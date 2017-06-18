@@ -1,6 +1,6 @@
 ## Component Hierarchy
 
-1) RootContainer
+1) HomePageContainer
   The root that renders the header, SortBar, and all the posts (PostsIndex).
 
 2) Header
@@ -62,7 +62,7 @@
 **NewPostModul**
   * NewPostForm
 
-**RootContainer** (Home Page)
+**HomePageContainer** (Home Page)
   * Header
   * SortBar
   * PostsIndex
@@ -77,7 +77,7 @@
   - Imgur(home Button)
   - New Post
 
-**PostShow**
+**PostShowPageContainer**
   * PostIndexItem
     * PostIndexItemDetails
     * ImagesIndex
