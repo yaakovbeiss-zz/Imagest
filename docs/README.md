@@ -13,22 +13,28 @@ Imgur is a web application inspired by Imgur built using Ruby on Rails and React
   Create Posts with images/gifs
  Feature 2
   Comments on posts
-  Upvote/Downvote posts
  Feature 3
-  Upvote/Downvote comments/replies
+  Upvote/Downvote posts and comments
  Feature 4
-  Gallery with Infinite Scroll
-
- Reply to comments
- Production README sample
+  Search Bar
+ Bonus
+  Reply to comments
+  Comment with gifs and pictures
+  Production README sample
 Design Docs
 
-View Wireframes
-React Components
-API endpoints
-DB schema
-Sample State
-Implementation Timeline
+## Design Docs
+* [View Wireframes][views]
+* [React Components][components]
+* [Flux Cycles][flux-cycles]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+
+[views]: docs/views.md
+[components]: docs/components.md
+[flux-cycles]: docs/flux-cycles.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
 Phase 1: Backend setup and Front End User Authentication (2 days)
 
@@ -42,21 +48,20 @@ Phase 3: Posts (2 days)
 
 Objective: Account users can post content that can be viewed.
 
-Phase 4: Tags (1 day)
+Phase 4: Comments (1 day)
 
-Objective: Notes can be tagged with multiple tags, and tags are searchable.
+Objective: Users can comment on posts.
 
-Phase 5: Allow Complex Styling in Notes (1 day, W2 Th 6pm)
+Phase 5: Upvote/Downvote
 
-Objective: Allow rich text editing of notes.
+Objective: Allow users to upvote and downvote posts.
 
-Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
+Phase 6: - Search Bar
 
-Objective: Add infinite scroll to Notes Index
+Objective: Allow users to search posts
 
 Bonus Features (TBD)
 
- Search notes by content
- Set reminders on notes
- Changelogs for Notes
- Multiple sessions
+ Search posts by description
+ Infinite Scroll
+ Comments can include pics and gifs

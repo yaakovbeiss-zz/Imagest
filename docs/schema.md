@@ -29,6 +29,7 @@ commenter_id      | integer   | not null, foreign key (references users), indexe
 commentable_id    | string    | not null, foreign key (references commentables), indexed
 commentable_type  | string    | not null
 
+
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
@@ -37,9 +38,9 @@ username        | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 
-## votings
+## votings (join table)
 column name     | data type | details
 ----------------|-----------|-----------------------
 voter_id        | integer   | not null, foreign key
 votable_id      | integer   | not null, foreign key
-votable_type    | string    | not null
+voted           | boolean   | not null, default: false
