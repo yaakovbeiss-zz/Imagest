@@ -7,20 +7,18 @@ Minimum Viable Product
 
 Imgur is a web application inspired by Imgur built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
- Hosting on Heroku
- New account creation, login, and guest/demo login
-  Feature 1
-  Create Posts with images/gifs
-  Feature 2
-  Comments on posts
-  Feature 3
-  Upvote/Downvote posts and comments
-  Feature 4
-  Search Bar
+ 1. Hosting on Heroku
+ 2. Create production README
+ 3. New account creation, login, and guest/demo login
+ 4. Create Posts with images/gifs
+ 5. Comments on posts
+ 6. Upvote/Downvote posts and comments
+ 7. Search Bar
   Bonus
   Reply to comments
   Comment with gifs and pictures
   Production README sample
+  
 Design Docs
 
 ## Design Docs
@@ -48,17 +46,17 @@ Design Docs
 
   Objective: Account users can post content that can be viewed.
 
-# Phase 4: Comments (1 day)
+# Phase 4: Comments (2 days)
 
   Objective: Users can comment on posts.
 
-# Phase 5: Upvote/Downvote
+# Phase 5: Upvote/Downvote (1 day)
 
   Objective: Allow users to upvote and downvote posts.
 
-# Phase 6: - Search Bar
+# Phase 6: - Search Bar (1 day)
 
-  Objective: Allow users to search posts
+  Objective: Allow users to search posts.
 
 Bonus Features (TBD)
 

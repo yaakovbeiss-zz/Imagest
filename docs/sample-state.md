@@ -1,6 +1,18 @@
 {
+  currentUser: {
+    1: {
+      id: 1,
+      username: "yaakovbeiss",
+      password_digest: "asdfas",
+      session_token: "adfsadf"
+    }
+  }
+  forms: {
+    signUp: {errors: []},
+    logIn: {errors: []},
+    createNote: {errors: ["body can't be blank"]}
+  },
   posts: {
-
     1: {
       id: 1,
       title: "PhotoshoppedMichaelCeraEveryDay",
@@ -16,9 +28,7 @@
       author_id: "yummybeiss"
     }
   }
-
   images: {
-
     1: {
       id: 1,
       post_id: 23,
@@ -26,11 +36,8 @@
       title: "dad joke video",
       description: "funny joke"
     }
-
   }
-
   comments: {
-
     1: {
       id: 1,
       body: "blah blah",
@@ -41,19 +48,7 @@
       commentable_id: ""
     }
   }
-
-  currentUser: {
-
-    1: {
-      id: 1,
-      username: "yaakovbeiss",
-      password_digest: "asdfas",
-      session_token: "adfsadf"
-    }
-  }
-
   votings: {
-
     1: {
       id: 1,
       voter_id: 1,
@@ -61,15 +56,4 @@
       voted_type: ""
     }
   }
-
-
-
-
-
-
-
-
-
-
-
 }
