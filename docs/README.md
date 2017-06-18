@@ -9,15 +9,15 @@ Imgur is a web application inspired by Imgur built using Ruby on Rails and React
 
  Hosting on Heroku
  New account creation, login, and guest/demo login
- # Feature 1
+  Feature 1
   Create Posts with images/gifs
- # Feature 2
+  Feature 2
   Comments on posts
- # Feature 3
+  Feature 3
   Upvote/Downvote posts and comments
- # Feature 4
+  Feature 4
   Search Bar
- # Bonus
+  Bonus
   Reply to comments
   Comment with gifs and pictures
   Production README sample

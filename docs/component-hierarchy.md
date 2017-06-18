@@ -36,19 +36,21 @@
 11) CommentsIndex/CommentsIndexContainer
   Component that contains a list of all the comments for a single post.
 
-12) CommentsIndexItem
+12) CommentsIndexDetails
+
+13) CommentsIndexItem
   Component that contains a single comment for a post or comment.
 
-13) CommentsDetail/CommentsDetailContainer
+14) CommentsDetail/CommentsDetailContainer
   Component that renders details about a single comment, such as upvotes/downvotes.
 
-14) NewPostModul
+16) NewPostModul
   A container modul that allows the user to upload a post via a form.
 
-15) AuthForm
+17) AuthForm
   Component form that allows a user to sign in.
 
-16) AuthForm
+18) AuthForm
   Component form that allows a user to sign up.
 
 
