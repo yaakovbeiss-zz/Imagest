@@ -30,11 +30,11 @@ Design Docs
 * [Sample-State][sample-state]
 * [DB schema][schema]
 
-[views]: ./wireframes.md
-[components]: ./components-hierarchy.md
-[api-endpoints]: ./api-endpoints.md
-[schema]: ./schema.md
-[sample-state]: ./sample-state.md
+[views]: wireframes.md
+[components]: components-hierarchy.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
+[sample-state]: sample-state.md
 
 Phase 1: Backend setup and Front End User Authentication (2 days)
 
