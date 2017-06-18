@@ -32,9 +32,9 @@
 
 - `GET /api/posts/:postId/comments`
 - `POST /api/posts/:postId/comments`
-- `GET /apiposts/:postId/comments/:commentId`
-- `PATCH /apiposts/:postId/comments/:commentId`
-- `DELETE /apiposts/:postId/comments/:commentId`
+- `GET /api/posts/:postId/comments/:commentId`
+- `PATCH /api/posts/:postId/comments/:commentId`
+- `DELETE /api/posts/:postId/comments/:commentId`
 
 ### Votes
 

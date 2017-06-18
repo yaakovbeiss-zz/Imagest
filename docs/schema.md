@@ -25,12 +25,12 @@ id                | integer   | not null, primary key
 body              | string    | not null
 points            | integer   | not null, default: 0
 parent_id         | integer   |
-commenter_id      | integer   | not null, foreign key (references users), indexed
+commenter_id      | integer   | not null, foreign key (references accounts), indexed
 commentable_id    | string    | not null, foreign key (references commentables), indexed
 commentable_type  | string    | not null
 
 
-## users
+## accounts
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
@@ -43,4 +43,4 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 voter_id        | integer   | not null, foreign key
 votable_id      | integer   | not null, foreign key
-voted           | boolean   | not null, default: false
+voted_type      | string    | not null

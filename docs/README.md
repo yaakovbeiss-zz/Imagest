@@ -26,15 +26,15 @@ Design Docs
 ## Design Docs
 * [View Wireframes][views]
 * [React Components][components]
-* [Flux Cycles][flux-cycles]
 * [API endpoints][api-endpoints]
+* [Sample-State][sample-state]
 * [DB schema][schema]
 
-[views]: docs/views.md
-[components]: docs/components.md
-[flux-cycles]: docs/flux-cycles.md
+[views]: docs/wireframes.md
+[components]: docs/components-hierarchy.md
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
+[sample-state]: docs/sample-state.md
 
 Phase 1: Backend setup and Front End User Authentication (2 days)
 
