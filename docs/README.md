@@ -9,15 +9,15 @@ Imgur is a web application inspired by Imgur built using Ruby on Rails and React
 
  Hosting on Heroku
  New account creation, login, and guest/demo login
- Feature 1
+ # Feature 1
   Create Posts with images/gifs
- Feature 2
+ # Feature 2
   Comments on posts
- Feature 3
+ # Feature 3
   Upvote/Downvote posts and comments
- Feature 4
+ # Feature 4
   Search Bar
- Bonus
+ # Bonus
   Reply to comments
   Comment with gifs and pictures
   Production README sample
@@ -30,35 +30,35 @@ Design Docs
 * [Sample-State][sample-state]
 * [DB schema][schema]
 
-[views]: wireframes.md
+[views]: ./wireframes
 [components]: components-hierarchy.md
 [api-endpoints]: api-endpoints.md
 [schema]: schema.md
 [sample-state]: sample-state.md
 
-Phase 1: Backend setup and Front End User Authentication (2 days)
+# Phase 1: Backend setup and Front End User Authentication (2 days)
 
-Objective: Functioning rails project with front-end Authentication
+  Objective: Functioning rails project with front-end Authentication
 
-Phase 2: Account Model, API, and components (2 days)
+# Phase 2: Account Model, API, and components (2 days)
 
-Objective: Accounts can be created, edited and destroyed through the API.
+  Objective: Accounts can be created, edited and destroyed through the API.
 
-Phase 3: Posts (2 days)
+# Phase 3: Posts (2 days)
 
-Objective: Account users can post content that can be viewed.
+  Objective: Account users can post content that can be viewed.
 
-Phase 4: Comments (1 day)
+# Phase 4: Comments (1 day)
 
-Objective: Users can comment on posts.
+  Objective: Users can comment on posts.
 
-Phase 5: Upvote/Downvote
+# Phase 5: Upvote/Downvote
 
-Objective: Allow users to upvote and downvote posts.
+  Objective: Allow users to upvote and downvote posts.
 
-Phase 6: - Search Bar
+# Phase 6: - Search Bar
 
-Objective: Allow users to search posts
+  Objective: Allow users to search posts
 
 Bonus Features (TBD)
 
