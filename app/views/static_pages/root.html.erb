@@ -1,1 +1,8 @@
+<script id="bootstrap-current-user" type="text/javascript">
+  <% if logged_in? %>
+  	window.currentUser = <%= render("api/accounts/account.json.jbuilder",
+  		account: current_user).html_safe %>
+  <% end %>
+</script>
+
 <div id='root'>sup</div>
