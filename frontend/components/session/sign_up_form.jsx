@@ -57,14 +57,21 @@ class SignUpForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <img className="imgur-image" src="https://imgur.com/images/access/access-logo.png"/>
           <br/>
-          Register With
+          <div className="register-box">
+            Register With
+          </div>
           <div className="social-box">
             <a className="facebook logo" href="https://en-gb.facebook.com/login/" value="f">f</a>
-            <img src="" className="twitter logo" href="https://twitter.com/login" />
+            <img src="/twitterlogo.jpg" className="twitter logo" href="https://twitter.com/login" />
             <img src="" className="google-plus logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
-            <img src="" className="yahoo logo" href="https://login.yahoo.com/" />
+            <a src="" className="yahoo logo" href="https://login.yahoo.com/">Y!</a>
           </div>
           {this.renderErrors()}
+          <div className="login-divider">
+            <div className="divider">-----------------</div>
+            or with Imgur
+            <div className="divider">-----------------</div>
+          </div>
           <div className="login-form">
             <br/>
               <label className="sign-in-text-input">
@@ -101,10 +108,12 @@ class SignUpForm extends React.Component {
                   onChange={this.update('password')}
                   className="login-input"
                 />
-              </label>
+            </label>By registering you agree to our terms of service.
               <br/>
-            <input type="submit" value="Submit" />
-            <button>Next</button>
+              <div className="sign-up-buttons">
+                <input type="submit" value="Submit" />
+                <button className="sign-up-button">Next</button>
+            </div>
           </div>
         </form>
       </div>

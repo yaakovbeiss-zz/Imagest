@@ -20,7 +20,9 @@
   height: 65px;
   cursor: pointer;
 }
-
+.register-box {
+  height: 30px;
+}
 .social-box {
   display: flex;
   flex-direction: row;
@@ -39,6 +41,7 @@
   background: #212121;
   border-radius: 5px;
   border-bottom: 5px solid;
+  transition: background-color 1s, transform .5s;
 }
 
 .facebook {
@@ -62,8 +65,6 @@
   background-color: #4099FF;
 }
 
-
-
 .google-plus {
   border-bottom-color: #D34836;
 }
@@ -73,11 +74,27 @@
 }
 
 .yahoo {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
   border-bottom-color: #7B0099;
 }
 
 .yahoo:hover {
   background-color: #7B0099;
+}
+
+.login-divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0 10px 0;
+}
+.divider{
+  opacity: .5;
+  height: 1px;
+  color: white;
+  text-decoration: line-through;
 }
 
 .login-form {
@@ -105,5 +122,20 @@
   color: #f2f2f2;
   letter-spacing: .02em;
   line-height: 1.5em;
-
+}
+.sign-up-buttons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: right;
+  padding: 10px 0 10px 0;
+  color: blue;
+}
+.sign-up-button{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: right;
+  padding: 10px 0 10px 0;
+  color: blue;
 }
