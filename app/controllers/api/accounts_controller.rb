@@ -6,7 +6,7 @@ class Api::AccountsController < ApplicationController
       login(@account)
       render :show
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: @account.errors.full_messages, status: 422
     end
   end
 
