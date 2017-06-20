@@ -38,19 +38,46 @@
   height: 27px;
   background: #212121;
   border-radius: 5px;
+  border-bottom: 5px solid;
+}
+
+.facebook {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom-color: #3A558E;
+}
+
+.facebook:hover {
+  background-color: #3A558E;
 }
 
 .twitter {
   background: url("https://www.google.com/search?q=twitter+logo&tbm=isch&imgil=PKtzXZLiZee58M%253A%253ByrdmuLe3wLbaDM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FFile%25253ATwitter_bird_logo_2012.svg&source=iu&pf=m&fir=PKtzXZLiZee58M%253A%252CyrdmuLe3wLbaDM%252C_&usg=__OTBX2rw-zdOCVg1vfgCO7g1Rvt0%3D");
-
+  border-bottom-color: #4099FF;
+}
+.twitter:hover{
+  background-color: #4099FF;
 }
 
-.google-plus {
 
+
+.google-plus {
+  border-bottom-color: #D34836;
+}
+
+.google-plus:hover {
+  background-color: #D34836;
 }
 
 .yahoo {
+  border-bottom-color: #7B0099;
+}
 
+.yahoo:hover {
+  background-color: #7B0099;
 }
 
 .login-form {
@@ -58,10 +85,11 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
-  padding: 15px;
+  padding: 0 0 42px;
   border: 1px solid transparent;
   background: #2C2F34;
   border-radius: 5px;
+  height: 180px;
 }
 
 .login-input {
