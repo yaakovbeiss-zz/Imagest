@@ -7,10 +7,9 @@ class AccountsController < ApplicationController
     @account = Account.new(account_params)
     if @account.save
       sign_in(@account)
-      redirect_to tweets_url
+      render :show
     else
-      flash[:errors] = ["invalid input"]
-      render :new
+      render :show
     end
   end
 

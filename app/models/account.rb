@@ -27,7 +27,7 @@ class Account < ActiveRecord::Base
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
-  def
+  end
 
   private
 
