@@ -59,11 +59,10 @@ class SignUpForm extends React.Component {
           <br/>
           Register With
           <div className="social-box">
-            <a className="facebook-logo" href="https://en-gb.facebook.com/login/">f</a>
-            <a className="twitter-logo" href="https://twitter.com/login"></a>
-            <a className="google-plus-logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin"></a>
-            <a className="yahoo-logo" href="https://login.yahoo.com/"></a>
-
+            <a className="facebook logo" href="https://en-gb.facebook.com/login/">f</a>
+            <a className="twitter logo" href="https://twitter.com/login">twitter</a>
+            <a className="google-plus logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin">google</a>
+            <a className="yahoo logo" href="https://login.yahoo.com/">yahoo</a>
           </div>
           {this.renderErrors()}
           <div className="login-form">

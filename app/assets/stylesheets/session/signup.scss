@@ -22,6 +22,34 @@
 }
 
 .social-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
+  padding: 12px;
+  background: #2C2F34;
+  border-radius: 5px;
+}
+
+.logo {
+  padding-top: 8px;
+  display: block;
+  width: 74px;
+  height: 27px;
+  background: #212121;
+  border-radius: 5px;
+}
+
+.twitter {
+  background: url("https://www.google.com/search?q=twitter+logo&tbm=isch&imgil=PKtzXZLiZee58M%253A%253ByrdmuLe3wLbaDM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FFile%25253ATwitter_bird_logo_2012.svg&source=iu&pf=m&fir=PKtzXZLiZee58M%253A%252CyrdmuLe3wLbaDM%252C_&usg=__OTBX2rw-zdOCVg1vfgCO7g1Rvt0%3D");
+
+}
+
+.google-plus {
+
+}
+
+.yahoo {
 
 }
 
