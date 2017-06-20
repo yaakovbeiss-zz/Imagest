@@ -1,18 +1,16 @@
-class AccountsController < ApplicationController
-
-  def new
-  end
+class Api::AccountsController < ApplicationController
 
   def create
     @account = Account.new(account_params)
     if @account.save
-      sign_in(@account)
+      login(@account)
       render :show
     else
-      render :show
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
+  private
 
   def account_params
     params.require(:account).permit(:username, :password)

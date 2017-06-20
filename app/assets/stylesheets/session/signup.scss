@@ -1,0 +1,53 @@
+.login-form-container {
+  font-family: 'Open sans';
+  width: 350px;
+  height: 100%;
+  margin: auto;
+  background-color: #141518;
+  color: white;
+  font-family: sans-serif;
+  font-size: 11px;
+  letter-spacing: .03em;
+  text-align: center;
+}
+
+.imgur-image {
+  padding-top: 80px;
+  position: relative;
+  display: block;
+  margin: 0 auto 90px;
+  width: 187px;
+  height: 65px;
+  cursor: pointer;
+}
+
+.social-box {
+
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
+  padding: 15px;
+  border: 1px solid transparent;
+  background: #2C2F34;
+  border-radius: 5px;
+}
+
+.login-input {
+  padding: 5px 10px;
+  width: 298px;
+  height: 20px;
+  border: 1px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+  border-radius: 5px;
+  background-color: #191919;
+  margin-bottom: 10px;
+  font-size: .9em;
+  color: #f2f2f2;
+  letter-spacing: .02em;
+  line-height: 1.5em;
+
+}
