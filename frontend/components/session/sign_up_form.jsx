@@ -119,15 +119,15 @@ class SignUpForm extends React.Component {
                     placeholder="Retype Password"
                     value=""
                     onChange={this.update('password')}
-                    className="login-input"
+                    className="login-input last"
                   />
               </label>
-                
+
                 <div className="terms">By registering you agree to our terms of service.</div>
               </div>
                 <div className="sign-up-buttons">
                   <input className="submit-button" type="submit" value="Sign Up" />
-                  <button className="sign-up-button" onClick={this.demoLogin}>Demo Login</button>
+                  <button className="demo-login-button" onClick={this.demoLogin}>Demo Login</button>
               </div>
           </form>
         </div>
