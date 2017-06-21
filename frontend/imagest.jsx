@@ -16,7 +16,7 @@ import App from './components/app';
     );
   };
 
-
+  
   document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {

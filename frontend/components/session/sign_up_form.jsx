@@ -6,7 +6,9 @@ class SignUpForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
+      retype_password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
@@ -27,14 +29,16 @@ class SignUpForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const account = this.state;
-    this.props.login({account});
+    this.props.processForm({account});
+    this.props.history.push('/');
   }
 
   demoLogin() {
-    this.props.login({
+    this.props.login({ account: {
       username: "yaakovbeiss",
       password: "password"
-    })
+    }});
+    this.props.history.push('/');
   }
 
   // navLink() {
@@ -75,7 +79,9 @@ class SignUpForm extends React.Component {
             </div>
             <div className="social-box">
               <a className="facebook logo" href="https://en-gb.facebook.com/login/" value="f">f</a>
-              <img src="/twitterlogo.jpg" className="twitter logo" href="https://twitter.com/login" />
+              <div className="twitter logo">
+                <img  className="twitter-icon" src=""  href="https://twitter.com/login" />
+              </div>
               <img src="" className="google-plus logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               <a src="" className="yahoo logo" href="https://login.yahoo.com/">Y!</a>
             </div>
@@ -99,8 +105,8 @@ class SignUpForm extends React.Component {
                 <label className="sign-in-text-input">
                   <input type="text"
                     placeholder="Email"
-                    value=""
-                    onChange={this.update('password')}
+                    value={this.state.email}
+                    onChange={this.update('email')}
                     className="login-input"
                   />
                 </label>
@@ -118,7 +124,7 @@ class SignUpForm extends React.Component {
                   <input type="password"
                     placeholder="Retype Password"
                     value=""
-                    onChange={this.update('password')}
+                    onChange={this.update('retype_password')}
                     className="login-input last"
                   />
               </label>
@@ -126,8 +132,8 @@ class SignUpForm extends React.Component {
                 <div className="terms">By registering you agree to our terms of service.</div>
               </div>
                 <div className="sign-up-buttons">
+                  <Link to="/login" className="to-login-link">login instead</Link>
                   <input className="submit-button" type="submit" value="Sign Up" />
-                  <button className="demo-login-button" onClick={this.demoLogin}>Demo Login</button>
               </div>
           </form>
         </div>

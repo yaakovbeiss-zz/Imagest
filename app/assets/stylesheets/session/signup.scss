@@ -58,7 +58,8 @@
   background: #212121;
   border-radius: 5px;
   border-bottom: 5px solid;
-  transition: background-color 1s, transform .5s;
+  transition: background-color 1s, transform .25s;
+  position: relative;
 }
 
 .facebook {
@@ -75,11 +76,18 @@
 }
 
 .twitter {
-  background: url("https://www.google.com/search?q=twitter+logo&tbm=isch&imgil=PKtzXZLiZee58M%253A%253ByrdmuLe3wLbaDM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FFile%25253ATwitter_bird_logo_2012.svg&source=iu&pf=m&fir=PKtzXZLiZee58M%253A%252CyrdmuLe3wLbaDM%252C_&usg=__OTBX2rw-zdOCVg1vfgCO7g1Rvt0%3D");
+  // background: url("https://www.google.com/search?q=twitter+logo&tbm=isch&imgil=PKtzXZLiZee58M%253A%253ByrdmuLe3wLbaDM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FFile%25253ATwitter_bird_logo_2012.svg&source=iu&pf=m&fir=PKtzXZLiZee58M%253A%252CyrdmuLe3wLbaDM%252C_&usg=__OTBX2rw-zdOCVg1vfgCO7g1Rvt0%3D");
   border-bottom-color: #4099FF;
 }
 .twitter:hover{
   background-color: #4099FF;
+}
+.twitter-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: none;
+  z-index: 100;
 }
 
 .google-plus {
@@ -92,6 +100,7 @@
 
 .yahoo {
   font-size: 20px;
+  color: #7B0099;
   text-align: center;
   text-decoration: none;
   border-bottom-color: #7B0099;
@@ -119,27 +128,31 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
-  padding: 15px;
+  padding: 6px;
   border: 1px solid transparent;
   background: #2C2F34;
   border-radius: 5px;
   height: 180px;
 }
+.login-form-session {
+  height: 104px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 .login-input {
   padding: 5px 10px;
-  width: 320px;
-  height: 20px;
-  border: 1px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+  width: 300px;
+  height: 18px;
+  border: 1px transparent;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: #191919;
-  margin-bottom: 10px;
   font-size: 1.1em;
   color: #f2f2f2;
   letter-spacing: .02em;
   line-height: 1.5em;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 .last {
   margin-bottom: 0;
@@ -154,32 +167,35 @@
   justify-content: flex-end;;
   padding: 10px 0 10px 0;
   width: 350px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
 }
-.demo-login-button{
+.to-login-link {
+  justify-content: flex-end;
+  padding: 10px 0 10px 0;
+  text-decoration: none;
+  border-style: none;
+  height: 40px;
+  color: white;
+  border-radius: 2px;
+  margin-left: 5px;
+  width: 95px;
+}
+.demo-login {
+  background-color: #141518;
+  font-size: 14px;
+}
+.submit-button {
+  font-size: 14px;
   justify-content: flex-end;
   padding: 10px 0 10px 0;
   color: blue;
   background: #5c69ff;
   border-style: none;
   height: 40px;
-  font: 15px system ui;
-  font-family: sans-serif;
   color: white;
   border-radius: 2px;
   margin-left: 5px;
   width: 95px;
-}
-.submit-button {
-justify-content: flex-end;
-padding: 10px 0 10px 0;
-color: blue;
-background: #5c69ff;
-border-style: none;
-height: 40px;
-font: 15px system ui;
-font-family: sans-serif;
-color: white;
-border-radius: 2px;
-margin-left: 5px;
-width: 95px;
 }

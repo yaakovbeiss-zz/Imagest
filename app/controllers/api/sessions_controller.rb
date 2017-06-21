@@ -1,6 +1,7 @@
 class Api::SessionsController < ApplicationController
 
 	def create
+    # debugger
 		@account = Account.find_by_credentials(
       params[:account][:username],
       params[:account][:password]
@@ -30,4 +31,7 @@ class Api::SessionsController < ApplicationController
 		end
 	end
 
+  def session_params
+    params.require(:account).permit(:username, :password)
+  end
 end
