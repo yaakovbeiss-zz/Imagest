@@ -1,3 +1,20 @@
+.back-imgur {
+  display: flex;
+  flex-direction: row;
+  font: 14px system-ui;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+.i-back-imgur {
+  font: 30px system-ui;
+  font-weight: 600;
+  position: absolute;
+  text-decoration: none;
+  color: white;
+}
+
 .login-form-container {
   font-family: 'Open sans';
   width: 350px;
@@ -102,7 +119,7 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
-  padding: 0 0 42px;
+  padding: 15px;
   border: 1px solid transparent;
   background: #2C2F34;
   border-radius: 5px;
@@ -118,7 +135,7 @@
   border-radius: 5px;
   background-color: #191919;
   margin-bottom: 10px;
-  font-size: .9em;
+  font-size: 1.1em;
   color: #f2f2f2;
   letter-spacing: .02em;
   line-height: 1.5em;
@@ -132,12 +149,9 @@
   width: 350px;
 }
 .sign-up-button{
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  justify-content: right;
   justify-content: flex-end;
   padding: 10px 0 10px 0;
+  color: blue;
   background: #5c69ff;
   border-style: none;
   height: 40px;
