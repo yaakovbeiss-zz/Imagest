@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   constructor(props){
     super(props);
-
+    this.toggleDropDown = this.toggleDropDown.bind(this);
   }
 
+  toggleDropDown(e) {
+    const dropdown = e.currentTarget;
 
+    if (dropdown.className === 'dropdown hidden'){
+      dropdown.className = 'dropdown';
+    } else {
+      dropdown.className = 'dropdown hidden';
+    }
+  }
 
   render() {
     return (
@@ -20,17 +28,17 @@ class Header extends React.Component {
               </div>
             </Link>
             <div className="header-buttons down-arrow">
-              <div className={dropdown} onClick={toggleDropDown}>
+              <div className='dropdown hidden' onClick={this.toggleDropDown}>
                 <ul>
                   <li className="hiring"></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li>asdf</li>
+                  <li>asdf</li>
+                  <li>asdf</li>
+                  <li>asdf</li>
+                  <li>asdf</li>
+                  <li>adsf</li>
+                  <li>asdf</li>
+                  <li>adsf</li>
                 </ul>
               </div>
             </div>

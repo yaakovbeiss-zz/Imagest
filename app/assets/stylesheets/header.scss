@@ -46,6 +46,7 @@
   width: 29px;
   padding: 9px 0 9px 0;
   cursor: pointer;
+  position: relative;
 }
 .down-arrow:before{
   content: "\2304";
@@ -62,7 +63,14 @@
   border-radius: 19px;
   background-color: #535353;
 }
-
+.dropdown {
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+}
+.hidden {
+  visibility: hidden;
+}
 .right-nav nav {
 
 }
