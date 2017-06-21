@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Header extends React.Component {
   constructor(props){
     super(props);
-  
+
   }
 
   toggleDrop(e) {
@@ -32,7 +32,7 @@ class Header extends React.Component {
             </Link>
             <div className="header-buttons down-arrow" onClick={this.toggleDrop}>
               <div id="header-buttons down-arrow" className="hidden">
-                <div className='dropdown'>
+                <div className='dropdown home-button'>
                   <ul>
                     <li className="dropdown-item hiring"><a>we're hiring!</a></li>
                     <li className="dropdown-item"> <a>blog</a> </li>
@@ -53,10 +53,12 @@ class Header extends React.Component {
                 </a>
                 <a className="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post" className="hidden">
-                    <ul>
-                      <li>asdf</li>
-                      <li>asdf</li>
-                    </ul>
+                    <div className='dropdown new-post'>
+                      <ul>
+                        <li>asdf</li>
+                        <li>asdf</li>
+                      </ul>
+                    </div>
                   </div>
                 </a>
               </div>

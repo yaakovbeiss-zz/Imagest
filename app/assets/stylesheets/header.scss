@@ -64,20 +64,21 @@
   background-color: #535353;
 }
 .dropdown {
-  background-color: white;
   position: absolute;
-  z-index: 10;
-  margin-top: 31px;
-  width: 112px;
-  right: 0px;
+  background-color: white;
   font-family: sans-serif;
   text-align: justify;
-  padding: 10px 14px;
   background-color: #efefef;
   color: #121211;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 3px 5px rgba(0,0,0,.35);
+  width: 112px;
+}
+.home-button {
+  margin-top: 31px;
+  right: 0px;
+  padding: 10px 14px;
 }
 .dropdown-item {
   font-weight: 400;
@@ -125,6 +126,12 @@
   right: 5px;
   color: #e4e5e5;
   font-weight: lighter;
+}
+.new-post {
+  position: absolute;
+  top: 50px;
+  width: 144px;
+  left: 140px;
 }
 .hidden {
   visibility: hidden;
