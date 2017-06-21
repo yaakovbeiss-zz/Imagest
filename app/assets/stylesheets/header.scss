@@ -95,6 +95,37 @@
 .hiring {
   font-weight: bold;
 }
+.new-post-button-container {
+  display: flex;
+  background: #1bb76e;
+  width: 141px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid #1bb76e;
+  padding: 0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.new-post-button {
+  background: #1bb76e;
+  width: 144px;
+  padding-top: 10px;
+}
+.cloud {
+  width: 35px;
+  height: 32px;
+  margin: 5px;
+}
+.down-arrow-new-post:before{
+  content: "\2304";
+  font-size: 31px;
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  right: 5px;
+  color: #e4e5e5;
+  font-weight: lighter;
+}
 .hidden {
   visibility: hidden;
 }
