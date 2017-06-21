@@ -8,8 +8,8 @@ class Header extends React.Component {
   }
 
   toggleDropDown(e) {
-    const dropdown = e.currentTarget;
-
+    let dropdown = document.getElementById("dropdown-arrow");
+    // debugger
     if (dropdown.className === 'dropdown hidden'){
       dropdown.className = 'dropdown';
     } else {
@@ -27,18 +27,18 @@ class Header extends React.Component {
                 <img className="header-buttons imgur-header-icon" src="https://imgur.com/images/access/access-logo.png"/>
               </div>
             </Link>
-            <div className="header-buttons down-arrow">
-              <div className='dropdown hidden' onClick={this.toggleDropDown}>
+            <div className="header-buttons down-arrow" onClick={this.toggleDropDown}>
+              <div className='dropdown hidden' id="dropdown-arrow">
                 <ul>
-                  <li className="hiring"></li>
-                  <li>asdf</li>
-                  <li>asdf</li>
-                  <li>asdf</li>
-                  <li>asdf</li>
-                  <li>asdf</li>
-                  <li>adsf</li>
-                  <li>asdf</li>
-                  <li>adsf</li>
+                  <li className="dropdown-item hiring"><a>we're hiring!</a></li>
+                  <li className="dropdown-item"> <a>blog</a> </li>
+                  <li className="dropdown-item"> <a>about Imagest</a></li>
+                  <li className="dropdown-item"> <a>imagest Store</a></li>
+                  <li className="dropdown-item"> <a>imagest apps</a></li>
+                  <li className="dropdown-item"> <a>developer api</a></li>
+                  <li className="dropdown-item"> <a>advertise</a></li>
+                  <li className="dropdown-item"> <a>need help?</a></li>
+                  <li className="dropdown-item"> <a>asdf</a></li>
                 </ul>
               </div>
             </div>
