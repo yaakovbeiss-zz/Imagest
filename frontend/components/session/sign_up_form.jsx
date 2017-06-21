@@ -67,7 +67,6 @@ class SignUpForm extends React.Component {
     return (
       <div>
         <NavLink className="back-imgur" exact to='/' >
-          <div className="i-back-imgur">i</div>
           <div>back to Imgur</div>
         </NavLink>
         <div className="login-form-container">

@@ -6,6 +6,8 @@
   text-decoration: none;
   color: white;
   margin: 20px;
+  text-align: right;
+
 }
 .i-back-imgur {
   font: 30px system-ui;
@@ -135,7 +137,7 @@
   height: 180px;
 }
 .login-form-session {
-  height: 104px;
+  height: 94px;
   padding: 0px;
   box-sizing: border-box;
 }
@@ -164,7 +166,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 5px;
-  justify-content: flex-end;;
+  justify-content: flex-end;
   padding: 10px 0 10px 0;
   width: 350px;
   font-family: 'Open Sans', sans-serif;
@@ -172,7 +174,6 @@
   font-weight: lighter;
 }
 .to-login-link {
-  justify-content: flex-end;
   padding: 10px 0 10px 0;
   text-decoration: none;
   border-style: none;
@@ -188,7 +189,6 @@
 }
 .submit-button {
   font-size: 14px;
-  justify-content: flex-end;
   padding: 10px 0 10px 0;
   color: blue;
   background: #5c69ff;

@@ -64,7 +64,6 @@ class SessionForm extends React.Component {
     return (
       <div>
         <NavLink className="back-imgur" exact to='/' >
-          <div className="i-back-imgur">i</div>
           <div>back to Imgur</div>
         </NavLink>
         <div className="login-form-container">
@@ -108,10 +107,10 @@ class SessionForm extends React.Component {
               <br/>
             </div>
           </form>
-        </div>
-        <div className="sign-up-buttons">
-          <button className="to-login-link demo-login" onClick={this.demoLogin}>demo login</button>
-          <button className="submit-button" onClick={this.handleSubmit}>Login</button>
+          <div className="sign-up-buttons">
+            <button className="to-login-link demo-login" onClick={this.demoLogin}>demo login</button>
+            <button className="submit-button" onClick={this.handleSubmit}>Login</button>
+          </div>
         </div>
       </div>
     );
