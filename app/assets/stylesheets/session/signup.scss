@@ -127,15 +127,38 @@
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  justify-content: right;
+  justify-content: flex-end;;
   padding: 10px 0 10px 0;
-  color: blue;
+  width: 350px;
 }
 .sign-up-button{
   display: flex;
   flex-direction: row;
   margin-top: 20px;
   justify-content: right;
+  justify-content: flex-end;
   padding: 10px 0 10px 0;
-  color: blue;
+  background: #5c69ff;
+  border-style: none;
+  height: 40px;
+  font: 15px system ui;
+  font-family: sans-serif;
+  color: white;
+  border-radius: 2px;
+  margin-left: 5px;
+  width: 95px;
+}
+.submit-button {
+justify-content: flex-end;
+padding: 10px 0 10px 0;
+color: blue;
+background: #5c69ff;
+border-style: none;
+height: 40px;
+font: 15px system ui;
+font-family: sans-serif;
+color: white;
+border-radius: 2px;
+margin-left: 5px;
+width: 95px;
 }

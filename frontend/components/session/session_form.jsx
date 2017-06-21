@@ -29,6 +29,13 @@ class SessionForm extends React.Component {
     this.props.processForm({account});
   }
 
+  demoLogin() {
+    this.props.login({
+      username: "yaakovbeiss",
+      password: "password"
+    })
+  }
+
   navLink() {
     if (this.props.formType === 'login') {
       return <Link to="/signup">sign up instead</Link>;
@@ -51,9 +58,20 @@ class SessionForm extends React.Component {
 
 
   render() {
-    
+
     return (
       <div className="login-form-container">
+        <img className="imgur-image" src="https://imgur.com/images/access/access-logo.png"/>
+        <br/>
+          <div className="register-box">
+            Sign In with
+          </div>
+          <div className="social-box">
+            <a className="facebook logo" href="https://en-gb.facebook.com/login/" value="f">f</a>
+            <img src="/twitterlogo.jpg" className="twitter logo" href="https://twitter.com/login" />
+            <img src="" className="google-plus logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+            <a src="" className="yahoo logo" href="https://login.yahoo.com/">Y!</a>
+          </div>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to BenchBnB!
           <br/>
@@ -63,6 +81,7 @@ class SessionForm extends React.Component {
             <br/>
             <label>Username:
               <input type="text"
+                placeholder="Username"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
@@ -71,6 +90,7 @@ class SessionForm extends React.Component {
             <br/>
             <label>Password:
               <input type="password"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
@@ -78,6 +98,7 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input type="submit" value="Submit" />
+            <button onClick={demoLogin()}></button>
           </div>
         </form>
       </div>

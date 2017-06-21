@@ -111,7 +111,7 @@ class SignUpForm extends React.Component {
             </label>By registering you agree to our terms of service.
               <br/>
               <div className="sign-up-buttons">
-                <input type="submit" value="Submit" />
+                <input className="submit-button" type="submit" value="Submit" />
                 <button className="sign-up-button">Next</button>
             </div>
           </div>
