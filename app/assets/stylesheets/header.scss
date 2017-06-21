@@ -1,15 +1,66 @@
-.nav {
+.header {
   height: 50px;
-  display: flex;
+  width: 100%;
+  font-size: 15px;
+  z-index: 101;
+  position: relative;
+  top: 0;
   background-color: #34373c;
+  margin: 0 auto;
 }
 
 .left-nav nav {
-
+  display: flex;
+  justify-content: flex-start;
 }
-.imgur-header {
-  padding: 0;
+.header-buttons {
+  float: left;
+  width: 83px;
   height: 34px;
+  background-size: contain;
+  padding: 1px 11px 1px 17px;
+  margin-top: 7px;
+  background-size: contain;
+  }
+.imgur-header-icon {
+  float: left;
+  width: 83px;
+  height: 34px;
+  background-size: contain;
+  padding: 1px 11px 1px 17px;
+  margin-top: 7px;
+  background-size: contain;
+  }
+.icon-container {
+  display: block;
+  float: left;
+}
+.icon-container :hover {
+  border-radius: 19px;
+  background-color: #535353;
+}
+.down-arrow {
+  margin-top: 10px;
+  display: flex;
+  height: 11px;
+  width: 29px;
+  padding: 9px 0 9px 0;
+  cursor: pointer;
+}
+.down-arrow:before{
+  content: "\2304";
+  font-size: 36px;
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  bottom: 13px;
+  left: 4px;
+  color: #e4e5e5;
+  font-weight: lighter;
+}
+.down-arrow:hover {
+  border-radius: 19px;
+  background-color: #535353;
 }
 
 .right-nav nav {

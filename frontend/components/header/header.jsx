@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   constructor(props){
@@ -11,9 +12,28 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <section className="nav">
+        <section className="header">
           <div className="left-nav">
-            <img className="imgur-header" src="https://imgur.com/images/access/access-logo.png"/>
+            <Link to="/">
+              <div className="icon-container">
+                <img className="header-buttons imgur-header-icon" src="https://imgur.com/images/access/access-logo.png"/>
+              </div>
+            </Link>
+            <div className="header-buttons down-arrow">
+              <div className={dropdown} onClick={toggleDropDown}>
+                <ul>
+                  <li className="hiring"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="right-nav">
