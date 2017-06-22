@@ -27,9 +27,9 @@ export const requestPost = post => dispatch => (
   ))
 );
 
-export const requestPosts = posts => dispatch => (
-  APIUtil.fetchPosts(posts).then(post => (
-    dispatch(receivePosts(post))
+export const requestPosts = () => dispatch => (
+  APIUtil.fetchPosts().then(posts => (
+    dispatch(receivePosts(posts))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ))

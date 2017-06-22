@@ -19,6 +19,7 @@ const PostReducer = (state = defaultState, action) => {
       });
     case RECEIVE_POST:
       const post = action.post;
+      debugger
       return merge({}, state, {
         entities: { [post.id]: post },
         currentPost: post.id
