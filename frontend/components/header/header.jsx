@@ -66,12 +66,16 @@ class Header extends React.Component {
             </div>
 
           <div className="right-nav">
-            <div className="search-icon-container">
-
+            <div className="search-icon-container" onClick={this.toggleDrop}>
+              <img className="search-icon" src="/assests/search_icon.png"/>
+                <div id="search-icon-container" className="hidden">
+                  <input className="search-bar"></input>
+                  <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+                </div>
             </div>
             <div className="signup-signin-links icon-container">
-              <Link exact to="/signup" className="right-nav-link"> signup </Link>
-              <Link exact to="/login" className="right-nav-link"> signin </Link>
+              <Link exact to="/login" className="right-nav-link"> sign in </Link>
+              <Link exact to="/signup" className="right-nav-link"> sign up </Link>
             </div>
           </div>
         </section>

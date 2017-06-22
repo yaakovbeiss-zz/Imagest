@@ -135,6 +135,9 @@
   height: 1px;
   color: white;
   text-decoration: line-through;
+  background: url(//imgur.com/images/access/fading-section-break.png) no-repeat;
+  display: inline-block;
+  opacity: .7;
 }
 
 .login-form {
@@ -158,10 +161,13 @@
   border-radius: 5px;
   background-color: #191919;
   font-size: 1.1em;
-  color: #f2f2f2;
+  color: grey;
   letter-spacing: .02em;
   line-height: 1.5em;
   box-sizing: content-box;
+}
+.login-input:focus{
+  outline: green;
 }
 .login-form-session {
   height: 94px;

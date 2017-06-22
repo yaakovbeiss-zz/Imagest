@@ -78,23 +78,23 @@ class SignUpForm extends React.Component {
             </div>
             <div className="social-box">
               <div className="facebook logo">
-                <img src="/assets/facebook_icon.png" className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+                <img src={window.images.facebook_icon} className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
-                <div className="twitter logo">
-                  <img src="/assets/twitter_icon.png" className="twitter-icon" href="https://twitter.com/login" />
-                </div>
+              <div className="twitter logo">
+                <img src={window.images.twitter_icon} className="twitter-icon" href="https://twitter.com/login" />
+              </div>
               <div className="google-plus logo">
-                <img src="/assets/google_plus_icon.png" className="google-plus-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+                <img src={window.images.google_plus_icon} className="google-plus-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
               <div className="yahoo logo">
-                <img src="/assets/yahoo_icon.png" className="yahoo-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+                <img src={window.images.yahoo_icon} className="yahoo-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
             </div>
             {this.renderErrors()}
             <div className="login-divider">
-              <div className="divider">-----------------</div>
+              <div className="divider"></div>
               or with Imgur
-              <div className="divider">-----------------</div>
+              <div className="divider"></div>
             </div>
             <div className="login-form">
               <br/>

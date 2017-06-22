@@ -41,7 +41,7 @@
 }
 .icon-container :hover {
   border-radius: 19px;
-  background-color: #535353;
+  background-color: #50545c;
 }
 .down-arrow {
   margin-top: 10px;
@@ -58,14 +58,14 @@
   display: flex;
   margin-bottom: 30px;
   position: relative;
-  bottom: 13px;
+  bottom: 15px;
   left: 4px;
   color: #e4e5e5;
   font-weight: lighter;
 }
 .down-arrow:hover {
   border-radius: 19px;
-  background-color: #535353;
+  background-color: #50545c;
 }
 .dropdown {
   position: absolute;
@@ -139,6 +139,7 @@
 }
 .dropdown-item :hover{
   background: #d9d9d9;
+  // display: block;
 }
 .hidden {
   visibility: hidden;
@@ -151,6 +152,7 @@
   height: 15px;
   cursor: pointer;
   margin: 15px;
+  margin-left: 0;
 }
 .right-nav-link {
   height: 15px;
@@ -159,8 +161,27 @@
   color: white;
 }
 .search-icon-container {
-
+  position: relative;
 }
 .search-icon {
+  padding: 7px;
+  position: absolute;;
+  top: 4px;
+  right: -7px;
+}
+.search-bar {
+  background-color: #535353;
+  outline: none;
+  border: 1px transparent;
+  width: 443px;
+  height: 48px;
+  border-bottom: 3px solid #1bb76e;
+}
+.search-bar-addition {
+  border-bottom: none;
+  display: flex;
+  color: white;
+  font-weight: lighter;
+  font-size: 9px;
 
 }
