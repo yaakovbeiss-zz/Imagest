@@ -148,11 +148,6 @@
   border-radius: 5px;
   height: 180px;
 }
-.login-form-session {
-  height: 94px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
 .login-input {
   padding: 5px 10px;
@@ -167,6 +162,14 @@
   letter-spacing: .02em;
   line-height: 1.5em;
   box-sizing: content-box;
+}
+.login-form-session {
+  height: 94px;
+  padding: 0px;
+  box-sizing: border-box;
+  .login-input {
+    background-color: rgb(250, 255, 189);
+  }
 }
 .last {
   margin-bottom: 0;
