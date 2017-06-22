@@ -9,25 +9,22 @@ class PostsIndex extends React.Component{
 
   componentDidMount(){
     this.requestPosts();
-    // debugger
   }
   render(){
-    let posts = values(this.props.post.entities)
+    let posts = this.props.posts;
     debugger
-      if (posts.length > 0) {
-
-      return (
-        <div>
-          <ul>
-
-            {posts[0].title}
-         </ul>
-        </div>
-      )
-    } else {
-      return null;
+    if (posts.length > 0) {
+        return (
+          <div>
+            <ul>
+              {posts.map( (post) => <li>{post.title}</li> )}
+           </ul>
+          </div>
+        )
+      } else {
+        return null;
+      }
     }
-
   }
-}
+
 export default PostsIndex;
