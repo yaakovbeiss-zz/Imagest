@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import App from './components/app';
+import { createPost, requestPosts, requestPost } from './actions/post_actions';
 
 
   const Root = ( {store} ) => {
@@ -16,7 +17,7 @@ import App from './components/app';
     );
   };
 
-  
+
   document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {
@@ -26,6 +27,13 @@ import App from './components/app';
     } else {
       store = configureStore();
     }
+
+    window.getState = store.getState;
+    window.createPost = createPost;
+    window.requestPosts = requestPosts;
+    window.requestPost = requestPost;
+    window.dispatch = store.dispatch;
+
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
   });

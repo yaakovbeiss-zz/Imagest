@@ -10,17 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620155622) do
+ActiveRecord::Schema.define(version: 20170622201821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string "username",        null: false
-    t.string "password_digest", null: false
-    t.string "session_token",   null: false
-    t.string "email"
+    t.string   "username",        null: false
+    t.string   "password_digest", null: false
+    t.string   "session_token",   null: false
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["username"], name: "index_accounts_on_username", unique: true, using: :btree
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title",                   null: false
+    t.text     "description"
+    t.integer  "upvotes",     default: 0
+    t.integer  "downvotes",   default: 0
+    t.integer  "account_id",              null: false
+    t.datetime "updated_at"
+    t.datetime "created_at"
+    t.index ["account_id"], name: "index_posts_on_account_id", using: :btree
+    t.index ["title"], name: "index_posts_on_title", using: :btree
   end
 
 end

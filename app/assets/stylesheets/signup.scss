@@ -167,7 +167,9 @@
   box-sizing: content-box;
 }
 .login-input:focus{
-  outline: green;
+  border: 1px solid green;
+  outline-offset: none;
+  outline-color: green;
 }
 .login-form-session {
   height: 94px;
