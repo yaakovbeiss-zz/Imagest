@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
             </div>
             <div className="social-box">
               <div className="facebook logo">
-                <img src="/assets/facebook_icon.png" className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+                <img src={window.images.facebook_icon} className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
               <div className="twitter logo">
                 <img src="/assets/twitter_icon.png" className="twitter-icon" href="https://twitter.com/login" />
