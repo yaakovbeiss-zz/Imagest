@@ -48,7 +48,7 @@ class Header extends React.Component {
               </div>
               </div>
               <div className="header-buttons new-post-button-container">
-                <img className="cloud" src="/assets/cloud.png" />
+                <img className="cloud" src={window.images.cloud_icon} />
                 <a className="new-post-button">New post
                 </a>
                 <a className="down-arrow-new-post" onClick={this.toggleDrop}>
@@ -67,7 +67,7 @@ class Header extends React.Component {
 
           <div className="right-nav">
             <div className="search-icon-container" onClick={this.toggleDrop}>
-              <img className="search-icon" src="/assests/search_icon.png"/>
+              <img className="search-icon" src={window.images.search_icon}/>
                 <div id="search-icon-container" className="hidden">
                   <input className="search-bar"></input>
                   <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
