@@ -73,10 +73,18 @@ class SessionForm extends React.Component {
               Sign In with
             </div>
             <div className="social-box">
-              <a className="facebook logo" href="https://en-gb.facebook.com/login/" value="f">f</a>
-              <img src="" className="twitter logo" href="https://twitter.com/login" />
-              <img src="" className="google-plus logo" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
-              <a src="" className="yahoo logo" href="https://login.yahoo.com/">Y!</a>
+              <div className="facebook logo">
+                <img src="/assets/facebook_icon.png" className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+              </div>
+              <div className="twitter logo">
+                <img src="/assets/twitter_icon.png" className="twitter-icon" href="https://twitter.com/login" />
+              </div>
+              <div className="google-plus logo">
+                <img src="/assets/google_plus_icon.png" className="google-plus-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+              </div>
+              <div className="yahoo logo">
+                <img src="/assets/yahoo_icon.png" className="yahoo-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+              </div>
             </div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-divider">

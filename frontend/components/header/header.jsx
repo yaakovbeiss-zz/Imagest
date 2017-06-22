@@ -55,8 +55,9 @@ class Header extends React.Component {
                   <div id="down-arrow-new-post" className="hidden">
                     <div className='dropdown new-post'>
                       <ul>
-                        <li>asdf</li>
-                        <li>asdf</li>
+                        <li className="dropdown-item"><a>Upload Images</a></li>
+                        <li className="dropdown-item"><a>Video to GIF</a></li>
+                        <li className="dropdown-item"><a>Make a Meme</a></li>
                       </ul>
                     </div>
                   </div>

@@ -79,6 +79,7 @@
   margin-top: 31px;
   right: 0px;
   padding: 10px 14px;
+  z-index: 5;
 }
 .dropdown-item {
   font-weight: 400;
@@ -90,9 +91,6 @@
   display: inline-block;
 }
 
-.dropdown-item :hover{
-  background: #d9d9d9;
-}
 .hiring {
   font-weight: bold;
 }
@@ -132,6 +130,11 @@
   top: 50px;
   width: 144px;
   left: 140px;
+  background-color: #e5e5e5;
+  z-index: 4;
+}
+.dropdown-item :hover{
+  background: #d9d9d9;
 }
 .hidden {
   visibility: hidden;

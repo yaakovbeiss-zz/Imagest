@@ -72,28 +72,36 @@
   font-weight: bold;
   border-bottom-color: #3A558E;
 }
-
+.facebook-icon{
+  position: relative;
+  height: 19px;
+}
 .facebook:hover {
   background-color: #3A558E;
 }
 
 .twitter {
-  // background: url("https://www.google.com/search?q=twitter+logo&tbm=isch&imgil=PKtzXZLiZee58M%253A%253ByrdmuLe3wLbaDM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FFile%25253ATwitter_bird_logo_2012.svg&source=iu&pf=m&fir=PKtzXZLiZee58M%253A%252CyrdmuLe3wLbaDM%252C_&usg=__OTBX2rw-zdOCVg1vfgCO7g1Rvt0%3D");
   border-bottom-color: #4099FF;
 }
 .twitter:hover{
   background-color: #4099FF;
 }
 .twitter-icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: relative;
   background: none;
   z-index: 100;
+  bottom: 9px;
 }
 
 .google-plus {
   border-bottom-color: #D34836;
+}
+.google-plus-icon {
+  border-bottom-color: #D34836;
+  position: relative;
+  bottom: 3px;
 }
 
 .google-plus:hover {
@@ -107,7 +115,11 @@
   text-decoration: none;
   border-bottom-color: #7B0099;
 }
-
+.yahoo-icon{
+  height: 17px;
+  top: 3px;
+  position: relative;
+}
 .yahoo:hover {
   background-color: #7B0099;
 }
