@@ -1,11 +1,15 @@
+.header-container{
+  background-color: #34373c;
+  width: 1440px;
+}
 .header {
   height: 50px;
-  width: 100%;
+  width: 1048px;
   font-size: 15px;
   z-index: 101;
   position: relative;
   top: 0;
-  background-color: #34373c;
+  font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
 }
 
@@ -103,12 +107,12 @@
   border: 1px solid #1bb76e;
   padding: 0;
   color: white;
-  font-family: 'Open Sans', sans-serif;
 }
 .new-post-button {
   background: #1bb76e;
   width: 144px;
   padding-top: 10px;
+  margin-left: 7px;
 }
 .cloud {
   width: 35px;
@@ -139,6 +143,24 @@
 .hidden {
   visibility: hidden;
 }
-.right-nav nav {
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.signup-signin-links {
+  height: 15px;
+  cursor: pointer;
+  margin: 15px;
+}
+.right-nav-link {
+  height: 15px;
+  cursor: pointer;
+  padding: 3px 15px 7px 15px;
+  color: white;
+}
+.search-icon-container {
+
+}
+.search-icon {
 
 }

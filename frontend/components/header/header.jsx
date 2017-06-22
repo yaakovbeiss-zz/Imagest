@@ -22,7 +22,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="header-container">
         <section className="header">
           <div className="left-nav">
             <Link to="/">
@@ -66,7 +66,13 @@ class Header extends React.Component {
             </div>
 
           <div className="right-nav">
+            <div className="search-icon-container">
 
+            </div>
+            <div className="signup-signin-links icon-container">
+              <Link exact to="/signup" className="right-nav-link"> signup </Link>
+              <Link exact to="/login" className="right-nav-link"> signin </Link>
+            </div>
           </div>
         </section>
       </div>
