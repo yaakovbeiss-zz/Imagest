@@ -7,7 +7,7 @@ class ImagesIndex extends React.Component {
 
   render(){
     let images = this.props.images;
-    // debugger
+    
     if (images.length > 0) {
         return (
           <div className="post-index-container">

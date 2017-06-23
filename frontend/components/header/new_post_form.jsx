@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPost } from '../../actions/post_actions';
 
-class NewPostForm extends React.Component {
+class NewPostForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -9,6 +9,7 @@ class NewPostForm extends React.Component {
       imageUrl: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
   handleSubmit(e) {
@@ -18,11 +19,14 @@ class NewPostForm extends React.Component {
   }
 
   updateFile(e) {
+    debugger
+
     let file = e.currentTarget.files[0];
     let fileReader = new FileReader();
-    fileReader.onloadend = function () {
-      this.setState( { imageFile: file, imageUrl: fileReader.result });
-    }.bind(this);
+
+    fileReader.onloadend = () => {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    };
     if (file) {
       fileReader.readAsDataURL(file);
     }
@@ -35,7 +39,7 @@ class NewPostForm extends React.Component {
           <input type="text" ></input>
           <input type="file" onChange={this.updateFile} />
           <img src={this.state.imageUrl} />
-          <button onClick={this.handleSubmit}>Upload Post!</button>
+
         </form>
       </div>
     )

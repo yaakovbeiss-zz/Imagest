@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Modal from '../modal/modal';
 import NewPostForm from './new_post_form';
 
 class Header extends React.Component {
@@ -14,20 +14,17 @@ class Header extends React.Component {
   toggleDrop(e) {
     let id = e.currentTarget.id;
     let dropdown = document.getElementById(`${id}-menu`);
-    // debugger
     if (dropdown.className === `hidden`){
       dropdown.className = ``;
     } else {
       dropdown.className = `hidden`;
     }
-    // debugger
     // $(e.currentTarget).toggleClass('hidden');
   }
 
   closeDropDown(e) {
     let child = e.target.firstElementChild;
     child = $(child);
-    // debugger
     // if (!e.target.id) {
     //   $('.dropdown').toggleClass('hidden', true);
     // }
@@ -36,13 +33,12 @@ class Header extends React.Component {
   render() {
     return (
       <div className="header-container" onClick={this.closeDropDown}>
-        <NewPostForm />
         <section className="header">
           <div className="left-nav">
             <Link to="/">
               <div className="icon-container">
                 <img className="header-buttons imgur-header-icon" src="https://imgur.com/images/access/access-logo.png"/>
-                
+
               </div>
             </Link>
             <div className="header-buttons down-arrow" id="header-buttons-down-arrow" onClick={this.toggleDrop}>

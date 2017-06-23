@@ -18,6 +18,7 @@ import GridListExampleSimple from './posts/grid_list';
 
 const App = () => (
   <div>
+    
       <header>
       </header>
 
@@ -26,10 +27,12 @@ const App = () => (
       <Route exact path="/login" component={SessionFormContainer} />
       <Route exact path="/signup" component={SignUpFormContainer} />
       <Route path="/" component={Header} />
+
     </Switch>
 
-    <PostsIndexContainer />
-
+    <MuiThemeProvider>
+      <PostsIndexContainer />
+    </MuiThemeProvider>
 
   </div>
 );

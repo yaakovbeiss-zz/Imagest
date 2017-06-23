@@ -5,7 +5,7 @@ class PostsIndexItem extends React.Component {
   constructor(props){
     super(props);
     // this.requestImage = this.requestImage.bind(this);
-    // debugger
+
   }
 
   componentDidMount() {
@@ -15,7 +15,7 @@ class PostsIndexItem extends React.Component {
 
 
   render() {
-    debugger
+    
     if (this.props.postId) {
       return (
         <div className="post-index-item">

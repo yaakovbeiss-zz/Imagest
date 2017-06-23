@@ -12,7 +12,7 @@ class Api::PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:main_image)
-    # debugger
+
   end
 
   def show
