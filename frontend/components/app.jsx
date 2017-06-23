@@ -13,19 +13,25 @@ import SignUpFormContainer from './session/sign_up_form_container';
 import Header from './header/header';
 import PostsIndexContainer from './posts/posts_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import GridListExampleSimple from './posts/grid_list';
 
 const App = () => (
   <div>
       <header>
-        <PostsIndexContainer />
       </header>
+
 
     <Switch>
       <Route exact path="/login" component={SessionFormContainer} />
       <Route exact path="/signup" component={SignUpFormContainer} />
       <Route path="/" component={Header} />
-      <Route path="/" component={PostsIndexContainer} />
     </Switch>
+
+    <MuiThemeProvider>
+      <GridListExampleSimple />
+    </MuiThemeProvider>
+    
   </div>
 );
 

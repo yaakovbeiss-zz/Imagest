@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink, Link, withRouter } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import GridList from '../posts/grid_list';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -123,6 +126,9 @@ class SessionForm extends React.Component {
             <button className="submit-button" onClick={this.handleSubmit}>Login</button>
           </div>
         </div>
+        <MuiThemeProvider>
+          <GridList />
+        </MuiThemeProvider>
       </div>
     );
   }
