@@ -3,5 +3,5 @@ json.array! @posts do |post|
   json.id post.id
   json.title post.title
   json.created_at post.created_at
-  json.image_url post.main_image.image
+  json.image_url asset_path(post.main_image.image.url)
 end

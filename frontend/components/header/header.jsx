@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from '../modal/modal';
 
 class Header extends React.Component {
   constructor(props){
@@ -57,6 +58,7 @@ class Header extends React.Component {
               </div>
               </div>
               <div className="header-buttons new-post-button-container">
+                <Modal />
                 <img className="cloud" src={window.images.cloud_icon} />
                 <a className="new-post-button">New post
                 </a>
