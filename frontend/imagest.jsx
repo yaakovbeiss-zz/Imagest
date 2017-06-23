@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import App from './components/app';
+import { createImage, requestImages, requestImage } from './actions/image_actions';
 import { createPost, requestPosts, requestPost } from './actions/post_actions';
 
 
@@ -29,8 +30,9 @@ import { createPost, requestPosts, requestPost } from './actions/post_actions';
     }
 
     window.getState = store.getState;
-    window.createPost = createPost;
-    window.requestPosts = requestPosts;
+    window.createImage = createImage;
+    window.requestImages = requestImages;
+    window.requestImage = requestImage;
     window.requestPost = requestPost;
     window.dispatch = store.dispatch;
 

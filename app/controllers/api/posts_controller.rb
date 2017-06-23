@@ -11,7 +11,8 @@ class Api::PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.includes(:main_image)
+    # debugger
   end
 
   def show

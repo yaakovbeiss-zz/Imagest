@@ -28,10 +28,9 @@ const App = () => (
       <Route path="/" component={Header} />
     </Switch>
 
-    <MuiThemeProvider>
-      <GridListExampleSimple />
-    </MuiThemeProvider>
-    
+    <PostsIndexContainer />
+
+
   </div>
 );
 

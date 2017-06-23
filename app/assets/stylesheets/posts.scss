@@ -1,0 +1,21 @@
+.post-index-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.post-index {
+  width: 958px;
+  height: 2048px;
+  float: left;
+}
+
+.post-index-item {
+  float: left;
+  display: flex;
+  color: white;
+  width: 40px;
+  width: 180px;
+  height: 180px;
+  padding: 2px;
+}

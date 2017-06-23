@@ -19,8 +19,8 @@ export const receivePost = post => ({
 //   errors
 // });
 
-export const requestPost = post => dispatch => (
-  APIUtil.fetchPost(post).then(post => (
+export const requestPost = id => dispatch => (
+  APIUtil.fetchPost(id).then(post => (
     dispatch(receivePost(post))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))

@@ -126,9 +126,7 @@ class SessionForm extends React.Component {
             <button className="submit-button" onClick={this.handleSubmit}>Login</button>
           </div>
         </div>
-        <MuiThemeProvider>
-          <GridList />
-        </MuiThemeProvider>
+
       </div>
     );
   }
