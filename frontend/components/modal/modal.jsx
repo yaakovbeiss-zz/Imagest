@@ -27,32 +27,33 @@ export default class Modal extends React.Component {
   };
 
   render() {
-    const actions = [
-      <FlatButton
-        label="Cancel"
-        primary={true}
-      />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        keyboardFocused={true}
-
-      />,
-    ];
-
-    return (
-      <div>
-        <RaisedButton label="Dialog" />
-        <Dialog
-          title="Dialog With Actions"
-          actions={actions}
-          modal={false}
-          open={this.state.open}
-          onRequestClose={this.handleClose}
-        >
-          The actions in this window were passed in as an array of React objects.
-        </Dialog>
-      </div>
-    );
+  //   const actions = [
+  //     <FlatButton
+  //       label="Cancel"
+  //       primary={true}
+  //     />,
+  //     <FlatButton
+  //       label="Submit"
+  //       primary={true}
+  //       keyboardFocused={true}
+  //
+  //     />,
+  //   ];
+  //
+  //   return (
+  //     <div>
+  //       <RaisedButton label="Dialog" />
+  //       <Dialog
+  //         title="Dialog With Actions"
+  //         actions={actions}
+  //         modal={false}
+  //         open={this.state.open}
+  //         onRequestClose={this.handleClose}
+  //       >
+  //         The actions in this window were passed in as an array of React objects.
+  //       </Dialog>
+  //     </div>
+  //   );
+  
   }
 }

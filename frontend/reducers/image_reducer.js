@@ -19,7 +19,7 @@ const ImageReducer = (state = defaultState, action) => {
       });
     case RECEIVE_IMAGE:
       const image = action.image;
-      debugger
+      
       return merge({}, state, {
         entities: { [image.id]: image },
         currentImage: image.id

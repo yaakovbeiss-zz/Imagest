@@ -13,9 +13,12 @@ export const fetchImages = () => (
 );
 
 export const createImage = ( image ) => {
+
   return $.ajax({
     method: 'POST',
     url: 'api/images/',
-    data: { image }
+    data: image ,
+    contentType: false,
+    processData: false,
   });
 };

@@ -30,6 +30,7 @@ import { createPost, requestPosts, requestPost } from './actions/post_actions';
     }
 
     window.getState = store.getState;
+    window.createPost = createPost;
     window.createImage = createImage;
     window.requestImages = requestImages;
     window.requestImage = requestImage;

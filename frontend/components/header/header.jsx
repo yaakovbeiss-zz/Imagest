@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Modal from '../modal/modal';
-import NewPostForm from './new_post_form';
+import NewPostFormContainer from './new_post_form_container';
+import Modal from './modal';
 
 class Header extends React.Component {
   constructor(props){
@@ -58,11 +58,8 @@ class Header extends React.Component {
                 </div>
               </div>
               </div>
-              <div className="header-buttons new-post-button-container">
-
-                <img className="cloud" src={window.images.cloud_icon} />
-                <a className="new-post-button">New post
-                </a>
+                
+                <Modal className="header-buttons new-post-button-container"/>
                 <div className="down-arrow-new-post" id="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post-menu" className="hidden">
                     <div className='dropdown new-post'>
@@ -74,7 +71,7 @@ class Header extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+
             </div>
 
           <div className="right-nav">

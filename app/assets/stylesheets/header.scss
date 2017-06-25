@@ -1,6 +1,6 @@
 .header-container{
   background-color: #34373c;
-  width: 1440px;
+  width: 100%;
 }
 .header {
   height: 50px;
@@ -16,6 +16,7 @@
 .left-nav nav {
   display: flex;
   justify-content: flex-start;
+  height: inherit;
 }
 .header-buttons {
   float: left;
@@ -25,6 +26,7 @@
   padding: 1px 11px 1px 17px;
   margin-top: 7px;
   background-size: contain;
+  position: relative;
   }
 .imgur-header-icon {
   float: left;
@@ -36,7 +38,6 @@
   background-size: contain;
   }
 .icon-container {
-  display: block;
   float: left;
 }
 .icon-container :hover {
@@ -50,7 +51,7 @@
   width: 29px;
   padding: 9px 0 9px 0;
   cursor: pointer;
-  position: relative;
+  // position: relative;
 }
 .down-arrow:before{
   content: "\2304";
@@ -107,6 +108,9 @@
   border: 1px solid #1bb76e;
   padding: 0;
   color: white;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
 }
 .new-post-button {
   background: #1bb76e;
@@ -122,15 +126,14 @@
 .down-arrow-new-post:before{
   content: "\2304";
   font-size: 31px;
-  display: flex;
-  margin-bottom: 30px;
-  position: relative;
-  right: 5px;
   color: #e4e5e5;
   font-weight: lighter;
+  width: 15px;
+  position: absolute;
+  top: 5px;
+  left: 250px;
 }
 .new-post {
-  position: absolute;
   top: 50px;
   width: 144px;
   left: 140px;
@@ -139,7 +142,6 @@
 }
 .dropdown-item :hover{
   background: #d9d9d9;
-  // display: block;
 }
 .hidden {
   visibility: hidden;
