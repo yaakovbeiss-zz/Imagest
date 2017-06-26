@@ -14,7 +14,7 @@ class PostsIndexItemDetail extends React.Component {
       return (
         <div className="post-index-item-detail">
           {this.props.title}
-
+          <div className="views">album</div>
         </div>
       )
      }

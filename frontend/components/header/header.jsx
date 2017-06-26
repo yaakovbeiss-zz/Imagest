@@ -58,7 +58,7 @@ class Header extends React.Component {
                 </div>
               </div>
               </div>
-                
+
                 <Modal className="header-buttons new-post-button-container"/>
                 <div className="down-arrow-new-post" id="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post-menu" className="hidden">

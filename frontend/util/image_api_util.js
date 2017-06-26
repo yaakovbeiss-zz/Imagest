@@ -12,12 +12,12 @@ export const fetchImages = () => (
   })
 );
 
-export const createImage = ( image ) => {
-
+export const createImage = ( props ) => {
+debugger
   return $.ajax({
     method: 'POST',
     url: 'api/images/',
-    data: image ,
+    data: props ,
     contentType: false,
     processData: false,
   });

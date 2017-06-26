@@ -24,6 +24,10 @@
   border: 2px solid #444442;
   margin: 4px 2px;
 }
+.upvote-arrow .downvote-arrow{
+  position: relative;
+  display: none;
+}
 
 .post-index-item img{
   width: 100%;
@@ -35,6 +39,11 @@
 .post-index-item-detail {
   position: relative;
   display: none;
+}
+.views {
+  padding: 5px 0 5px 0;
+  display: block;
+  background-color: #34373c;
 }
 .post-index-item:hover > .post-index-item-detail {
   padding: 15px;

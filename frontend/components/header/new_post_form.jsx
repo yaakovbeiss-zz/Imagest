@@ -8,7 +8,7 @@ class NewPostForm extends React.Component{
       post: {
         title: 'new post',
         description: 'posted with new form',
-        account_id: 65,
+        account_id: 115,
       },
       image: {
         post_id: 63,
@@ -30,8 +30,14 @@ class NewPostForm extends React.Component{
     formData.append("image[post_id]", this.state.image.post_id);
     formData.append("image[title]", this.state.image.title);
 
-    this.props.createPost(post);
-    this.props.createImage(formData);
+    this.props.createPost(post).then(
+      (post) => {
+        debugger
+        formData.append('image[post_id]', post.post.id)
+        return(this.props.createImage(formData))
+      }
+    );
+    ;
   }
 
   update(field) {
