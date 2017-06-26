@@ -3,9 +3,12 @@ import PostsIndex from './posts_index'
 import { requestPosts } from '../../actions/post_actions';
 import { selectAllPosts } from '../../reducers/selectors'
 
-const mapStateToProps = state => ({
-  posts: selectAllPosts(state),
-});
+const mapStateToProps = state => {
+  
+  return {
+    posts: selectAllPosts(state),
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
   requestPosts: () => dispatch(requestPosts())

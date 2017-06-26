@@ -32,7 +32,7 @@ class NewPostForm extends React.Component{
 
     this.props.createPost(post).then(
       (post) => {
-        debugger
+
         formData.append('image[post_id]', post.post.id)
         return(this.props.createImage(formData))
       }

@@ -40,11 +40,6 @@
   position: relative;
   display: none;
 }
-.views {
-  padding: 5px 0 5px 0;
-  display: block;
-  background-color: #34373c;
-}
 .post-index-item:hover > .post-index-item-detail {
   padding: 15px;
   font-family: 'Open sans', sans-serif;
@@ -56,4 +51,10 @@
   font-weight: lighter;
   font-size: 14px;
   right: 23px;
+}
+
+.views {
+  padding: 5px 0 5px 0;
+  display: block;
+  background-color: #34373c;
 }

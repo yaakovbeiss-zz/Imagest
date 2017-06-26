@@ -7,13 +7,13 @@ import NewPostFormContainer from '../header/new_post_form_container';
 class PostsIndex extends React.Component{
   constructor(props){
     super(props);
-    this.requestPosts = this.props.requestPosts.bind(this);
   }
 
   componentDidMount(){
-    this.requestPosts();
+    this.props.requestPosts();
   }
   render(){
+    
     let posts = this.props.posts;
 
     if (posts.length > 0) {

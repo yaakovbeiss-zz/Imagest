@@ -7,7 +7,7 @@
     if @image.save
       render :show
     else
-      debugger
+      
       render json: @image.errors.full_messages, status: 422
     end
 

@@ -9,7 +9,7 @@ class PostsIndexItemDetail extends React.Component {
   }
 
   render() {
-    debugger
+    
     {
       return (
         <div className="post-index-item-detail">

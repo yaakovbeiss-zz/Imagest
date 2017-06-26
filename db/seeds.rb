@@ -19,6 +19,6 @@ Image.delete_all
 
 25.times do
   a = Account.create!({username: Faker::Name.name, password: 'password'})
-  b = Post.create!({title: Faker::ChuckNorris.fact, account_id: a.id})
+  b = Post.create!({title: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact, account_id: a.id})
   c = Image.create!({title: Faker::Friends.quote, post_id: b.id, image: Faker::LoremPixel.image })
 end

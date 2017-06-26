@@ -11,6 +11,7 @@ const defaultState = Object.freeze({
 });
 
 const PostReducer = (state = defaultState, action) => {
+  
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_POSTS:

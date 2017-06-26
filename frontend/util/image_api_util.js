@@ -13,7 +13,7 @@ export const fetchImages = () => (
 );
 
 export const createImage = ( props ) => {
-debugger
+
   return $.ajax({
     method: 'POST',
     url: 'api/images/',

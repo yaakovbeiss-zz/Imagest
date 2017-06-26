@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NewPostFormContainer from './new_post_form_container';
 import Modal from './modal';
+import GreetingContainer from './greeting_container';
 
 class Header extends React.Component {
   constructor(props){
@@ -59,7 +60,7 @@ class Header extends React.Component {
               </div>
               </div>
 
-                <Modal className="header-buttons new-post-button-container"/>
+                <Modal className="header-buttons new-post-button-container modal"/>
                 <div className="down-arrow-new-post" id="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post-menu" className="hidden">
                     <div className='dropdown new-post'>
@@ -83,11 +84,9 @@ class Header extends React.Component {
                   <input className="search-bar"></input>
                   <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
                 </div>
+                <GreetingContainer />
             </div>
-            <div className="signup-signin-links icon-container">
-              <Link to="/login" className="right-nav-link"> sign in </Link>
-              <Link to="/signup" className="right-nav-link"> sign up </Link>
-            </div>
+
           </div>
         </section>
       </div>

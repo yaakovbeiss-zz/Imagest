@@ -7,14 +7,14 @@ class ImageItem extends React.Component {
 
 
   render() {
-    debugger
-    if (this.props.title) {
 
+    if (this.props.title) {
       return (
         <div>
-          {this.props.title}
-          <img src={this.props.url}></img>
-          {this.props.description}
+          <div className="image-item-container">
+            <img src={this.props.url} className="image-item"></img>
+            {this.props.description}
+          </div>
         </div>
       )
     }

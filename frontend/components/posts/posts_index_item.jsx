@@ -15,8 +15,8 @@ class PostsIndexItem extends React.Component {
         <div className="post-index-item">
           <Link to={`/posts/${this.props.postId}`} >
             <img src={this.props.imageUrl}></img>
-            <PostsIndexItemDetail title={this.props.title} />
           </Link>
+            <PostsIndexItemDetail title={this.props.title} />
         </div>
       )
     } else { return null }

@@ -47,7 +47,7 @@ export default class Modal extends React.Component {
       <div className="modal">
         <button  onClick={this.handleOpen} className="header-buttons new-post-button-container ">
         <img className="cloud" src={window.images.cloud_icon} />
-        New Post</button>
+        <div className="new-post-text">New Post</div></button>
 
 
         <Dialog
