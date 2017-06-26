@@ -2,6 +2,7 @@ class Post < ActiveRecord::Base
 
   validates :title, :account, presence: true
 
+
   belongs_to :account
   has_many :images
   has_many :comments
@@ -11,5 +12,5 @@ class Post < ActiveRecord::Base
     class_name: 'Image',
     foreign_key: :post_id
 
-  
+
 end

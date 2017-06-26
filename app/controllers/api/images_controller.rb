@@ -4,7 +4,6 @@
   def create
 
     @image = Image.new(image_params)
-    debugger
     if @image.save
       render :show
     else

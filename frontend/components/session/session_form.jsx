@@ -13,11 +13,9 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    debugger
   }
 
-  componentWillMount() {
-    // this.props.errors = [];
-  }
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
@@ -37,10 +35,12 @@ class SessionForm extends React.Component {
   }
 
   demoLogin() {
+    debugger
     this.props.login({ account: {
       username: "yaakovbeiss",
       password: "password"
     }});
+    debugger
     this.props.history.push('/');
   }
 
