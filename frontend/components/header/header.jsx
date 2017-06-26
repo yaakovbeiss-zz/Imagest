@@ -23,17 +23,17 @@ class Header extends React.Component {
     // $(e.currentTarget).toggleClass('hidden');
   }
 
-  closeDropDown(e) {
-    let child = e.target.firstElementChild;
-    child = $(child);
-    // if (!e.target.id) {
-    //   $('.dropdown').toggleClass('hidden', true);
-    // }
-  }
+  // closeDropDown(e) {
+  //   let child = e.target.firstElementChild;
+  //   child = $(child);
+  //   // if (!e.target.id) {
+  //   //   $('.dropdown').toggleClass('hidden', true);
+  //   // }
+  // }
 
   render() {
     return (
-      <div className="header-container" onClick={this.closeDropDown}>
+      <div className="header-container">
         <section className="header">
           <div className="left-nav">
             <Link to="/">
@@ -80,9 +80,11 @@ class Header extends React.Component {
               <div className="icon-container">
                 <img className="search-icon" id="search-icon" onClick={this.toggleDrop} src={window.images.search_icon}/>
               </div>
-                <div id="search-icon-menu" className="dropdown hidden">
-                  <input className="search-bar"></input>
-                  <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+                <div id="search-icon-menu" className="hidden">
+                  <div className="dropdown">
+                    <input className="search-bar"></input>
+                    <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+                  </div>
                 </div>
                 <GreetingContainer />
             </div>
