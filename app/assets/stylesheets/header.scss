@@ -197,7 +197,7 @@
   height: 48px;
   border-bottom: 3px solid #1bb76e;
   color: white;
-  position: absolute;
+  position: relative;;
 }
 .search-bar-addition {
   border-bottom: none;
@@ -205,5 +205,5 @@
   color: white;
   font-weight: lighter;
   font-size: 9px;
-
+  position: absolute;
 }

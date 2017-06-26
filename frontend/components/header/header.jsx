@@ -76,16 +76,14 @@ class Header extends React.Component {
             </div>
 
           <div className="right-nav">
+            <div id="search-icon-menu" className="hidden">
+              <input className="search-bar"></input>
+              <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+              </div>
             <div className="search-icon-container" >
               <div className="icon-container">
                 <img className="search-icon" id="search-icon" onClick={this.toggleDrop} src={window.images.search_icon}/>
               </div>
-                <div id="search-icon-menu" className="hidden">
-                  <div className="dropdown">
-                    <input className="search-bar"></input>
-                    <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
-                  </div>
-                </div>
                 <GreetingContainer />
             </div>
 
