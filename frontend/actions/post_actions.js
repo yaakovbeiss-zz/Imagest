@@ -9,10 +9,13 @@ export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
   posts
 });
-export const receivePost = post => ({
-  type: RECEIVE_POST,
-  post
-});
+export const receivePost = post => {
+
+  return {
+    type: RECEIVE_POST,
+    post
+  }
+};
 
 // export const receiveErrors = errors => ({
 //   type: RECEIVE_ERRORS,

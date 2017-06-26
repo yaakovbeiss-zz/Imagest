@@ -1,8 +1,6 @@
 import React from 'react';
-import {values} from 'lodash';
-import PostsIndexItem from './posts_index_item';
 
-class PostsIndex extends React.Component{
+class PostsShowList extends React.Component{
   constructor(props){
     super(props);
   }
@@ -32,4 +30,4 @@ class PostsIndex extends React.Component{
     }
   }
 
-export default PostsIndex;
+export default PostsShowList;
