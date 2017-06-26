@@ -60,6 +60,7 @@
   background-color: #000000;
   width: 650px;
   justify-content: center;
+  border-bottom: 20px solid #2c2f34;
 }
 .image-item {
   display: flex;
@@ -70,11 +71,44 @@
   display: flex;
   background-color: #2c2f34;
   height: 80px;
-  align-items: center;
   color: white;
   padding: 5px 20px;
-  font-size: 18px;
-  border-radius: 3px 3px 0 0;
+  font-size: 14px;
+  border-radius: 0 0 3px 3px;
+  width: 94%;
+  flex-direction: column;
+}
+.post-actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+.post-actions-left{
+  display: flex;
+  justify-content: flex-start;
+}
+.post-actions-right{
+  display: flex;
+  justify-content: flex-end;
+}
+.post-actions-action{
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 25px 0 0;
+}
+.post-actions-social{
+  display: flex;
+  justify-content: flex-end;
+  width: 30px;
+  height: 30px;
+  padding: 0 8px 0 8px;
+}
+.last-menu{
+  height: 20px;
+  width: 20px;
 }
 .right-post-pad{
   display: flex;

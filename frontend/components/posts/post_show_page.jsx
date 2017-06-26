@@ -15,7 +15,7 @@ class PostShowPage extends React.Component {
   }
 
   render() {
-    debugger
+
     if (this.props.post) {
       const images = this.props.post.images;
       return (
@@ -34,7 +34,21 @@ class PostShowPage extends React.Component {
             {images.map( (image) => <ImageItem title={image.title} description={image.description}
               url={image.url} />)}
               <div className="post-description">
-                
+                <div className="post-actions-container">
+                  <div className="post-actions-left">
+                    <img src={window.images.upvote_icon} className="post-actions-action" ></img>
+                    <img src={window.images.downvote_icon} className="post-actions-action"></img>
+                    <img src={window.images.heart_icon} className="post-actions-action"></img>
+                  </div>
+                  <div className="post-actions-right">
+                    <img src={window.images.facebook_action} className="post-actions-social" ></img>
+                    <img src={window.images.twitter_action} className="post-actions-social"></img>
+                    <img src={window.images.pinterest_action} className="post-actions-social"></img>
+                    <img src={window.images.reddit_action} className="post-actions-social"></img>
+                    <img src={window.images.menu_action} className="post-actions-social last-menu"></img>
+                  </div>
+                </div>
+                {this.props.post.description}
               </div>
             </div>
             <div className="right-post-pad">

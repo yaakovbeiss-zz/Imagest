@@ -13,7 +13,7 @@ class ImageItem extends React.Component {
         <div>
           <div className="image-item-container">
             <img src={this.props.url} className="image-item"></img>
-            {this.props.description}
+            
           </div>
         </div>
       )

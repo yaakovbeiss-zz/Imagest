@@ -21,4 +21,5 @@ Image.delete_all
   a = Account.create!({username: Faker::Name.name, password: 'password'})
   b = Post.create!({title: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact, account_id: a.id})
   c = Image.create!({title: Faker::Friends.quote, post_id: b.id, image: Faker::LoremPixel.image })
+  c = Image.create!({title: Faker::Friends.quote, post_id: b.id, image: Faker::LoremPixel.image, main_image: false })
 end
