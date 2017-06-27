@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageItem from './image_item';
-import PostsIndexContainer from './posts_index_container';
 import PostShowListContainer from './post_show_list_container';
+import CommentsIndex from '../comments/comments_index';
 
 class PostShowPage extends React.Component {
   constructor(props){
@@ -63,6 +63,7 @@ class PostShowPage extends React.Component {
                 </div>
                 {this.props.post.description}
               </div>
+              <CommentsIndex comments={this.props.post.comments}/>
             </div>
             <div className="right-post-pad">
               <PostShowListContainer />

@@ -24,9 +24,8 @@ column name       | data type | details
 id                | integer   | not null, primary key
 body              | string    | not null
 points            | integer   | not null, default: 0
-parent_id         | integer   |
 commenter_id      | integer   | not null, foreign key (references accounts), indexed
-commentable_id    | string    | not null, foreign key (references commentables), indexed
+commentable_id    | id        | not null, foreign key (references commentables), indexed
 commentable_type  | string    | not null
 
 

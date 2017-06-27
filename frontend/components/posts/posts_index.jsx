@@ -1,5 +1,4 @@
 import React from 'react';
-import {values} from 'lodash';
 import PostsIndexItem from './posts_index_item';
 
 class PostsIndex extends React.Component{

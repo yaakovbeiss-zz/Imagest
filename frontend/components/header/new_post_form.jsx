@@ -6,12 +6,12 @@ class NewPostForm extends React.Component{
     super(props);
     this.state = {
       post: {
-        title: 'new post',
-        description: 'posted with new form',
-        account_id: 115,
+        title: '',
+        description: '',
+        account_id: 171,
       },
       image: {
-        post_id: 63,
+        post_id: 255,
         title: 'posted with new post form',
         image: null,
       },
@@ -40,10 +40,10 @@ class NewPostForm extends React.Component{
     ;
   }
 
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+  update(key, field) {
+    return e => this.setState({ [key]: {
+      [field]: e.currentTarget.value }
+     });
   }
 
   updateFile(e) {
@@ -53,7 +53,7 @@ class NewPostForm extends React.Component{
 
     fileReader.onloadend = () => {
       this.setState( { imageUrl: fileReader.result } );
-      this.setState({ image: { image: file, post_id: 163, title: 'new post form title' } } );
+      this.setState({ image: { image: file, post_id: 255, title: 'new post form title' } } );
     };
     if (file) {
       fileReader.readAsDataURL(file);
@@ -67,7 +67,8 @@ class NewPostForm extends React.Component{
       <div>
         <form className="new-post-form">New Post Form
           <div>
-            <input type="text" ></input>
+            <input type="text" onChange={this.update('post','title')} value={this.state.post.title}></input>
+            <input type="text" onChange={this.update('post','description')} value={this.state.post.description}></input>
             <input type="file" onChange={this.updateFile} />
             <img src={this.state.imageUrl} />
             <button onClick={this.handleSubmit}> Submit Post</button>

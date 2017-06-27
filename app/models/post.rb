@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :account
   has_many :images
-  has_many :comments
+  has_many :comments, as: :commentable, dependent: :destroy
 
   has_one :main_image,
   -> { where main_image: true },
