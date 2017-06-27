@@ -144,6 +144,9 @@
   height: 80px;
   width: 80px;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 .sidebar-item-title {
   display: -webkit-box;
   height: 58px;
