@@ -3,6 +3,8 @@ class Comment < ActiveRecord::Base
 
   belongs_to :commentable, polymorphic: true
 
-  has_many :child_comments, as: :commentable, dependent: :destroy
+  has_many :child_comments,
+   class_name: :Comment,
+   as: :commentable, dependent: :destroy
 
 end

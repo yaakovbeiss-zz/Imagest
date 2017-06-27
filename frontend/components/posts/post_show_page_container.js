@@ -2,9 +2,13 @@ import { connect } from 'react-redux';
 import PostShowPage from './post_show_page';
 import { requestPost } from '../../actions/post_actions';
 
-const mapStateToProps = ({ post }, ownProps ) => ({
-  post: post.entities[post.currentPost],
-});
+const mapStateToProps = ({ post, comment }, ownProps ) => {
+
+  return {
+    post: post.entities[post.currentPost],
+    comment: comment.entities
+  }
+};
 
 
 const mapDispatchToProps = dispatch => ({

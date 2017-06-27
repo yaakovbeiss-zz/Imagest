@@ -9,11 +9,11 @@ export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
   posts
 });
-export const receivePost = post => {
+export const receivePost = payload => {
 
   return {
     type: RECEIVE_POST,
-    post
+    payload
   }
 };
 

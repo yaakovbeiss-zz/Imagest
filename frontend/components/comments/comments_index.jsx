@@ -8,7 +8,7 @@ class CommentsIndex extends React.Component{
   }
 
   render(){
-
+    
     let comments = this.props.comments;
 
     if (comments.length > 0) {
@@ -18,7 +18,7 @@ class CommentsIndex extends React.Component{
               <ul>
 
                 {comments.map( (comment) => <CommentsIndexItem key={comment.id} body={comment.body}
-                  commentId={comment.id} /> )}
+                  commentId={comment.id} points={comment.points} commenterId={comment.commenter_id}/> )}
              </ul>
             </div>
           </div>

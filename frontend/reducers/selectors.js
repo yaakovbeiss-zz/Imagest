@@ -6,6 +6,14 @@ export const selectAllPosts = ({ post }) => {
   });
   return posts;
 }
+
+export const selectAllComments = ({ comment }) => {
+  const comments = Object.keys(comment.entities).map( id => {
+    return comment.entities[id];
+  });
+  return comments;
+}
+
 export const selectAllImages = ({ image }) => {
   if (values(image.entities).length > 0) {
     return image.entities

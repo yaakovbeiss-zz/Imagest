@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageItem from './image_item';
 import PostShowListContainer from './post_show_list_container';
-import CommentsIndex from '../comments/comments_index';
+import CommentsIndexContainer from '../comments/comments_index_container';
+import NewCommentFormContainer from '../comments/new_comment_form_container';
 
 class PostShowPage extends React.Component {
   constructor(props){
@@ -25,7 +26,7 @@ class PostShowPage extends React.Component {
   }
 
   render() {
-
+    
 
     if (this.props.post) {
       const images = this.props.post.images;
@@ -63,7 +64,8 @@ class PostShowPage extends React.Component {
                 </div>
                 {this.props.post.description}
               </div>
-              <CommentsIndex comments={this.props.post.comments}/>
+              <NewCommentFormContainer commentableId={this.props.post.id} commentableType="Post" />
+              <CommentsIndexContainer />
             </div>
             <div className="right-post-pad">
               <PostShowListContainer />
