@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PostsShowList from './posts_show_list';
+import PostShowList from './post_show_list';
 import { requestPosts } from '../../actions/post_actions';
 import { selectAllPosts } from '../../reducers/selectors'
 
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PostsShowList)
+)(PostShowList)

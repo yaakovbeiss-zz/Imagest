@@ -1,6 +1,7 @@
 import React from 'react';
+import PostShowListItem from './post_show_list_item';
 
-class PostsShowList extends React.Component{
+class PostShowList extends React.Component{
   constructor(props){
     super(props);
   }
@@ -14,11 +15,11 @@ class PostsShowList extends React.Component{
 
     if (posts.length > 0) {
         return (
-          <div className="post-index-container">
-            <div className="post-index">
+          <div className="sidebar-list-container">
+            <div className="sidebar-list">
               <ul>
 
-                {posts.map( (post) => <PostsIndexItem key={post.id} title={post.title}
+                {posts.map( (post) => <PostShowListItem key={post.id} title={post.title}
                   imageUrl={post.image} postId={post.id} /> )}
              </ul>
             </div>
@@ -30,4 +31,4 @@ class PostsShowList extends React.Component{
     }
   }
 
-export default PostsShowList;
+export default PostShowList;
