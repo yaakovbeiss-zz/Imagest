@@ -4,7 +4,7 @@ import { selectAllComments } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-  comments: selectAllComments(state, ownProps.commentIds) 
+  comments: selectAllComments(state, ownProps.commentIds)
   }
 };
 

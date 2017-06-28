@@ -6,11 +6,31 @@ import CommentsIndexContainer from './comments_index_container';
 class CommentsIndexItem extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      hidden: true,
+      hidechild: true,
+    }
+    this.toggle = this.toggle.bind(this);
+    this.toggleChild = this.toggleChild.bind(this);
+  }
 
+  toggle(){
+    this.setState({ hidden: !this.state.hidden })
+  }
+  toggleChild(){
+    this.setState({ hidechild: !this.state.hidechild })
+  }
+  form(){
+    return this.state.hidden ? <div></div> :
+    <NewCommentReplyFormContainer commentableId={this.props.commentId}
+      commentableType='Comment' />
+  }
+  childComments(){
+      return this.state.hidechild ? <div></div> :
+      <CommentsIndexContainer commentIds={this.props.commentIds} />
   }
 
   render() {
-
     if (this.props.commentId) {
       return (
         <div>
@@ -22,14 +42,14 @@ class CommentsIndexItem extends React.Component {
               </div>
               <div  className="comment-body">
                 {this.props.body}
+                <button onClick={this.toggle} className="reply-button">reply</button>
               </div>
               <div className="comment-gradient-wrapper"></div>
-
             </div>
           </div>
-          <CommentsIndexContainer commentIds={this.props.commentIds} />
-          <NewCommentReplyFormContainer commentableId={this.props.commentId}
-            commentableType='Comment' />
+          <button className="replies-button" onClick={this.toggleChild}>{this.props.commentIds.length} Replies</button>
+          {this.childComments()}
+          {this.form()}
         </div>
       )
     } else { return null }

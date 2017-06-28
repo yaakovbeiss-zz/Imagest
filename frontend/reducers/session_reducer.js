@@ -12,11 +12,9 @@ const nullUser = Object.freeze({
 
 const SessionReducer = (state = nullUser, action) => {
   Object.freeze(state);
-
   switch(action.type) {
     case RECEIVE_CURRENT_ACCOUNT:
       const currentaccount = action.currentaccount;
-      debugger
       return Object.assign({}, nullUser, {
         currentaccount: currentaccount
       });

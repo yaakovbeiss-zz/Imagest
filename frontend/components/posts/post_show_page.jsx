@@ -10,6 +10,7 @@ class PostShowPage extends React.Component {
     super(props);
     this.prevPost = this.prevPost.bind(this);
     this.nextPost = this.nextPost.bind(this);
+    this.commentsCount = this.commentsCount.bind(this);
   }
 
   componentDidMount() {
@@ -32,6 +33,11 @@ class PostShowPage extends React.Component {
   nextPost(){
     const id = parseInt(this.props.match.params.postId) + 1;
     this.props.history.push(`/posts/${id}`);
+  }
+  commentsCount(){
+    if(this.props.comment){
+      return <div>{Object.keys(this.props.comment).length}</div>
+    }
   }
 
   render() {
@@ -74,8 +80,15 @@ class PostShowPage extends React.Component {
                 </div>
                 {this.props.post.description}
               </div>
+              <div className="comments-info">
+                <div className="comments-count">{this.commentsCount()} COMMENTS</div>
+                <div className="comments-info-right">
+                  <div className="best-comments">Best</div>
+                  <div className="expand-comments">Expand All</div>
+                </div>
+              </div>
               <NewCommentFormContainer commentableId={this.props.post.id} commentableType="Post" />
-              <CommentsIndexContainer  commentIds={this.props.post.comment_ids}/>
+              <CommentsIndexContainer  commentIds={this.props.post.comment_ids} />
             </div>
             <div className="right-post-pad">
               <PostShowListContainer />

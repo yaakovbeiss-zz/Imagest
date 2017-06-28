@@ -1,5 +1,6 @@
 .comment-index-container{
   width: 728px;
+  width: inherit;
   position: relative;
 }
 
@@ -16,6 +17,7 @@
   border-radius: 4px;
   cursor: text;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .comment-input{
   display: block;
@@ -33,9 +35,6 @@
   font-weight: bolder;
   margin-bottom: 10px;
 }
-// .comment-input ::-webkit-input-placeholder {
-//   color: white;
-// }
 .comment-details-container{
   height: 36px;
   font-size: 12px;
@@ -69,12 +68,18 @@
 }
 .comments-info{
   width: inherit;
-  margin: 20px 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   color: #6c6c6c;
   font-size: 14px;
   font-weight: 600;
+}
+.comments-count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95px;
 }
 .comments-info-right{
   width: 85%;
@@ -88,6 +93,7 @@
   float: right;
 }
 .comment-index-item{
+  width: inherit;
   display: flex;
   background: #2c2f34;
   margin-bottom: 24px;
@@ -98,6 +104,7 @@
   border-radius: 6px 6px 6px 0;
 }
 .comment-body-container{
+  width: inherit;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -123,4 +130,32 @@
   left: -16px;
   display: block;
   width: 728px;
+}
+.comment-body{
+  display: flex;
+  width: 700px;
+  height: 36px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reply-button{
+  display: none;
+  position: relative;
+  outline: none;
+}
+.replies-button{
+  background: none;
+  color: white;
+  border: none;
+}
+.comment-index-item:hover .reply-button{
+  font-family: 'Open sans', sans-serif;
+  display: flex;
+  border: 2px solid #34373c;
+  border-radius: 5px;
+  background-color: #595a5b;
+  font-size: 14px;
+  color: #a8a8a2;
+  font-weight: bold;
+  height: inherit;
 }

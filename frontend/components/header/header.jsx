@@ -10,8 +10,6 @@ class Header extends React.Component {
 
   }
 
-
-
   toggleDrop(e) {
     let id = e.currentTarget.id;
     let dropdown = document.getElementById(`${id}-menu`);
@@ -20,7 +18,6 @@ class Header extends React.Component {
     } else {
       dropdown.className = `hidden`;
     }
-    // $(e.currentTarget).toggleClass('hidden');
   }
 
   // closeDropDown(e) {
