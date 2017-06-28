@@ -5,7 +5,7 @@ import { selectAllComments } from '../../reducers/selectors';
 const mapStateToProps = state => {
 
   return {
-  comments: selectAllComments(state)
+  comments: selectAllComments(state) || []
   }
 };
 

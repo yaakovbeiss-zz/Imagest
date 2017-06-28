@@ -16,7 +16,8 @@ class NewCommentForm extends React.Component{
     const comment = { body: this.state.body,
       commenter_id: this.state.commenter_id,
       commentable_id: this.props.commentableId,
-      commentable_type: this.props.commentableType
+      commentable_type: this.props.commentableType,
+      post_id: this.props.currentPost,
     };
     this.props.createComment(comment);
   }

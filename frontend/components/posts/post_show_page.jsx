@@ -9,6 +9,7 @@ class PostShowPage extends React.Component {
   constructor(props){
     super(props);
     this.prevPost = this.prevPost.bind(this);
+    this.nextPost = this.nextPost.bind(this);
   }
 
   componentDidMount() {
@@ -26,12 +27,12 @@ class PostShowPage extends React.Component {
   }
 
   prevPost(){
-    
+
     const id = this.props.match.params.postId - 1;
     this.props.history.push(`/posts/${id}`);
   }
   nextPost(){
-    const id = this.props.match.params.postId + 1;
+    const id = parseInt(this.props.match.params.postId) + 1;
     this.props.history.push(`/posts/${id}`);
   }
 
@@ -57,8 +58,7 @@ class PostShowPage extends React.Component {
                   </div>
                 </div>
               </div>
-            {images.map( (image) => <ImageItem key={image.id} title={image.title} description={image.description}
-              url={image.url} />)}
+            {images.map( (image) => <ImageItem key={image.id} url={image.url} id={image.id}/>)}
               <div className="post-description">
                 <div className="post-actions-container">
                   <div className="post-actions-left">

@@ -27,7 +27,6 @@ class NewPostForm extends React.Component{
         formData.append('image[post_id]', post.payload.post.id)
         return(this.props.createImage(formData).then(
           response => {
-            debugger
             if (response.image.id) {
               this.props.history.push(`/posts/${response.image.post_id}`);
             }

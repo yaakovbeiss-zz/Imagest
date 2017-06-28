@@ -8,7 +8,6 @@ export const selectAllPosts = ({ post }) => {
 }
 
 export const selectAllComments = ({ comment }) => {
-  debugger
   if(!_.isEmpty(comment.entities)){
     const comments = Object.keys(comment.entities).map( id => {
       return comment.entities[id];

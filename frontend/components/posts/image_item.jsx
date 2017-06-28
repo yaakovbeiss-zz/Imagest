@@ -8,12 +8,12 @@ class ImageItem extends React.Component {
 
   render() {
 
-    if (this.props.title) {
+    if (this.props.id) {
       return (
         <div>
           <div className="image-item-container">
             <img src={this.props.url} className="image-item"></img>
-            
+
           </div>
         </div>
       )
