@@ -1,6 +1,5 @@
 .comment-index-container{
   width: 728px;
-  margin-top: 20px;
   position: relative;
 }
 
@@ -91,7 +90,7 @@
 .comment-index-item{
   display: flex;
   background: #2c2f34;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   color: white;
   font-size: 14px;
   font-weight: normal;
@@ -101,6 +100,7 @@
 .comment-body-container{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .comment-item-info{
   display: flex;
@@ -112,4 +112,15 @@
   font-weight: bold;
   color: #bbb;
   height: auto;
+}
+.comment-gradient-wrapper{
+  transform: rotateX(-45deg);
+  -webkit-transform-origin-x: rotate(45deg);
+  height: 21px;
+  background: linear-gradient(to top,#141518,#282a2e);
+  position: absolute;
+  bottom: -29px;
+  left: -16px;
+  display: block;
+  width: 728px;
 }

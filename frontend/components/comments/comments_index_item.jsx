@@ -21,6 +21,8 @@ class CommentsIndexItem extends React.Component {
             <div  className="comment-body">
               {this.props.body}
             </div>
+            <div className="comment-gradient-wrapper"></div>
+
           </div>
 
         </div>
