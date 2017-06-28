@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
 
-  validates :post_id, :title, presence: true
+  validates :post_id, presence: true
   belongs_to :post
 
   has_attached_file :image, default_url: "/assets/themummy.jpg"

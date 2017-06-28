@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   def login(account)
-    @current_user = account
     session[:session_token] = account.reset_session_token
+    @current_user = account
   end
 
   def logout

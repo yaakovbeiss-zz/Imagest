@@ -1,2 +1,1 @@
-json.extract! @account, :username
-# json.partial! "account", account: @account
+json.partial! "api/accounts/account", account: @account

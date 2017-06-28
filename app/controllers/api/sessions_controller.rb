@@ -22,7 +22,7 @@ class Api::SessionsController < ApplicationController
 		@account = current_user
 		if @account
 			logout
-			render "api/accounts/"
+			render "api/accounts/show"
 		else
 			render(
         json: ["Nobody signed in"],

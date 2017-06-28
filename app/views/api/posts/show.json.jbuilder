@@ -10,11 +10,9 @@ json.post do
 end
 
 json.comments do
-  @post.comments.map do |comment|
+  @post.all_comments.map do |comment|
     json.set! comment.id do
       json.partial! 'api/comments/show', comment: comment
-      # comment
-      # json.comment_ids comment.child_comments.map { |child_comment| child_comment.id }
     end
   end
 end

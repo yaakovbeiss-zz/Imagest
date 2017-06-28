@@ -43,6 +43,18 @@
   }
 .icon-container {
   float: left;
+  align-items: center;
+}
+.signout{
+  float: right;
+  margin-left: 10px;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  background: transparent;
+  color: white;
+  height: 30px;
+  padding-bottom: 5px;
 }
 .icon-container :hover {
   border-radius: 19px;
@@ -169,6 +181,7 @@
   cursor: pointer;
   margin: 15px;
   margin-left: 0;
+  color: white;
 }
 .right-nav-link {
   height: 15px;

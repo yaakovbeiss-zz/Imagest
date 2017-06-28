@@ -21,10 +21,10 @@ import { createPost, requestPosts, requestPost } from './actions/post_actions';
 
   document.addEventListener('DOMContentLoaded', () => {
     let store;
-    if (window.currentUser) {
-      
-      const preloadedState = { session: { currentaccount: window.currentUser } };
+    if (window.currentaccount) {
+      const preloadedState = { session: { currentaccount: window.currentaccount } };
       store = configureStore(preloadedState);
+
       delete window.currentaccount;
     } else {
       store = configureStore();

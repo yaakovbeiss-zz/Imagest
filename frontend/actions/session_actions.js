@@ -1,6 +1,6 @@
 import * as APIUtil from '../util/session_api_util';
 
-export const RECEIVE_CURRENT_ACCOUNT = 'RECEIVE_CURRENT_account';
+export const RECEIVE_CURRENT_ACCOUNT = 'RECEIVE_CURRENT_ACCOUNT';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveCurrentaccount = currentaccount => ({

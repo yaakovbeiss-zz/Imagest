@@ -9,10 +9,11 @@ class Greeting extends React.Component{
 
   render(){
 
-    if (this.props.currentAccount) {
+    if (this.props.currentaccount) {
     return (
       <div className="signup-signin-links icon-container">
-        {this.props.currentAccount.username}
+        <button className="icon-container signout" onClick={this.props.logout}>logout</button>
+        {this.props.currentaccount.username}
       </div>
     )
   } else {

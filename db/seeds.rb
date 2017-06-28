@@ -11,7 +11,7 @@ Account.destroy_all
 Post.destroy_all
 Image.delete_all
 #
-# guest = Account.create!({username: 'yaakovbeiss', password: 'password'})
+guest = Account.create!({username: 'guest', password: 'password'})
 #
 # post = Post.create!({title: 'seeded post', account_id: guest.id})
 #
@@ -22,4 +22,6 @@ Image.delete_all
   b = Post.create!({title: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact, account_id: a.id})
   c = Image.create!({title: Faker::Friends.quote, post_id: b.id, image: Faker::LoremPixel.image })
   c = Image.create!({title: Faker::Friends.quote, post_id: b.id, image: Faker::LoremPixel.image, main_image: false })
+  d = Comment.create!({body: Faker::Friends.quote, post_id: b.id, commenter_id: a.id, commentable_id: b.id, commentable_type: 'Post'})
+  d = Comment.create!({body: Faker::Friends.quote, post_id: b.id, commenter_id: a.id, commentable_id: d.id, commentable_type: 'Comment'})
 end

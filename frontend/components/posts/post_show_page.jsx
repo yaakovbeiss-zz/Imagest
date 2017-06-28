@@ -8,6 +8,7 @@ import NewCommentFormContainer from '../comments/new_comment_form_container';
 class PostShowPage extends React.Component {
   constructor(props){
     super(props);
+    this.prevPost = this.prevPost.bind(this);
   }
 
   componentDidMount() {
@@ -20,9 +21,18 @@ class PostShowPage extends React.Component {
     const oldId = this.props.match.params.postId
     const nextId = nextProps.match.params.postId
     if(oldId !== nextId){
-
       this.props.requestPost(nextId);
     }
+  }
+
+  prevPost(){
+    
+    const id = this.props.match.params.postId - 1;
+    this.props.history.push(`/posts/${id}`);
+  }
+  nextPost(){
+    const id = this.props.match.params.postId + 1;
+    this.props.history.push(`/posts/${id}`);
   }
 
   render() {
@@ -37,7 +47,6 @@ class PostShowPage extends React.Component {
               <div className="show-page-title-container">
                 <div className="show-page-title">
                   {this.props.post.title}
-                </div>
                   <div className="prev-next">
                     <button className="button prev-post" onClick={this.prevPost}>
                       <img src={window.images.left_arrow_icon}></img>
@@ -46,6 +55,7 @@ class PostShowPage extends React.Component {
                       <img src={window.images.right_arrow_icon}></img>
                     </button>
                   </div>
+                </div>
               </div>
             {images.map( (image) => <ImageItem key={image.id} title={image.title} description={image.description}
               url={image.url} />)}

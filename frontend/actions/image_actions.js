@@ -31,6 +31,6 @@ export const requestImages = () => dispatch => (
 
 export const createImage = image => dispatch => (
   APIUtil.createImage(image)
-  .then(image => { dispatch(receiveImage(image)); dispatch(clearErrors())},
+  .then(image => dispatch(receiveImage(image)),
   err => dispatch(receiveErrors(err.responseJSON)))
 );

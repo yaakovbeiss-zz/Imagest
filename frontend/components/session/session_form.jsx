@@ -13,7 +13,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
-    
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -35,13 +35,10 @@ class SessionForm extends React.Component {
   }
 
   demoLogin() {
-    
     this.props.login({ account: {
-      username: "yaakovbeiss",
+      username: "guest",
       password: "password"
     }});
-    
-    this.props.history.push('/');
   }
 
   navLink() {

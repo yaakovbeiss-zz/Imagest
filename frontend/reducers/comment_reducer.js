@@ -13,7 +13,7 @@ const CommentReducer = (state = defaultState, action) => {
     case RECEIVE_POST:
 
       const comments = action.payload.comments;
-      return merge({}, state, {
+      return Object.assign({}, state, {
         entities: comments
       });
     case RECEIVE_COMMENT:
@@ -25,7 +25,7 @@ const CommentReducer = (state = defaultState, action) => {
         newState.entities[action.comment.commentable_id].comment_ids.push(action.comment.id);
       }
         newState.entities[comment.id] = comment;
-        
+
       return newState;
     default:
       return state;

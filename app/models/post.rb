@@ -4,6 +4,9 @@ class Post < ActiveRecord::Base
 
 
   belongs_to :account
+  has_many :all_comments,
+    class_name: :Comment
+
   has_many :images
   has_many :comments, as: :commentable, dependent: :destroy
 

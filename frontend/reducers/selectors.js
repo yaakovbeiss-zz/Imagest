@@ -1,4 +1,4 @@
-import { values, get, pick } from 'lodash';
+import { values, get, pick, isEmpty } from 'lodash';
 
 export const selectAllPosts = ({ post }) => {
   const posts = Object.keys(post.entities).map( (id)=>{
@@ -8,10 +8,13 @@ export const selectAllPosts = ({ post }) => {
 }
 
 export const selectAllComments = ({ comment }) => {
-  const comments = Object.keys(comment.entities).map( id => {
-    return comment.entities[id];
-  });
-  return comments;
+  debugger
+  if(!_.isEmpty(comment.entities)){
+    const comments = Object.keys(comment.entities).map( id => {
+      return comment.entities[id];
+    });
+    return comments;
+  }
 }
 
 export const selectAllImages = ({ image }) => {

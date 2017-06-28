@@ -21,7 +21,11 @@ export default class Modal extends React.Component {
   }
 
   handleOpen() {
-    this.setState({open: true});
+    if(this.props.loggedIn) {
+      this.setState({open: true});
+    } else {
+      this.props.history.push('/login');
+    }
   };
 
   handleClose() {
@@ -48,7 +52,7 @@ export default class Modal extends React.Component {
         <button  onClick={this.handleOpen} className="header-buttons new-post-button-container ">
           <img className="cloud" src={window.images.cloud_icon} />
           <div className="new-post-button">New post</div>
-          
+
         </button>
 
 
