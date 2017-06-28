@@ -3,7 +3,7 @@ import PostShowPage from './post_show_page';
 import { requestPost } from '../../actions/post_actions';
 
 const mapStateToProps = ({ post, comment }, ownProps ) => {
-
+  
   return {
     post: post.entities[post.currentPost],
     comment: comment.entities

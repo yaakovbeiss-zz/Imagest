@@ -26,7 +26,7 @@ class PostShowPage extends React.Component {
   }
 
   render() {
-    
+
 
     if (this.props.post) {
       const images = this.props.post.images;
@@ -38,12 +38,14 @@ class PostShowPage extends React.Component {
                 <div className="show-page-title">
                   {this.props.post.title}
                 </div>
+                  <div className="prev-next">
                     <button className="button prev-post" onClick={this.prevPost}>
                       <img src={window.images.left_arrow_icon}></img>
                     </button>
-                  <button className="button next-post" onClick={this.nextPost}>Next Post
-                    <img src={window.images.right_arrow_icon}></img>
-                  </button>
+                    <button className="button next-post" onClick={this.nextPost}>Next Post
+                      <img src={window.images.right_arrow_icon}></img>
+                    </button>
+                  </div>
               </div>
             {images.map( (image) => <ImageItem key={image.id} title={image.title} description={image.description}
               url={image.url} />)}
