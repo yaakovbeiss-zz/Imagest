@@ -5,6 +5,7 @@ import { createComment } from '../../actions/comment_actions';
 
 const mapStateToProps = ({ post, session }) => {
   const currentaccountId = session.currentaccount ? session.currentaccount.id : null
+  debugger
   return {
     currentPost: post.currentPost,
     loggedIn: Boolean(session.currentaccount),

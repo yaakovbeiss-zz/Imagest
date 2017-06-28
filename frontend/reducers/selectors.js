@@ -7,18 +7,13 @@ export const selectAllPosts = ({ post }) => {
   return posts;
 }
 
-export const selectAllComments = ({ comment, post }) => {
-  const currentPostId = post.currentPost;
-  if(!_.isEmpty(comment.entities)){
-    const comments = [];
-    Object.keys(comment.entities).map( id => {
-      if(comment.entities[id].commentable_id === currentPostId ) {
-        comments.push(comment.entities[id]);
-      }
-    });
-    return comments;
-  }
+export const selectAllComments = ({ comment }, commentIds ) => {
+  return commentIds.map( id => comment.entities[id]);
 }
+
+// export const selectChildComments = ({ comment }) => {
+//
+// }
 
 export const selectAllImages = ({ image }) => {
   if (values(image.entities).length > 0) {

@@ -75,7 +75,7 @@ class PostShowPage extends React.Component {
                 {this.props.post.description}
               </div>
               <NewCommentFormContainer commentableId={this.props.post.id} commentableType="Post" />
-              <CommentsIndexContainer />
+              <CommentsIndexContainer  commentIds={this.props.post.comment_ids}/>
             </div>
             <div className="right-post-pad">
               <PostShowListContainer />

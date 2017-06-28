@@ -16,7 +16,7 @@ const SessionReducer = (state = nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_ACCOUNT:
       const currentaccount = action.currentaccount;
-
+      debugger
       return Object.assign({}, nullUser, {
         currentaccount: currentaccount
       });

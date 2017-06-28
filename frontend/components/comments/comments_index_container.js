@@ -2,10 +2,9 @@ import { connect } from 'react-redux';
 import CommentsIndex from './comments_index'
 import { selectAllComments } from '../../reducers/selectors';
 
-const mapStateToProps = state => {
-
+const mapStateToProps = (state, ownProps) => {
   return {
-  comments: selectAllComments(state) || []
+  comments: selectAllComments(state, ownProps.commentIds) 
   }
 };
 
