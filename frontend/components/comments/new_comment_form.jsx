@@ -6,20 +6,24 @@ class NewCommentForm extends React.Component{
     super(props);
     this.state = {
       body: '',
-      commenter_id: 147,
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const comment = { body: this.state.body,
-      commenter_id: this.state.commenter_id,
-      commentable_id: this.props.commentableId,
-      commentable_type: this.props.commentableType,
-      post_id: this.props.currentPost,
-    };
-    this.props.createComment(comment);
+    if(this.props.loggedIn) {
+      const comment = { body: this.state.body,
+        commenter_id: this.props.currentaccountId,
+        commentable_id: this.props.commentableId,
+        commentable_type: this.props.commentableType,
+        post_id: this.props.currentPost,
+      };
+      this.props.createComment(comment);
+    } else {
+      this.props.history.push('/login');
+    }
   }
 
   update(field) {

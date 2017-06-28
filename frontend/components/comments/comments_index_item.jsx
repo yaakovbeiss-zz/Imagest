@@ -24,7 +24,8 @@ class CommentsIndexItem extends React.Component {
             <div className="comment-gradient-wrapper"></div>
 
           </div>
-
+            <NewCommentReplyFormContainer commentableId={this.props.commentId}
+              commentableType='Comment' />
         </div>
       )
     } else { return null }

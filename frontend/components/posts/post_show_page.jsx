@@ -18,7 +18,6 @@ class PostShowPage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-
     const oldId = this.props.match.params.postId
     const nextId = nextProps.match.params.postId
     if(oldId !== nextId){
@@ -27,7 +26,6 @@ class PostShowPage extends React.Component {
   }
 
   prevPost(){
-
     const id = this.props.match.params.postId - 1;
     this.props.history.push(`/posts/${id}`);
   }

@@ -10,7 +10,7 @@ class CommentsIndex extends React.Component{
   render(){
 
     let comments = this.props.comments;
-
+    debugger
     if (comments.length > 0) {
         return (
           <div className="comment-index-container">

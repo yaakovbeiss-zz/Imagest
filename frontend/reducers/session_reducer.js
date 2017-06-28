@@ -15,10 +15,10 @@ const SessionReducer = (state = nullUser, action) => {
 
   switch(action.type) {
     case RECEIVE_CURRENT_ACCOUNT:
-      
       const currentaccount = action.currentaccount;
-      return merge({}, nullUser, {
-        currentaccount
+
+      return Object.assign({}, nullUser, {
+        currentaccount: currentaccount
       });
     case RECEIVE_ERRORS:
       const errors = action.errors;
