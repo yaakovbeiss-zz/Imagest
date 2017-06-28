@@ -1,0 +1,115 @@
+.comment-index-container{
+  width: 728px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.new-comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 694px;
+  height: 68px;
+  padding: 15px;
+  background: #2C2F34;
+  position: relative;
+  padding: 15px;
+  border: 2px solid #53555b;
+  border-radius: 4px;
+  cursor: text;
+  margin-top: 20px;
+}
+.comment-input{
+  display: block;
+  width: 100%;
+  height: 22px;
+  overflow: hidden;
+  background: 0 0;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+// .comment-input ::-webkit-input-placeholder {
+//   color: white;
+// }
+.comment-details-container{
+  height: 36px;
+  font-size: 12px;
+  color: #8a8a8a;
+  line-height: 60px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.rules {
+  display: flex;
+}
+.comment-details{
+  display: flex;
+  justify-content: flex-end;
+}
+.comment-button{
+  display: flex;
+  justify-content: flex-end;
+  height: inherit;
+  padding: 10px 25px;
+  margin-left: 10px;
+  font-weight: 700;
+  background: #6C6C6C;
+  border-color: #6C6C6C;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #a8a8a2;
+}
+.comments-info{
+  width: inherit;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  color: #6c6c6c;
+  font-size: 14px;
+  font-weight: 600;
+}
+.comments-info-right{
+  width: 85%;
+  text-align: right;
+}
+.expand-comments{
+  float: right;
+  margin-right: 50px;
+}
+.best-comments{
+  float: right;
+}
+.comment-index-item{
+  display: flex;
+  background: #2c2f34;
+  margin-bottom: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 9px 12px 11px 15px;
+  border-radius: 6px 6px 6px 0;
+}
+.comment-body-container{
+  display: flex;
+  flex-direction: column;
+}
+.comment-item-info{
+  display: flex;
+  margin-bottom: 4px;
+}
+.username{
+  display: flex;
+  font-size: 11px;
+  font-weight: bold;
+  color: #bbb;
+  height: auto;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createComment } from '../../actions/comment_actions';
 
-class NewCommentForm extends React.Component{
+class NewCommentReplyForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -30,13 +30,10 @@ class NewCommentForm extends React.Component{
   render() {
     return (
       <div>
-        <form className="new-comment-form">
-          <div >
-            <input type="text" className="comment-input" placeholder="Write a comment" onChange={this.update('body')} value={this.state.body}></input>
-            <div className="comment-details-container">
-                <div className="char-counter">140</div>
-                <button onClick={this.handleSubmit} className="comment-button">Post</button>
-            </div>
+        <form className="new-comment-reply-form">Write a comment
+          <div>
+            <input type="text" onChange={this.update('body')} value={this.state.body}></input>
+            <button onClick={this.handleSubmit}>Post</button>
           </div>
         </form>
       </div>
@@ -45,4 +42,4 @@ class NewCommentForm extends React.Component{
 
 }
 
-export default NewCommentForm;
+export default NewCommentReplyForm;
