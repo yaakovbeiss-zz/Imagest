@@ -46,15 +46,21 @@
   display: block;
   border: 2px solid #34373c;
   border-radius: 5px;
-  background-color: rgb(18, 18, 17);
+  background-color: #121211;
   width: 200px;
   font-weight: lighter;
   font-size: 14px;
   right: 23px;
+  position: relative;
 }
 
 .views {
-  padding: 5px 0 5px 0;
+  position: absolute;
   display: block;
+  padding: 14px;
   background-color: #34373c;
+  margin-top: 5px;
+  border: 1px solid #121211;
+  width: inherit;
+  right: 0px;
 }

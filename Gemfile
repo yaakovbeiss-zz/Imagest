@@ -38,6 +38,8 @@ gem 'faker'
 
 gem 'figaro'
 gem 'aws-sdk', '>= 2.0'
+
+gem 'giphy'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

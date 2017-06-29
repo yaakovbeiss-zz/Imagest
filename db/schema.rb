@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628171059) do
+ActiveRecord::Schema.define(version: 20170629012814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,15 @@ ActiveRecord::Schema.define(version: 20170628171059) do
     t.datetime "created_at"
     t.index ["account_id"], name: "index_posts_on_account_id", using: :btree
     t.index ["title"], name: "index_posts_on_title", using: :btree
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "voter_id",     null: false
+    t.integer  "votable_id",   null: false
+    t.string   "votable_type", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "vote_type",    null: false
   end
 
 end

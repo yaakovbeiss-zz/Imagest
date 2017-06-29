@@ -17,6 +17,10 @@ guest = Account.create!({username: 'guest', password: 'password'})
 #
 # image = Image.create!({title: 'seeded image', post_id: post.id})
 
+# e = Account.create!({username: Faker::Name.name, password: 'password'})
+# f = Post.create!({title: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact, account_id: e.id})
+# g = Image.create!({title: Faker::Friends.quote, post_id: f.id, image: Giphy.trending(limit: 1)})
+
 25.times do
   a = Account.create!({username: Faker::Name.name, password: 'password'})
   b = Post.create!({title: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact, account_id: a.id})

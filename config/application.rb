@@ -22,5 +22,10 @@ module ImgurApp
     }
   }
 
+  Giphy::Configuration.configure do |config|
+    config.version = "1.2.6"
+    config.api_key = "231ddab3323f4e6481244cdabc353077"
+  end
+
   end
 end
