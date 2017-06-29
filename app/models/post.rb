@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
 
   validates :title, :account, presence: true
 
+  has_many :upvotes, -> { where vote_type: 'Upvote' }, as: :votable, class_name: 'Vote'
+  has_many :downvotes, -> { where vote_type: 'Downvote' }, as: :votable, class_name: 'Vote'
 
   belongs_to :account
   has_many :all_comments,

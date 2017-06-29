@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629012814) do
+ActiveRecord::Schema.define(version: 20170629142406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,14 +26,13 @@ ActiveRecord::Schema.define(version: 20170629012814) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "body",                         null: false
-    t.integer  "points",           default: 0
-    t.integer  "commenter_id",                 null: false
-    t.integer  "commentable_id",               null: false
-    t.string   "commentable_type",             null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.integer  "post_id",                      null: false
+    t.string   "body",             null: false
+    t.integer  "commenter_id",     null: false
+    t.integer  "commentable_id",   null: false
+    t.string   "commentable_type", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "post_id",          null: false
     t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
   end
 
@@ -52,11 +51,9 @@ ActiveRecord::Schema.define(version: 20170629012814) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",                   null: false
+    t.string   "title",       null: false
     t.text     "description"
-    t.integer  "upvotes",     default: 0
-    t.integer  "downvotes",   default: 0
-    t.integer  "account_id",              null: false
+    t.integer  "account_id",  null: false
     t.datetime "updated_at"
     t.datetime "created_at"
     t.index ["account_id"], name: "index_posts_on_account_id", using: :btree

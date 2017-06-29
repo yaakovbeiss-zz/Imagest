@@ -32,9 +32,24 @@
 }
 .show-page-title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   width: inherit;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+}
+.by-username{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: #bbb;
+  padding-top: 5px;
+}
+.username{
+  padding-left: 5px;
+  font-weight: bold;
 }
 .prev-next{
   display: flex;

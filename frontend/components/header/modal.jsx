@@ -52,10 +52,7 @@ export default class Modal extends React.Component {
         <button  onClick={this.handleOpen} className="header-buttons new-post-button-container ">
           <img className="cloud" src={window.images.cloud_icon} />
           <div className="new-post-button">New post</div>
-
         </button>
-
-
         <Dialog
           actions={actions}
           modal={false}
@@ -63,7 +60,6 @@ export default class Modal extends React.Component {
           onRequestClose={this.handleClose}
         >
           <NewPostFormContainer />
-
         </Dialog>
       </div>
     );

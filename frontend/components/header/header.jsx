@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NewPostFormContainer from './new_post_form_container';
 import ModalContainer from './modal_container';
+import MyModal from './my_modal';
 import GreetingContainer from './greeting_container';
 
 class Header extends React.Component {
@@ -58,6 +59,7 @@ class Header extends React.Component {
               </div>
 
                 <ModalContainer className="header-buttons new-post-button-container modal"/>
+
                 <div className="down-arrow-new-post" id="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post-menu" className="hidden">
                     <div className='dropdown new-post'>

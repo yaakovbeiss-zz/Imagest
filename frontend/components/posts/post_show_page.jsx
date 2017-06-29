@@ -41,7 +41,7 @@ class PostShowPage extends React.Component {
   }
 
   render() {
-
+    
 
     if (this.props.post) {
       const images = this.props.post.images;
@@ -51,7 +51,12 @@ class PostShowPage extends React.Component {
             <div className="left-post-pad">
               <div className="show-page-title-container">
                 <div className="show-page-title">
-                  {this.props.post.title}
+                  <div className="title">
+                    {this.props.post.title}
+                    <div className="by-username">by
+                      <div className="username">{this.props.post.username}</div>
+                    </div>
+                  </div>
                   <div className="prev-next">
                     <button className="button prev-post" onClick={this.prevPost}>
                       <img src={window.images.left_arrow_icon}></img>
@@ -64,6 +69,7 @@ class PostShowPage extends React.Component {
               </div>
             {images.map( (image) => <ImageItem key={image.id} url={image.url} id={image.id}/>)}
               <div className="post-description">
+                <div>{this.props.post.description}</div>
                 <div className="post-actions-container">
                   <div className="post-actions-left">
                     <img src={window.images.upvote_icon} className="post-actions-action" ></img>
@@ -78,7 +84,7 @@ class PostShowPage extends React.Component {
                     <img src={window.images.menu_action} className="post-actions-social last-menu"></img>
                   </div>
                 </div>
-                {this.props.post.description}
+                <div>{this.props.post.points} points</div>
               </div>
               <div className="comments-info">
                 <div className="comments-count">{this.commentsCount()} COMMENTS</div>
