@@ -12,6 +12,7 @@ class CommentsIndexItem extends React.Component {
     }
     this.toggle = this.toggle.bind(this);
     this.toggleChild = this.toggleChild.bind(this);
+    this.repliesCount = this.repliesCount.bind(this);
   }
 
   toggle(){
@@ -28,6 +29,11 @@ class CommentsIndexItem extends React.Component {
   childComments(){
       return this.state.hidechild ? <div></div> :
       <CommentsIndexContainer commentIds={this.props.commentIds} />
+  }
+  repliesCount(){
+    if(this.props.commentIds.length > 0){
+      return <div>{this.state.hidechild ? "+ " : "- "}{this.props.commentIds.length} replies</div>
+    }
   }
 
   render() {
@@ -47,7 +53,7 @@ class CommentsIndexItem extends React.Component {
               <div className="comment-gradient-wrapper"></div>
             </div>
           </div>
-          <button className="replies-button" onClick={this.toggleChild}>{this.props.commentIds.length} Replies</button>
+          <button className="replies-button" onClick={this.toggleChild}>{this.repliesCount()}</button>
           {this.childComments()}
           {this.form()}
         </div>

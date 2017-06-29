@@ -1,6 +1,4 @@
 .comment-index-container{
-  width: 728px;
-  width: inherit;
   position: relative;
 }
 
@@ -93,15 +91,14 @@
   float: right;
 }
 .comment-index-item{
-  width: inherit;
   display: flex;
   background: #2c2f34;
-  margin-bottom: 24px;
   color: white;
   font-size: 14px;
   font-weight: normal;
   padding: 9px 12px 11px 15px;
   border-radius: 6px 6px 6px 0;
+  margin-top: 2px;
 }
 .comment-body-container{
   width: inherit;
@@ -129,7 +126,7 @@
   bottom: -29px;
   left: -16px;
   display: block;
-  width: 728px;
+  width: inherit;
 }
 .comment-body{
   display: flex;
@@ -147,6 +144,7 @@
   background: none;
   color: white;
   border: none;
+  outline: none;
 }
 .comment-index-item:hover .reply-button{
   font-family: 'Open sans', sans-serif;
