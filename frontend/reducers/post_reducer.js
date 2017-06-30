@@ -22,8 +22,7 @@ const PostReducer = (state = defaultState, action) => {
         entities: { [post.id]: post },
         currentPost: post.id
       });
-    case RECEIVE_SEARCH:
-      
+    case RECEIVE_SEARCH:  
       return merge({}, {
         entities: action.results
       });

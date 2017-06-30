@@ -67,10 +67,10 @@ class SessionForm extends React.Component {
     return (
       <div>
         <NavLink className="back-imgur" exact to='/' >
-          <div>back to Imgur</div>
+          <div>back to Imagest</div>
         </NavLink>
         <div className="login-form-container">
-          <img className="imgur-image" src="https://imgur.com/images/access/access-logo.png"/>
+          <img className="imgur-image" src={window.images.imgur_logo}/>
           <br/>
             <div className="register-box">
               Sign In with
@@ -92,7 +92,7 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-divider">
               <div className="divider">-----------------</div>
-              or with Imgur
+              or with imagest
               <div className="divider">-----------------</div>
             </div>
             {this.renderErrors()}

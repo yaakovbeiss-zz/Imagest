@@ -1,6 +1,7 @@
 class Api::VotesController < ApplicationController
   def create
     vote = Vote.new(vote_params)
+    
     vote.voter_id = current_user.id
 
     if(vote.save)
@@ -19,7 +20,7 @@ class Api::VotesController < ApplicationController
   def update
     vote = Vote.find(params[:id])
     if vote.update(vote_params)
-      
+
       if vote.votable_type == "Post"
         @post = vote.votable
       else

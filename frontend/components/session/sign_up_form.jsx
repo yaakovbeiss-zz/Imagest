@@ -41,14 +41,6 @@ class SignUpForm extends React.Component {
     this.props.history.push('/');
   }
 
-  // navLink() {
-  //   if (this.props.formType === 'login') {
-  //     return <Link to="/signup">sign up instead</Link>;
-  //   } else {
-  //     return <Link to="/login">log in instead</Link>;
-  //   }
-  // }
-
   renderErrors() {
     return(
       <ul>
@@ -71,7 +63,7 @@ class SignUpForm extends React.Component {
         </NavLink>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <img className="imgur-image" src="https://imgur.com/images/access/access-logo.png"/>
+            <img className="imgur-image" src={window.images.imgur_logo}/>
             <br/>
             <div className="register-box">
               Register With

@@ -1,7 +1,7 @@
 class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
-    
+
     if @comment.save
       render :show
     else
@@ -15,6 +15,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def show
+    debugger
     @comment = Comment.find(params[:id])
   end
 

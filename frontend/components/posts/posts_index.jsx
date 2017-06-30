@@ -12,7 +12,7 @@ class PostsIndex extends React.Component{
   render(){
 
     let posts = this.props.posts;
-
+  
     if (posts.length > 0) {
         return (
           <div className="post-index-container">
