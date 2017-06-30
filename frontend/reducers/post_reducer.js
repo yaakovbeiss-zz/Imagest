@@ -5,10 +5,10 @@ import {
   RECEIVE_POSTS
 } from '../actions/post_actions';
 
-const defaultState = Object.freeze({
+const defaultState = {
   entities: {},
   currentPost: null
-});
+};
 
 const PostReducer = (state = defaultState, action) => {
 
@@ -25,7 +25,7 @@ const PostReducer = (state = defaultState, action) => {
         currentPost: post.id
       });
     case RECEIVE_COMMENT:
-      
+
       const commentableType = action.comment.commentable_type;
       if (commentableType === 'Post') {
         const newState = merge({}, state);

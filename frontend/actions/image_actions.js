@@ -16,21 +16,17 @@ export const receiveImage = image => ({
 export const requestImage = id => dispatch => (
   APIUtil.fetchImage(id).then(image => (
     dispatch(receiveImage(image))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const requestImages = () => dispatch => (
   APIUtil.fetchImages().then( images => (
     dispatch(receiveImages(images))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const createImage = image => dispatch => (
-  APIUtil.createImage(image)
-  .then(image => dispatch(receiveImage(image)),
-  err => dispatch(receiveErrors(err.responseJSON)))
+  APIUtil.createImage(image).then(image => (
+    dispatch(receiveImage(image))
+  ))
 );

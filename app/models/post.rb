@@ -5,7 +5,12 @@ class Post < ActiveRecord::Base
   has_many :upvotes, -> { where vote_type: 'Upvote' }, as: :votable, class_name: 'Vote'
   has_many :downvotes, -> { where vote_type: 'Downvote' }, as: :votable, class_name: 'Vote'
 
+  has_many :votes,
+    foreign_key: :votable_id,
+    class_name: 'Vote'
+    
   belongs_to :account
+
   has_many :all_comments,
     class_name: :Comment
 

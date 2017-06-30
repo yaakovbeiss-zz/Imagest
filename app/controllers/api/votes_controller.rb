@@ -1,7 +1,7 @@
 class Api::VotesController < ApplicationController
   def create
     vote = Vote.new(vote_params)
-    vote.account_id = current_user.id
+    vote.voter_id = current_user.id
 
     if(vote.save)
       if vote.votable_type == "Post"
@@ -17,9 +17,9 @@ class Api::VotesController < ApplicationController
   end
 
   def update
-    vote = Vote.find_by(params[:id])
-
+    vote = Vote.find(params[:id])
     if vote.update(vote_params)
+      
       if vote.votable_type == "Post"
         @post = vote.votable
       else
@@ -33,7 +33,7 @@ class Api::VotesController < ApplicationController
   end
 
   def destroy
-    vote = Vote.find_by(params[:id])
+    vote = Vote.find(params[:id])
 
     if(vote.destroy)
       if vote.votable_type == "Post"
@@ -50,6 +50,6 @@ class Api::VotesController < ApplicationController
 
   private
   def vote_params
-    params.require(:vote).permit(:vote_type, :votable_id, :votable_type)
+    params.require(:vote).permit(:vote_type, :votable_id, :votable_type, :voter_id, :id, :created_at, :updated_at)
   end
 end

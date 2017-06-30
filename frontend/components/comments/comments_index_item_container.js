@@ -1,15 +1,24 @@
 import { connect } from 'react-redux';
-import CommentsIndexItem from './comments_index_itemn'
-import { selectChildComments } from '../../reducers/selectors';
+import CommentsIndexItem from './comments_index_item';
+import { toggleUpvote, toggleDownvote } from '../../actions/vote_actions';
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ session }) => {
+
   return {
-    username: state.session.currentaccount.username,
-    comments: selectChildComments(state) || []
+    username: session.currentaccount ? session.currentaccount.username : null,
+    accountId: session.currentaccount ? session.currentaccount.id : null
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+
+  return {
+    toggleUpvote: (vote, voted) => dispatch(toggleUpvote(vote, voted)),
+    toggleDownvote: (vote, voted) => dispatch(toggleDownvote(vote, voted)),
   }
 };
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(CommentsIndexItem)

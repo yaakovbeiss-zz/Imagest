@@ -6,7 +6,7 @@ export const createVote = vote => (
   })
 );
 
-export const updateVote = vote => (
+export const updateVote = ( vote ) => (
   $.ajax({
     method: 'PATCH',
     url: `api/votes/${vote.id}`,
@@ -18,6 +18,6 @@ export const destroyVote = ( vote ) => {
   return $.ajax({
     method: 'DELETE',
     url: `api/votes/${vote.id}`,
-    data: { post }
+    data: { vote }
   });
 };

@@ -128,6 +128,9 @@
   align-items: flex-start;
   padding: 0 25px 0 0;
 }
+.upvote:focus{
+  background-color: green;
+}
 .post-actions-social{
   display: flex;
   justify-content: flex-end;

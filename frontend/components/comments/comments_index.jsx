@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentsIndexItem from './comments_index_item';
+import CommentsIndexItemContainer from './comments_index_item_container';
 
 
 class CommentsIndex extends React.Component{
@@ -9,16 +9,22 @@ class CommentsIndex extends React.Component{
 
   render(){
 
-    let comments = this.props.comments;
+    const comments = this.props.comments;
 
-    if (comments.length > 0) {
+    if (comments) {
         return (
           <div className="comment-index-container">
             <div className="comment-index">
               <ul>
-                {comments.map( (comment) => <CommentsIndexItem key={comment.id} body={comment.body}
-                  commentId={comment.id} points={comment.points} commenterId={comment.commenter_id}
-                  commentIds={comment.comment_ids}/> )}
+                {comments.map( (comment) => {
+                  if(comment) {
+                    return (
+                  <CommentsIndexItemContainer key={comment.id} body={comment.body}
+                    commentId={comment.id} username={comment.username} commenterId={comment.commenter_id}
+                    commentIds={comment.comment_ids} points={comment.points} voted={comment.voted} vote={comment.vote}/>)
+                  }
+                }
+                )}
              </ul>
             </div>
           </div>

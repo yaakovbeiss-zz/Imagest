@@ -11,6 +11,9 @@ class PostShowPage extends React.Component {
     this.prevPost = this.prevPost.bind(this);
     this.nextPost = this.nextPost.bind(this);
     this.commentsCount = this.commentsCount.bind(this);
+    this.vote = this.vote.bind(this);
+    this.handleSubmitUpvote = this.handleSubmitUpvote.bind(this);
+    this.handleSubmitDownvote = this.handleSubmitDownvote.bind(this);
   }
 
   componentDidMount() {
@@ -39,9 +42,32 @@ class PostShowPage extends React.Component {
       return <div>{Object.keys(this.props.comment).length}</div>
     }
   }
+  vote(upOrDown){
+    if(this.props.post.voted){
+      return this.props.post.vote
+    } else {
+        const vote = {
+        voter_id: this.props.accountId,
+        votable_id: this.props.post.id,
+        votable_type: 'Post',
+        vote_type: `${upOrDown}`,
+      }
+      return vote;
+    }
+  }
+
+  handleSubmitUpvote(e){
+    e.preventDefault();
+    this.props.toggleUpvote(this.vote('Upvote'), this.props.post.voted)
+  }
+  handleSubmitDownvote(e){
+    e.preventDefault();
+    this.props.toggleDownvote(this.vote('Downvote'), this.props.post.voted)
+  }
+
 
   render() {
-    
+
 
     if (this.props.post) {
       const images = this.props.post.images;
@@ -72,8 +98,11 @@ class PostShowPage extends React.Component {
                 <div>{this.props.post.description}</div>
                 <div className="post-actions-container">
                   <div className="post-actions-left">
-                    <img src={window.images.upvote_icon} className="post-actions-action" ></img>
-                    <img src={window.images.downvote_icon} className="post-actions-action"></img>
+
+                      <img onClick={ this.handleSubmitUpvote } src={window.images.upvote_icon} className="post-actions-action upvote" ></img>
+
+                      <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="post-actions-action downvote"></img>
+
                     <img src={window.images.heart_icon} className="post-actions-action"></img>
                   </div>
                   <div className="post-actions-right">

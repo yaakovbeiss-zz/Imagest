@@ -68,6 +68,9 @@
   font-size: 14px;
   color: #a8a8a2;
 }
+.comment-button:focus{
+  background: #1bb76e;
+}
 .comments-info{
   width: inherit;
   margin-top: 20px;
@@ -160,4 +163,28 @@
   color: #a8a8a2;
   font-weight: bold;
   height: inherit;
+}
+.vote-actions{
+  float: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.comment-votes{
+  display: none;
+  position: relative;
+}
+.container:hover .comment-votes{
+  display: flex;
+  float: left;
+  padding: 4px;
+  position: absolute;
+  flex-direction: column;
+  left: -43px;
+}
+.vote-arrow{
+  display: flex;
+  padding: 5px;
+  float: left;
+  margin-right: 10px;
 }

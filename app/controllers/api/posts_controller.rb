@@ -13,12 +13,13 @@ class Api::PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.includes(:main_image)
-
+    @posts = Post.includes(:comments, :votes, :upvotes, :downvotes, :main_image).all
   end
 
   def show
-    @post = Post.find(params[:id])
+    
+    @post = Post.includes(:comments, :all_comments, :votes, :upvotes, :downvotes, :main_image).find(params[:id])
+    render :show
   end
 
   def destroy

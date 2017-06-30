@@ -17,29 +17,19 @@ export const receivePost = payload => {
   }
 };
 
-// export const receiveErrors = errors => ({
-//   type: RECEIVE_ERRORS,
-//   errors
-// });
-
 export const requestPost = id => dispatch => (
   APIUtil.fetchPost(id).then(post => (
     dispatch(receivePost(post))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const requestPosts = () => dispatch => (
   APIUtil.fetchPosts().then(posts => (
     dispatch(receivePosts(posts))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
   ))
 );
-
 export const createPost = post => dispatch => (
-  APIUtil.createPost(post)
-  .then(post => dispatch(receivePost(post)),
-  err => dispatch(receiveErrors(err.responseJSON)))
+  APIUtil.createPost(post).then(post => (
+    dispatch(receivePost(post))
+  ))
 );
