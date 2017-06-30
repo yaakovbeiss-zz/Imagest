@@ -3,31 +3,13 @@ import { Link } from 'react-router-dom';
 import NewPostFormContainer from './new_post_form_container';
 import ModalContainer from './modal_container';
 import MyModal from './my_modal';
-import GreetingContainer from './greeting_container';
+import SearchBar from './search_bar';
 
 class Header extends React.Component {
   constructor(props){
     super(props);
 
   }
-
-  toggleDrop(e) {
-    let id = e.currentTarget.id;
-    let dropdown = document.getElementById(`${id}-menu`);
-    if (dropdown.className === `hidden`){
-      dropdown.className = ``;
-    } else {
-      dropdown.className = `hidden`;
-    }
-  }
-
-  // closeDropDown(e) {
-  //   let child = e.target.firstElementChild;
-  //   child = $(child);
-  //   // if (!e.target.id) {
-  //   //   $('.dropdown').toggleClass('hidden', true);
-  //   // }
-  // }
 
   render() {
     return (
@@ -71,22 +53,10 @@ class Header extends React.Component {
                     </div>
                   </div>
                 </div>
-
+                <SearchBar />
             </div>
 
-          <div className="right-nav">
-            <div id="search-icon-menu" className="hidden">
-              <input className="search-bar"></input>
-              <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
-              </div>
-            <div className="search-icon-container" >
-              <div className="icon-container">
-                <img className="search-icon" id="search-icon" onClick={this.toggleDrop} src={window.images.search_icon}/>
-              </div>
-                <GreetingContainer />
-            </div>
 
-          </div>
         </section>
       </div>
     );

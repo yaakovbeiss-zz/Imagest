@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :images, except: [:new]
     resources :comments, except: [:index]
     resources :votes, only: [:create, :update, :destroy]
+    resources :search, only: [:index]
   end
 end

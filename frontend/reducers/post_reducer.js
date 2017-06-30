@@ -1,9 +1,7 @@
 import merge from 'lodash/merge';
 import { RECEIVE_COMMENT } from '../actions/comment_actions';
-import {
-  RECEIVE_POST,
-  RECEIVE_POSTS
-} from '../actions/post_actions';
+import { RECEIVE_POST, RECEIVE_POSTS } from '../actions/post_actions';
+import { RECEIVE_SEARCH } from '../actions/search_actions';
 
 const defaultState = {
   entities: {},
@@ -23,6 +21,11 @@ const PostReducer = (state = defaultState, action) => {
       return merge({}, state, {
         entities: { [post.id]: post },
         currentPost: post.id
+      });
+    case RECEIVE_SEARCH:
+      
+      return merge({}, {
+        entities: action.results
       });
     case RECEIVE_COMMENT:
 
