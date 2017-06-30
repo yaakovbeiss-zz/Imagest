@@ -1,6 +1,6 @@
 import { TOGGLE_MODAL, toogleModal } from '../actions/modal_actions';
 
-const defaultState = true;
+const defaultState = false;
 
 const ModalReducer = ( state = defaultState, action ) => {
   Object.freeze(state);

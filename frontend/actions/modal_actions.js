@@ -1,6 +1,6 @@
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 
-export const toggleModal = payload => ({
+export const toggleModal = e => ({
   type: TOGGLE_MODAL,
-  payload
+  e
 });

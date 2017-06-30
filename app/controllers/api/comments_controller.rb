@@ -15,7 +15,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def show
-    debugger
+    
     @comment = Comment.find(params[:id])
   end
 

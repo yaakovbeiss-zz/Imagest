@@ -20,7 +20,7 @@ json.post do
     json.title image.title
     json.description image.description
   end
-  json.comment_ids @post.comments.map { |comment| comment.id }
+  json.comment_ids @post.comments.sort_by {|x| (x.upvotes - x.downvotes) }.reverse.map { |comment| comment.id }
 end
 
 json.comments do

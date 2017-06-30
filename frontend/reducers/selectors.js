@@ -8,7 +8,6 @@ export const selectAllPosts = ({ post }) => {
 }
 
 export const selectAllComments = ({ comment }, commentIds ) => {
-  
   return commentIds.map( id => comment.entities[id]);
 }
 

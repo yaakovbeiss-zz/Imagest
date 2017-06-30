@@ -31,21 +31,20 @@ class NewPostForm extends React.Component{
               this.props.history.push(`/posts/${response.image.post_id}`);
             }
           }
-        ))
+        ).then(()=> this.props.toggleModal(e))
+      )
       }
     );
     ;
   }
 
   update(field) {
-
     return e => this.setState({
       [field]: e.currentTarget.value
      });
   }
 
   updateFile(e) {
-
     let file = e.currentTarget.files[0];
     let fileReader = new FileReader();
     fileReader.onloadend = () => {
@@ -55,19 +54,22 @@ class NewPostForm extends React.Component{
       fileReader.readAsDataURL(file);
     }
 
-
   }
 
   render() {
     return (
       <div>
-        <form className="new-post-form">New Post Form
-          <div>
-            <input type="text" onChange={this.update('title')} value={this.state.title}></input>
-            <input type="text" onChange={this.update('description')} value={this.state.description}></input>
-            <input type="file" onChange={this.updateFile} />
-            <img src={this.state.imageUrl} />
-            <button onClick={this.handleSubmit}> Submit Post</button>
+        <form className="new-post-form-container" >
+          <div className="form-title"></div>
+          <div className="new-post-form">
+            Enter a title:
+            <input type="text" className="new-post-form-title" onChange={this.update('title')} value={this.state.title}></input>
+            Enter a description:
+            <input type="text" className="new-post-form-description" onChange={this.update('description')} value={this.state.description}></input>
+            <input className="" type="file" onChange={this.updateFile} />
+            <img className="" src={this.state.imageUrl} />
+            <button className=""onClick={this.handleSubmit}> Submit Post</button>
+            <div className="new-post-form-bottom"></div>
           </div>
         </form>
       </div>

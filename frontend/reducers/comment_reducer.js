@@ -11,7 +11,7 @@ const CommentReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_POST:
-
+      
       const comments = action.payload.comments;
       return Object.assign({}, state, {
         entities: comments

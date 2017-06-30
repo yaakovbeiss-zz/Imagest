@@ -20,7 +20,7 @@ class Header extends React.Component {
       dropdown.className = `hidden`;
     }
   }
-  
+
   render() {
     return (
       <div className="header-container">
@@ -49,8 +49,8 @@ class Header extends React.Component {
                 </div>
               </div>
               </div>
+              <MyModal />
 
-                <ModalContainer className="header-buttons new-post-button-container modal"/>
 
                 <div className="down-arrow-new-post" id="down-arrow-new-post" onClick={this.toggleDrop}>
                   <div id="down-arrow-new-post-menu" className="hidden">

@@ -1,5 +1,32 @@
-.new-post-form {
-  background-color: #45484f;
-  width: 685px;
+.new-post-form-container{
   height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: none;
+  margin: none;
+}
+.new-post-form{
+  display: flex;
+  flex-direction: column;
+  width: 680px;
+  height: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-post-form input{
+  width: auto;
+}
+.new-post-form-bottom{
+  height: 85px;
+  width: inherit;
+  background-color: #45484f;
+  align-items: baseline;
+  display: flex;
+  right            : 0;
+  bottom           : 0;
+  left             : 0;
+  background-color : #2c2f34;
+  text-align       : center;
 }
