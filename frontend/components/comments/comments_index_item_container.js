@@ -5,7 +5,6 @@ import { toggleUpvote, toggleDownvote } from '../../actions/vote_actions';
 const mapStateToProps = ({ session }) => {
 
   return {
-    username: session.currentaccount ? session.currentaccount.username : null,
     accountId: session.currentaccount ? session.currentaccount.id : null
   }
 };
