@@ -11,6 +11,16 @@ class Header extends React.Component {
 
   }
 
+  toggleDrop(e) {
+    let id = e.currentTarget.id;
+    let dropdown = document.getElementById(`${id}-menu`);
+    if (dropdown.className === `hidden`){
+      dropdown.className = ``;
+    } else {
+      dropdown.className = `hidden`;
+    }
+  }
+  
   render() {
     return (
       <div className="header-container">
@@ -18,7 +28,7 @@ class Header extends React.Component {
           <div className="left-nav">
             <Link to="/">
               <div className="icon-container">
-                <img className="header-buttons imgur-header-icon" src="https://imgur.com/images/access/access-logo.png"/>
+                <img className="header-buttons imgur-header-icon" src={window.images.imgur_logo}/>
 
               </div>
             </Link>
