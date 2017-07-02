@@ -7,7 +7,8 @@ const mapStateToProps = ({ post, comment, session }, ownProps ) => {
   return {
     post: post.entities[post.currentPost],
     comment: comment.entities,
-    accountId: session.currentaccount ? session.currentaccount.id : null
+    accountId: session.currentaccount ? session.currentaccount.id : null,
+    loggedIn: Boolean(session.currentaccount),
   }
 };
 

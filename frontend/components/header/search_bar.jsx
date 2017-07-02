@@ -7,17 +7,22 @@ class SearchBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      searchResults: ''
+      searchResults: '',
+      hiddenSearchBar: true,
     }
      this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange() {
-  return e => {
-    this.setState({['search']: e.currentTarget.value})
-    this.props.fetchSearch(e.currentTarget.value)
+    return e => {
+      this.setState({['search']: e.currentTarget.value})
+      this.props.fetchSearch(e.currentTarget.value)
+    }
   }
-}
+
+  toggleSearch(){
+    
+  }
 
   toggleDrop(e) {
     let id = e.currentTarget.id;
@@ -31,18 +36,21 @@ class SearchBar extends React.Component {
 
   render(){
     return (
-      <div className="right-nav">
-        <div id="search-icon-menu" className="hidden">
-          <input type="text" onChange={this.handleChange('searchResults')} className="search-bar"></input>
-          <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+        <form>
+          <div className="right-nav">
+          <div id="search-icon-menu" className="hidden">
+            <input type="text" onChange={this.handleChange('searchResults')} className="search-bar"></input>
+            <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
+            </div>
+          <div className="search-icon-container" >
+            <div className="icon-container">
+              <img className="search-icon" id="search-icon" onClick={this.toggleDrop} src={window.images.search_icon}/>
+            </div>
+              <GreetingContainer />
           </div>
-        <div className="search-icon-container" >
-          <div className="icon-container">
-            <img className="search-icon" id="search-icon" onClick={this.toggleDrop} src={window.images.search_icon}/>
-          </div>
-            <GreetingContainer />
         </div>
-      </div>
+          <input type="hidden" onSubmit={this.toggleDrop} className="hidden-input"  />
+        </form>
     )
   }
 }

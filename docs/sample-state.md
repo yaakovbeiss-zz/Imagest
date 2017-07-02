@@ -3,29 +3,24 @@
     1: {
       id: 1,
       username: "yaakovbeiss",
-      password_digest: "asdfas",
-      session_token: "adfsadf"
     }
   }
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createNote: {errors: ["body can't be blank"]}
-  },
   posts: {
     1: {
       id: 1,
       title: "PhotoshoppedMichaelCeraEveryDay",
       description: "awesome description",
       points: 1000,
-      author_id: "yaakovbeiss"
+      account_id: "yaakovbeiss",
+      comment_ids: [1,2,3]
     }
     2: {
       id: 2,
       title: "SeeThatGuyOverThere",
       description: "he's pointing at us",
       points: 500,
-      author_id: "yummybeiss"
+      account_id: "yummybeiss",
+      comment_ids: [1,2,3]
     }
   }
   images: {
@@ -45,7 +40,8 @@
       commenter_id: "yaakovbeiss",
       parent_id: [1,4,64,2,4,54],
       commentable_type: "comment",
-      commentable_id: ""
+      commentable_id: "",
+      comment_ids: [1,2,3]
     }
   }
   votings: {

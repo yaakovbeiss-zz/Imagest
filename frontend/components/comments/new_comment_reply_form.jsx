@@ -20,6 +20,8 @@ class NewCommentReplyForm extends React.Component{
         post_id: this.props.currentPost,
       };
       this.props.createComment(comment);
+      this.props.toggle();
+      this.props.toggleChild();
     } else {
       this.props.history.push('/login');
     }

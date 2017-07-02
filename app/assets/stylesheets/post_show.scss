@@ -189,3 +189,11 @@
   text-overflow: ellipsis;
   color: white;
 }
+.bottom-fade{
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  position: sticky;
+  background: linear-gradient(to bottom, transparent 0, #141518 100%);
+  pointer-events: none;
+}

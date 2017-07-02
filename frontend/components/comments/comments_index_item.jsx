@@ -16,7 +16,8 @@ class CommentsIndexItem extends React.Component {
     this.vote = this.vote.bind(this);
     this.handleSubmitUpvote = this.handleSubmitUpvote.bind(this);
     this.handleSubmitDownvote = this.handleSubmitDownvote.bind(this);
-
+    this.toggle = this.toggle.bind(this)
+    this.toggleChild = this.toggleChild.bind(this);
   }
 
   toggle(){
@@ -27,7 +28,7 @@ class CommentsIndexItem extends React.Component {
   }
   form(){
     return this.state.hidden ? <div></div> :
-    <NewCommentReplyFormContainer commentableId={this.props.commentId}
+    <NewCommentReplyFormContainer toggle={this.toggle} toggleChild={this.toggleChild} commentableId={this.props.commentId}
       commentableType='Comment' />
   }
   childComments(){
@@ -54,11 +55,19 @@ class CommentsIndexItem extends React.Component {
   }
   handleSubmitUpvote(e){
     e.preventDefault();
-    this.props.toggleUpvote(this.vote('Upvote'), this.props.voted)
+    if (this.props.loggedIn){
+      this.props.toggleUpvote(this.vote('Upvote'), this.props.voted)
+    } else {
+      this.props.history.push('/login');
+    }
   }
   handleSubmitDownvote(e){
     e.preventDefault();
-    this.props.toggleDownvote(this.vote('Downvote'), this.props.voted)
+    if (this.props.loggedIn){
+      this.props.toggleDownvote(this.vote('Downvote'), this.props.voted)
+    } else {
+      this.props.history.push('/login');
+    }
   }
 
   render() {

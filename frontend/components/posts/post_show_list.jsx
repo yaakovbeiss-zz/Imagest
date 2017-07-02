@@ -21,6 +21,7 @@ class PostShowList extends React.Component{
 
                 {posts.map( (post) => <PostShowListItem key={post.id} title={post.title}
                   imageUrl={post.image} postId={post.id} /> )}
+                  <div className="bottom-fade"></div>
              </ul>
             </div>
           </div>

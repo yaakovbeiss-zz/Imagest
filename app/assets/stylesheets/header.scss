@@ -242,3 +242,8 @@ li:hover{
   display: flex;
   flex-direction: row;
 }
+.hidden-input{
+  position: absolute;
+  z-index: 100;
+  display: none;
+}

@@ -14,6 +14,7 @@ class PostShowPage extends React.Component {
     this.vote = this.vote.bind(this);
     this.handleSubmitUpvote = this.handleSubmitUpvote.bind(this);
     this.handleSubmitDownvote = this.handleSubmitDownvote.bind(this);
+
   }
 
   componentDidMount() {
@@ -58,11 +59,19 @@ class PostShowPage extends React.Component {
 
   handleSubmitUpvote(e){
     e.preventDefault();
-    this.props.toggleUpvote(this.vote('Upvote'), this.props.post.voted)
+    if (this.props.loggedIn){
+      this.props.toggleUpvote(this.vote('Upvote'), this.props.post.voted)
+    } else {
+      this.props.history.push('/login');
+    }
   }
   handleSubmitDownvote(e){
     e.preventDefault();
-    this.props.toggleDownvote(this.vote('Downvote'), this.props.post.voted)
+    if (this.props.loggedIn){
+      this.props.toggleDownvote(this.vote('Downvote'), this.props.post.voted)
+    } else {
+      this.props.history.push('/login');
+    }
   }
 
 

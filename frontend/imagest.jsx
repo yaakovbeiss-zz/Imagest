@@ -30,14 +30,6 @@ import { createPost, requestPosts, requestPost } from './actions/post_actions';
       store = configureStore();
     }
 
-    window.getState = store.getState;
-    window.createPost = createPost;
-    window.createImage = createImage;
-    window.requestImages = requestImages;
-    window.requestImage = requestImage;
-    window.requestPost = requestPost;
-    window.dispatch = store.dispatch;
-
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
   });
