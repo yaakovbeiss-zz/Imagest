@@ -218,7 +218,12 @@ li:hover{
 }
 .search-icon:focus {
   right: 3px;
-
+}
+.hidden-div{
+  position: relative;
+  float: right;
+  width: 443px;
+  height: 48px;
 }
 .search-bar {
   background-color: #50545c;
@@ -228,7 +233,7 @@ li:hover{
   height: 48px;
   border-bottom: 3px solid #1bb76e;
   color: white;
-  position: relative;;
+  position: relative;
 }
 .search-bar-addition {
   border-bottom: none;
