@@ -11,7 +11,6 @@ const CommentReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_POST:
-
       const comments = action.payload.comments;
       return Object.assign({}, state, {
         entities: comments
@@ -20,10 +19,12 @@ const CommentReducer = (state = defaultState, action) => {
       
       const comment = action.comment;
       const commentableType = comment.commentable_type;
-      let newState = merge({}, state);
+      let newState = merge({}, state, {
+        entities: {}
+      });
       if (commentableType === 'Comment') {
 
-        newState.entities[action.comment.commentable_id].comment_ids.push(action.comment.id);
+        newState.entities[comment.commentable_id].comment_ids.push(comment.id);
       }
         newState.entities[comment.id] = comment;
 

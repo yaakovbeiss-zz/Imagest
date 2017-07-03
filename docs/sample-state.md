@@ -38,7 +38,6 @@
       body: "blah blah",
       points: 50,
       commenter_id: "yaakovbeiss",
-      parent_id: [1,4,64,2,4,54],
       commentable_type: "comment",
       commentable_id: "",
       comment_ids: [1,2,3]

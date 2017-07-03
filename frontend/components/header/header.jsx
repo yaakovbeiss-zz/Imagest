@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NewPostFormContainer from './new_post_form_container';
-import ModalContainer from './modal_container';
 import MyModal from './my_modal';
 import SearchBar from './search_bar';
 

@@ -15,6 +15,7 @@
     "material-ui": "^0.18.3",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-dropzone": "^3.13.3",
     "react-redux": "^4.4.5",
     "react-router-dom": "^4.1.1",
     "redux": "^3.5.2",

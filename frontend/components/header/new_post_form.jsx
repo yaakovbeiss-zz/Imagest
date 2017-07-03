@@ -1,5 +1,6 @@
 import React from 'react';
 import { createPost } from '../../actions/post_actions';
+import Dropzone from 'react-dropzone';
 
 class NewPostForm extends React.Component{
   constructor(props){
@@ -45,7 +46,8 @@ class NewPostForm extends React.Component{
   }
 
   updateFile(e) {
-    let file = e.currentTarget.files[0];
+
+    let file = e[0];
     let fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({ image: file, imageUrl: fileReader.result });
@@ -62,16 +64,24 @@ class NewPostForm extends React.Component{
         <form className="new-post-form-container" >
           <div className="form-title"></div>
           <div className="new-post-form">
-            Enter a title:
-            <input type="text" className="new-post-form-title" onChange={this.update('title')} value={this.state.title}></input>
-            Enter a description:
-            <input type="text" className="new-post-form-description" onChange={this.update('description')} value={this.state.description}></input>
-            <input className="" type="file" onChange={this.updateFile} />
+            <Dropzone
+              onDrop={this.updateFile}
+              className='dropzone'>
+              <img src={window.images.cloud_icon}></img>
+            </Dropzone>Click above to browse or drag and drop images inside
+
+            <input type="text" className="new-post-form-title" onChange={this.update('title')} value={this.state.title}
+              placeholder="Enter a title:"></input>
+
+            <input type="text" className="new-post-form-description" onChange={this.update('description')} value={this.state.description}
+              placeholder="Enter a description:"></input>
+
             <img className="" src={this.state.imageUrl} />
             <button className=""onClick={this.handleSubmit}> Submit Post</button>
             <div className="new-post-form-bottom"></div>
           </div>
         </form>
+
       </div>
     )
   }

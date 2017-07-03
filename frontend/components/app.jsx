@@ -11,7 +11,6 @@ import {
 import SessionFormContainer from './session/session_form_container';
 import SignUpFormContainer from './session/sign_up_form_container';
 import Header from './header/NavBar';
-import Modal from './header/modal';
 import PostsIndexContainer from './posts/posts_index_container';
 import PostShowPageContainer from './posts/post_show_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';

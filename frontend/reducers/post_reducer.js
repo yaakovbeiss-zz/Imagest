@@ -17,7 +17,7 @@ const PostReducer = (state = defaultState, action) => {
         entities: action.posts
       });
     case RECEIVE_POST:
-    
+
       const post = action.payload.post;
       return merge({}, state, {
         entities: { [post.id]: post },
@@ -28,11 +28,15 @@ const PostReducer = (state = defaultState, action) => {
         entities: action.results
       });
     case RECEIVE_COMMENT:
-
-      const commentableType = action.comment.commentable_type;
+      
+      const comment = action.comment;
+      const commentableType = comment.commentable_type;
       if (commentableType === 'Post') {
-        const newState = merge({}, state);
-        newState.entities[action.comment.commentable_id].comment_ids.push(action.comment.id);
+
+        let newState = merge({}, state, {
+          entities: {}
+        });
+        newState.entities[comment.commentable_id].comment_ids.push(comment.id);
         return newState;
       } else {
         return state;

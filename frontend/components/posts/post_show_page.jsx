@@ -73,6 +73,31 @@ class PostShowPage extends React.Component {
       this.props.history.push('/login');
     }
   }
+  voteIcon(){
+    if(this.props.post.voted){
+      debugger
+      if(this.props.post.vote.vote_type === 'Upvote'){
+        return (
+          <div>
+            <img onClick={ this.handleSubmitUpvote } src={window.images.upvote_icon} className="post-actions-action upvote" ></img>
+            <img onClick={this.handleSubmitDownvote} src={window.images.grey_down_icon} className="post-actions-action downvote"></img>
+          </div>
+        )
+      } else {
+          <div>
+            <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="post-actions-action upvote" ></img>
+            <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="post-actions-action downvote"></img>
+          </div>
+      }
+    } else {
+      return (
+        <div>
+          <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="post-actions-action upvote" ></img>
+          <img onClick={this.handleSubmitDownvote} src={window.images.grey_down_icon} className="post-actions-action downvote"></img>
+        </div>
+        )
+    }
+  }
 
 
   render() {
@@ -108,10 +133,7 @@ class PostShowPage extends React.Component {
                 <div className="post-actions-container">
                   <div className="post-actions-left">
 
-                      <img onClick={ this.handleSubmitUpvote } src={window.images.upvote_icon} className="post-actions-action upvote" ></img>
-
-                      <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="post-actions-action downvote"></img>
-
+                    {this.voteIcon()}
                     <img src={window.images.heart_icon} className="post-actions-action"></img>
                   </div>
                   <div className="post-actions-right">

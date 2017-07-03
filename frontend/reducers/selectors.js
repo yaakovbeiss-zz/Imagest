@@ -8,7 +8,9 @@ export const selectAllPosts = ({ post }) => {
 }
 
 export const selectAllComments = ({ comment }, commentIds ) => {
-  return commentIds.map( id => comment.entities[id]);
+    if(comment.entities) {
+      return commentIds.map( id => comment.entities[id]);
+    }
 }
 
 export const selectAllImages = ({ image }) => {

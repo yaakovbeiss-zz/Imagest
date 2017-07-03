@@ -14,9 +14,41 @@
   height: inherit;
   align-items: center;
   justify-content: space-between;
+  color: white;
 }
 .new-post-form input{
-  width: auto;
+  width: 99%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  height: 50px;
+  color: white;
+}
+.new-post-form button{
+  background: #6C6C6C;
+  border-color: #6C6C6C;
+  padding: 10px 25px;
+  color: #a8a8a2;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 25px;
+  height: 30px;
+}
+.new-post-form button:focus{
+  background: #1bb76e;
+}
+.dropzone{
+  width: 98%;
+  margin: 10px 15px;
+  height: 180px;
+  border: 2px dotted grey;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropzone img{
+  height: 50px;
 }
 .new-post-form-bottom{
   height: 85px;
