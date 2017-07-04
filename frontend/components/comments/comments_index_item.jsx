@@ -9,7 +9,7 @@ class CommentsIndexItem extends React.Component {
     this.state = {
       hideForm: true,
       hidechild: true,
-      hideVotes: true,
+
     }
     this.toggle = this.toggle.bind(this);
     this.toggleChild = this.toggleChild.bind(this);
@@ -19,9 +19,7 @@ class CommentsIndexItem extends React.Component {
     this.handleSubmitDownvote = this.handleSubmitDownvote.bind(this);
     this.toggle = this.toggle.bind(this)
     this.toggleChild = this.toggleChild.bind(this);
-    this.toggleVotes = this.toggleVotes.bind(this);
     this.revealVotes = this.revealVotes.bind(this);
-    debugger
   }
 
   toggle(){
@@ -29,10 +27,6 @@ class CommentsIndexItem extends React.Component {
   }
   toggleChild(){
     this.setState({ hidechild: !this.state.hidechild })
-  }
-  toggleVotes(e){
-    e.stopPropagation();
-    this.setState({ hideVotes: !this.state.hideVotes })
   }
   form(){
     return this.state.hideForm ? <div></div> :
@@ -49,9 +43,6 @@ class CommentsIndexItem extends React.Component {
     }
   }
   revealVotes(){
-    if(this.state.hideVotes){
-      return <div></div>;
-    } else {
         if(this.props.voted){
           if(this.props.vote.vote_type === 'Upvote'){
             return (
@@ -76,7 +67,6 @@ class CommentsIndexItem extends React.Component {
             </div>
           )
         }
-      }
     }
 
   vote(upOrDown){

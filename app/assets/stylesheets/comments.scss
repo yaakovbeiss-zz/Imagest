@@ -171,16 +171,17 @@
   position: relative;
 }
 .comment-votes{
+  display: none;
   position: relative;
+}
+.container:hover .comment-votes{
   display: flex;
   float: left;
   padding: 4px;
   position: absolute;
   flex-direction: column;
   left: -43px;
-  bottom: 5px;
 }
-
 .vote-arrow{
   display: flex;
   padding: 5px;

@@ -5,10 +5,14 @@ class Account < ActiveRecord::Base
 
   has_many :posts
 
+  has_many :comments,
+    class_name: 'Comment',
+    foreign_key: :commenter_id
+
   has_many :votes,
     class_name: 'Vote',
     foreign_key: :voter_id
-  
+
 
   after_initialize :ensure_session_token
 
