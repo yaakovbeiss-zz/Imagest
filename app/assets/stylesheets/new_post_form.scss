@@ -23,6 +23,14 @@
   background-color: inherit;
   height: 50px;
   color: white;
+  box-shadow: 2px 2px 9px 3px rgba(0,0,0,.2);
+  border-radius: 1px;
+  margin-top: 5px;
+}
+.new-post-form input:focus{
+  outline-color: green;
+  outline-offset: none;
+  border: 1px solid green;
 }
 .new-post-form button{
   background: #6C6C6C;
@@ -30,7 +38,7 @@
   padding: 10px 25px;
   color: #a8a8a2;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 10px 25px;
   height: 30px;
 }
@@ -51,14 +59,14 @@
   height: 50px;
 }
 .new-post-form-bottom{
-  height: 85px;
+  height: 70px;
   width: inherit;
   background-color: #45484f;
   align-items: baseline;
   display: flex;
-  right            : 0;
-  bottom           : 0;
-  left             : 0;
-  background-color : #2c2f34;
-  text-align       : center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #2c2f34;
+  text-align: center;
 }
