@@ -21,6 +21,7 @@ class CommentsIndexItem extends React.Component {
     this.toggleChild = this.toggleChild.bind(this);
     this.toggleVotes = this.toggleVotes.bind(this);
     this.revealVotes = this.revealVotes.bind(this);
+    debugger
   }
 
   toggle(){
@@ -48,12 +49,36 @@ class CommentsIndexItem extends React.Component {
     }
   }
   revealVotes(){
-    return this.state.hideVotes ? <div></div> :
-    <div className="comment-votes">
-      <img onClick={ this.handleSubmitUpvote } src={window.images.upvote_icon} className="vote-arrow" ></img>
-      <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="vote-arrow"></img>
-    </div>
-  }
+    if(this.state.hideVotes){
+      return <div></div>;
+    } else {
+        if(this.props.voted){
+          if(this.props.vote.vote_type === 'Upvote'){
+            return (
+              <div className="comment-votes">
+                <img onClick={ this.handleSubmitUpvote } src={window.images.upvote_icon} className="vote-arrow" ></img>
+                <img onClick={this.handleSubmitDownvote} src={window.images.grey_down_icon} className="vote-arrow"></img>
+              </div>
+            )
+          } else {
+            return(
+              <div className="comment-votes">
+                <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="vote-arrow" ></img>
+                <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="vote-arrow"></img>
+              </div>
+            )
+          }
+        } else {
+          return (
+            <div className="comment-votes">
+              <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="vote-arrow" ></img>
+              <img onClick={this.handleSubmitDownvote} src={window.images.grey_down_icon} className="vote-arrow"></img>
+            </div>
+          )
+        }
+      }
+    }
+
   vote(upOrDown){
     if(this.props.voted){
       return this.props.vote

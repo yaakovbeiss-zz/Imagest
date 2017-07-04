@@ -83,10 +83,12 @@ class PostShowPage extends React.Component {
           </div>
         )
       } else {
+        return(
           <div>
             <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="post-actions-action upvote" ></img>
             <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="post-actions-action downvote"></img>
-          </div>
+          </div>  
+        )
       }
     } else {
       return (
