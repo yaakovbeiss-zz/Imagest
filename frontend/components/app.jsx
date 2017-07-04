@@ -17,7 +17,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => (
-  <MuiThemeProvider>
+
   <div>
 
       <header>
@@ -38,7 +38,7 @@ const App = () => (
 
 
   </div>
-</MuiThemeProvider>
+
 );
 
 export default App;

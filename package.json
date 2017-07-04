@@ -22,7 +22,7 @@
     "webpack": "^2.3.3"
   },
   "devDependencies": {
-    "redux-logger": "^3.0.6",
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "webpack": "webpack --watch",
