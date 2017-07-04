@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
 import { fetchSearch } from '../../actions/search_actions';
 
@@ -16,8 +17,18 @@ class SearchBar extends React.Component {
 
   handleChange() {
     return e => {
-      this.setState({['search']: e.currentTarget.value})
+      this.setState({['searchResults']: e.currentTarget.value})
       this.props.fetchSearch(e.currentTarget.value)
+    }
+  }
+  componentWillReceiveProps(){
+    this.setState({['searchResults']: ''});
+  }
+  componentDidUpdate(nextProps){
+    if(this.state.searchResults !== '') {
+      if (this.props.history.location.pathname !== '/'){
+        this.props.history.push('/');
+      }
     }
   }
 
@@ -47,7 +58,7 @@ class SearchBar extends React.Component {
 
   render(){
     return (
-        <form>
+        <div>
           <div className="right-nav">
             {this.searchBar()}
 
@@ -59,7 +70,7 @@ class SearchBar extends React.Component {
           </div>
         </div>
 
-        </form>
+      </div>
     )
   }
 }
@@ -70,7 +81,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   null,
   mapDispatchToProps
-)(SearchBar);
+)(SearchBar));

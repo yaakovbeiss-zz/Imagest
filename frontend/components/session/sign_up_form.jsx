@@ -99,14 +99,7 @@ class SignUpForm extends React.Component {
                   />
                 </label>
                 <br/>
-                <label className="sign-in-text-input">
-                  <input type="text"
-                    placeholder="Email"
-                    value={this.state.email}
-                    onChange={this.update('email')}
-                    className="login-input"
-                  />
-                </label>
+          
                 <br/>
                 <label className="sign-in-text-input">
                   <input type="password"
@@ -117,14 +110,7 @@ class SignUpForm extends React.Component {
                   />
                 </label>
                 <br/>
-                <label className="sign-in-text-input">
-                  <input type="password"
-                    placeholder="Retype Password"
-                    value=""
-                    onChange={this.update('retype_password')}
-                    className="login-input last"
-                  />
-              </label>
+
 
                 <div className="terms">By registering you agree to our terms of service.</div>
               </div>

@@ -75,7 +75,6 @@ class PostShowPage extends React.Component {
   }
   voteIcon(){
     if(this.props.post.voted){
-      debugger
       if(this.props.post.vote.vote_type === 'Upvote'){
         return (
           <div>
