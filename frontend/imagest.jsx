@@ -4,8 +4,8 @@ import configureStore from './store/store';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import App from './components/app';
-import { createImage, requestImages, requestImage } from './actions/image_actions';
-import { createPost, requestPosts, requestPost } from './actions/post_actions';
+
+
 
 
   const Root = ( {store} ) => {

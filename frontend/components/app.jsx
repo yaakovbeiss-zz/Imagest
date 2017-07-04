@@ -14,8 +14,7 @@ import Header from './header/NavBar';
 import PostsIndexContainer from './posts/posts_index_container';
 import PostShowPageContainer from './posts/post_show_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import GridListExampleSimple from './posts/grid_list';
+
 
 const App = () => (
   <MuiThemeProvider>
