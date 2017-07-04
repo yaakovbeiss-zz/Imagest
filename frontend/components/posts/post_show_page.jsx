@@ -87,7 +87,7 @@ class PostShowPage extends React.Component {
           <div>
             <img onClick={ this.handleSubmitUpvote } src={window.images.grey_up_icon} className="post-actions-action upvote" ></img>
             <img onClick={this.handleSubmitDownvote} src={window.images.downvote_icon} className="post-actions-action downvote"></img>
-          </div>  
+          </div>
         )
       }
     } else {
@@ -135,14 +135,20 @@ class PostShowPage extends React.Component {
                   <div className="post-actions-left">
 
                     {this.voteIcon()}
-                    <img src={window.images.heart_icon} className="post-actions-action"></img>
+
                   </div>
                   <div className="post-actions-right">
-                    <img src={window.images.facebook_action} className="post-actions-social" ></img>
-                    <img src={window.images.twitter_action} className="post-actions-social"></img>
-                    <img src={window.images.pinterest_action} className="post-actions-social"></img>
-                    <img src={window.images.reddit_action} className="post-actions-social"></img>
-                    <img src={window.images.menu_action} className="post-actions-social last-menu"></img>
+                    <a href="https://www.linkedin.com/in/yaakovbeiss/">
+                      <img src={window.images.linkedin_icon} className="post-actions-social" ></img>
+                    </a>
+                    <a href="https://github.com/yaakovbeiss">
+                      <img src={window.images.github_icon} className="post-actions-social"></img>
+                    </a>
+                    <a href="https://docs.google.com/document/d/1DV9YqtN8VOqWAOu80XtD1xnhhQLAAmrQ4oRg-uPSlrw/edit?usp=sharing">
+                      <img src={window.images.resume_icon} className="post-actions-social"></img>
+                    </a>
+
+
                   </div>
                 </div>
                 <div>{this.props.post.points} points</div>
@@ -150,8 +156,8 @@ class PostShowPage extends React.Component {
               <div className="comments-info">
                 <div className="comments-count">{this.commentsCount()} COMMENTS</div>
                 <div className="comments-info-right">
-                  <div className="best-comments">Best</div>
-                  <div className="expand-comments">Expand All</div>
+                  <div className="best-comments"></div>
+                  <div className="expand-comments"></div>
                 </div>
               </div>
               <NewCommentFormContainer commentableId={this.props.post.id} commentableType="Post" />

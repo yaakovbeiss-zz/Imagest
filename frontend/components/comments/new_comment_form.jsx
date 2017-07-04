@@ -39,7 +39,7 @@ class NewCommentForm extends React.Component{
           <div >
             <input type="text" className="comment-input" placeholder="Write a comment" onChange={this.update('body')} value={this.state.body}></input>
             <div className="comment-details-container">
-                <div className="char-counter">140</div>
+                <div className="char-counter"></div>
                 <button onClick={this.handleSubmit} className="comment-button">Post</button>
             </div>
           </div>

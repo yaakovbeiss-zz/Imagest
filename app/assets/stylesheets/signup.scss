@@ -64,29 +64,29 @@
   position: relative;
 }
 
-.facebook {
+.linkedin {
   font-size: 20px;
   color: white;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  border-bottom-color: #3A558E;
+  border-bottom-color: #0077b5;
 }
-.facebook-icon{
+.linkedin-icon{
   position: relative;
   height: 19px;
 }
-.facebook:hover {
-  background-color: #3A558E;
+.linkedin:hover {
+  background-color: #0077b5;
 }
 
-.twitter {
-  border-bottom-color: #4099FF;
+.github {
+  border-bottom-color: #d971db;
 }
-.twitter:hover{
-  background-color: #4099FF;
+.github:hover{
+  background-color: #d971db;
 }
-.twitter-icon {
+.github-icon {
   width: 30px;
   height: 30px;
   position: relative;
@@ -95,16 +95,16 @@
   bottom: 9px;
 }
 
-.google-plus {
+.resume {
   border-bottom-color: #D34836;
 }
-.google-plus-icon {
+.resume-icon {
   border-bottom-color: #D34836;
   position: relative;
   bottom: 3px;
 }
 
-.google-plus:hover {
+.resume:hover {
   background-color: #D34836;
 }
 

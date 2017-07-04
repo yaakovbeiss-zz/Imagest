@@ -73,27 +73,27 @@ class SessionForm extends React.Component {
           <img className="imgur-image" src={window.images.imgur_logo}/>
           <br/>
             <div className="register-box">
-              Sign In with
+              Check out my info at:
             </div>
             <div className="social-box">
-              <div className="facebook logo">
-                <img src={window.images.facebook_icon} className="facebook-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
-              </div>
-              <div className="twitter logo">
-                <img src={window.images.twitter_icon} className="twitter-icon" href="https://twitter.com/login" />
-              </div>
-              <div className="google-plus logo">
-                <img src={window.images.google_plus_icon} className="google-plus-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
-              </div>
+              <a className="linkedin logo" href="https://www.linkedin.com/in/yaakovbeiss/" >
+                <img src={window.images.linkedin_icon} className="linkedin-icon" />
+              </a>
+              <a className="github logo" href="https://github.com/yaakovbeiss">
+                <img src={window.images.github_icon} className="github-icon"  />
+              </a>
+              <a className="resume logo" href="https://docs.google.com/document/d/1DV9YqtN8VOqWAOu80XtD1xnhhQLAAmrQ4oRg-uPSlrw/edit?usp=sharing">
+                <img src={window.images.resume_icon} className="resume-icon" />
+              </a>
               <div className="yahoo logo">
                 <img src={window.images.yahoo_icon} className="yahoo-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
             </div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-divider">
-              <div className="divider">-----------------</div>
-              or with imagest
-              <div className="divider">-----------------</div>
+              <div className="divider"></div>
+              or have fun on imagest!
+              <div className="divider"></div>
             </div>
             {this.renderErrors()}
             <div className="login-form login-form-session">
