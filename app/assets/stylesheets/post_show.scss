@@ -63,6 +63,7 @@
   border-radius: 2px;
   height: 16px;
   width: 87px;
+  cursor: pointer;
 }
 .prev-post{
   display: flex;
@@ -127,6 +128,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 25px 0 0;
+  cursor: pointer;
 }
 .upvote:focus{
   background-color: green;

@@ -54,6 +54,7 @@
   background: transparent;
   color: white;
   height: 30px;
+  cursor: pointer;
 }
 .icon-container :hover {
   border-radius: 19px;
@@ -173,6 +174,7 @@
   position: absolute;
   top: 8px;
   left: 292px;
+  cursor: pointer;
 }
 .new-post {
   top: 50px;
@@ -215,6 +217,7 @@ li:hover{
   padding: 7px;
   margin-top: 5px;
   right: -7px;
+  cursor: pointer;
 }
 .search-icon:focus {
   right: 3px;

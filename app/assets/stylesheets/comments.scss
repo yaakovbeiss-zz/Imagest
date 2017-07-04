@@ -67,6 +67,7 @@
   border-radius: 2px;
   font-size: 14px;
   color: #a8a8a2;
+  cursor: pointer;
 }
 .comment-button:focus{
   background: #1bb76e;
@@ -146,12 +147,14 @@
   display: none;
   position: relative;
   outline: none;
+  cursor: pointer;
 }
 .replies-button{
   background: none;
   color: white;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .comment-index-item:hover .reply-button{
   font-family: 'Open sans', sans-serif;
@@ -187,4 +190,5 @@
   padding: 5px;
   float: left;
   margin-right: 10px;
+  cursor: pointer;
 }
