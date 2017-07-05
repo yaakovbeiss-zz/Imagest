@@ -11,7 +11,7 @@ class Api::AccountsController < ApplicationController
   end
 
   def show
-    @account = Account.find(params[:id])
+    @account = Account.includes(:posts, :comments, :votes).find(params[:id])
   end
 
   private

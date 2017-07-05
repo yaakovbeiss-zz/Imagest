@@ -12,8 +12,10 @@ class Greeting extends React.Component{
     if (this.props.currentaccount) {
     return (
       <div className="signup-signin-links icon-container greeting">
-        {this.props.currentaccount.username}
-        <button className="icon-container logout" onClick={this.props.logout}>logout</button>
+        <Link to={`/accounts/${this.props.currentaccount.id}`} >
+          {this.props.currentaccount.username}
+        </Link>
+          <button className="icon-container logout" onClick={this.props.logout}>logout</button>
       </div>
     )
   } else {

@@ -13,6 +13,10 @@ class Account < ActiveRecord::Base
     class_name: 'Vote',
     foreign_key: :voter_id
 
+  def points
+    (self.posts.upvotes - self.posts.downvotes) + (self.comments.upvotes - self.comments.downvotes)
+  end
+
 
   after_initialize :ensure_session_token
 

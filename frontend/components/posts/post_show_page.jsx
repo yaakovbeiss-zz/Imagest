@@ -40,7 +40,7 @@ class PostShowPage extends React.Component {
   }
   commentsCount(){
     if(this.props.comment){
-      return <div>{Object.keys(this.props.comment).length}</div>
+      return <div>{Object.keys(this.props.comment).length + " "}</div>
     }
   }
   vote(upOrDown){
@@ -154,7 +154,7 @@ class PostShowPage extends React.Component {
                 <div>{this.props.post.points} points</div>
               </div>
               <div className="comments-info">
-                <div className="comments-count">{this.commentsCount()} COMMENTS</div>
+                <div className="comments-count">{this.commentsCount()}  COMMENTS</div>
                 <div className="comments-info-right">
                   <div className="best-comments"></div>
                   <div className="expand-comments"></div>

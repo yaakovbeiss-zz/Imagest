@@ -117,7 +117,7 @@ class CommentsIndexItem extends React.Component {
 
                 <button onClick={this.toggle} className="reply-button">reply</button>
               </div>
-
+            
             </div>
           </div>
           <button className="replies-button" onClick={this.toggleChild}>{this.repliesCount()}</button>

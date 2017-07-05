@@ -125,16 +125,15 @@
   color: #bbb;
   height: auto;
 }
-.comment-gradient-wrapper{
+.gradient-wrapper{
   transform: rotateX(-45deg);
-  -webkit-transform-origin-x: rotate(45deg);
   height: 21px;
   background: linear-gradient(to top,#141518,#282a2e);
   position: absolute;
-  bottom: -29px;
-  left: -16px;
+  bottom: -18px;
+  left: 18px;
+  right: 18px;
   display: block;
-  width: inherit;
 }
 .comment-body{
   display: flex;
@@ -155,6 +154,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  z-index: 10;
 }
 .comment-index-item:hover .reply-button{
   font-family: 'Open sans', sans-serif;

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PostsIndexItem from '../posts/posts_index_item';
 
 
 class AccountShowPage extends React.Component{
@@ -8,15 +8,14 @@ class AccountShowPage extends React.Component{
   }
 
   render(){
+    debugger
 
-    let posts = this.props.posts;
-
-    if (posts.length > 0) {
+    if (this.props.posts) {
+      let posts = this.props.posts;
         return (
           <div className="post-index-container">
             <div className="post-index">
               <ul>
-
                 {posts.map( (post) => <PostsIndexItem key={post.id} title={post.title}
                   imageUrl={post.image} postId={post.id} /> )}
              </ul>
@@ -24,7 +23,7 @@ class AccountShowPage extends React.Component{
           </div>
         )
       } else {
-        return null;
+        return <div>No posts yet!</div>;
       }
     }
 }

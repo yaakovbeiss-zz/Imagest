@@ -13,6 +13,7 @@ import SignUpFormContainer from './session/sign_up_form_container';
 import Header from './header/NavBar';
 import PostsIndexContainer from './posts/posts_index_container';
 import PostShowPageContainer from './posts/post_show_page_container';
+import AccountShowPageContainer from './accounts/account_show_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -29,6 +30,7 @@ const App = () => (
       <Route exact path="/" component={PostsIndexContainer} />
       <Route exact path="/posts" component={PostsIndexContainer} />
       <Route exact path="/posts/:postId" component={PostShowPageContainer} />
+      <Route exact path="/accounts/:accountId" component={AccountShowPageContainer} />
       <Route exact path="/login" component={SessionFormContainer} />
       <Route exact path="/signup" component={SignUpFormContainer} />
     </Switch>
