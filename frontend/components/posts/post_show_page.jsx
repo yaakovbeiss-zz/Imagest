@@ -144,7 +144,7 @@ class PostShowPage extends React.Component {
                     <a href="https://github.com/yaakovbeiss">
                       <img src={window.images.github_icon} className="post-actions-social"></img>
                     </a>
-                    <a href="https://docs.google.com/document/d/1DV9YqtN8VOqWAOu80XtD1xnhhQLAAmrQ4oRg-uPSlrw/edit?usp=sharing">
+                    <a href="https://docs.google.com/document/d/1enzQGlTqfClweE3buxkDi7pe-XXQtjJUUYXknbM3x40/edit?usp=sharing">
                       <img src={window.images.resume_icon} className="post-actions-social"></img>
                     </a>
 

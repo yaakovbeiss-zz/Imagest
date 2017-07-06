@@ -75,11 +75,11 @@ class SignUpForm extends React.Component {
             <a className="github logo" href="https://github.com/yaakovbeiss">
               <img src={window.images.github_icon} className="github-icon"  />
             </a>
-            <a className="resume logo" href="https://docs.google.com/document/d/1DV9YqtN8VOqWAOu80XtD1xnhhQLAAmrQ4oRg-uPSlrw/edit?usp=sharing">
+            <a className="resume logo" href="https://docs.google.com/document/d/1enzQGlTqfClweE3buxkDi7pe-XXQtjJUUYXknbM3x40/edit?usp=sharing">
               <img src={window.images.resume_icon} className="resume-icon" />
             </a>
-              <div className="yahoo logo">
-                <img src={window.images.yahoo_icon} className="yahoo-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
+              <div className="angellist logo">
+                <img src={window.images.angellist_icon} className="angellist-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
               </div>
             </div>
             {this.renderErrors()}
