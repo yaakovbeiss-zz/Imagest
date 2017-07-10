@@ -186,9 +186,8 @@
   left: -43px;
 }
 .vote-arrow{
-  display: flex;
-  padding: 5px;
-  float: left;
-  margin-right: 10px;
   cursor: pointer;
+  right: 10px;
+  position: relative;
+  height: 41px;
 }
