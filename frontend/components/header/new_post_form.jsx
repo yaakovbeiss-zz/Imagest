@@ -59,31 +59,47 @@ class NewPostForm extends React.Component{
   }
 
   render() {
-    return (
-      <div>
-        <form className="new-post-form-container" >
-          <div className="form-title"></div>
-          <div className="new-post-form">
-            <Dropzone
-              onDrop={this.updateFile}
-              className='dropzone'>
-              <img src={window.images.cloud_icon}></img>
-            </Dropzone>Click above to browse or drag and drop images inside
+      if(!this.state.imageUrl){
+        return (
+          <div>
+            <form className="new-post-form-container" >
+              <div className="form-title"></div>
+              <div className="new-post-form">
+                <Dropzone
+                  onDrop={this.updateFile}
+                  className='dropzone'>
+                  <img src={window.images.cloud_icon}></img>
+                </Dropzone>Click above to browse or drag and drop images inside
 
-            <input type="text" className="new-post-form-title" onChange={this.update('title')} value={this.state.title}
-              placeholder="Enter a title:"></input>
-
-            <input type="text" className="new-post-form-description" onChange={this.update('description')} value={this.state.description}
-              placeholder="Enter a description:"></input>
-
-            <img className="" src={this.state.imageUrl} />
-            <button className=""onClick={this.handleSubmit}> Submit Post</button>
-            <div className="new-post-form-bottom"></div>
+                <div className="new-post-form-bottom"></div>
+              </div>
+            </form>
           </div>
-        </form>
+        )
+      } else {
+        return (
+          <div>
+            <form className="new-post-form-container" >
+              <div className="form-title"></div>
+              <div className="new-post-form">
+                <img className="uploaded-image" src={this.state.imageUrl} />
 
-      </div>
-    )
+
+                <input type="text" className="new-post-form-title" onChange={this.update('title')} value={this.state.title}
+                  placeholder="Enter a title:"></input>
+
+                <input type="text" className="new-post-form-description" onChange={this.update('description')} value={this.state.description}
+                  placeholder="Enter a description:"></input>
+
+                <button className=""onClick={this.handleSubmit}> Submit Post</button>
+                <div className="new-post-form-bottom"></div>
+              </div>
+            </form>
+
+          </div>
+        )
+      }
+
   }
 
 }

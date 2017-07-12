@@ -8,7 +8,6 @@ class AccountShowPage extends React.Component{
   }
 
   render(){
-    debugger
 
     if (this.props.posts) {
       let posts = this.props.posts;

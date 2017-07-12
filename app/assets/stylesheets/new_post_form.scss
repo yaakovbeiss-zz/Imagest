@@ -48,7 +48,7 @@
 .dropzone{
   width: 98%;
   margin: 10px 15px;
-  height: 180px;
+  height: 325px;
   border: 2px dotted grey;
   border-radius: 4px;
   display: flex;
@@ -57,6 +57,11 @@
 }
 .dropzone img{
   height: 50px;
+}
+.uploaded-image{
+  height: 325px;
+  width: auto;
+  margin-top: 5px;
 }
 .new-post-form-bottom{
   height: 70px;

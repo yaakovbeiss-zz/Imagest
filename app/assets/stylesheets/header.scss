@@ -249,6 +249,10 @@ li:hover{
 .greeting {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
+}
+.greeting:visited{
+  text-decoration: none;
 }
 .hidden-input{
   position: absolute;
