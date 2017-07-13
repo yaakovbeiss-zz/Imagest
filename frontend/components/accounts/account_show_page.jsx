@@ -7,12 +7,17 @@ class AccountShowPage extends React.Component{
     super(props);
   }
 
+  componentDidMount(){
+    this.props.requestAccounts();
+  }
+
   render(){
 
     if (this.props.posts) {
       let posts = this.props.posts;
         return (
           <div className="post-index-container">
+
             <div className="post-index">
               <ul>
                 {posts.map( (post) => <PostsIndexItem key={post.id} title={post.title}

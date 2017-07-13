@@ -14,7 +14,14 @@ class Account < ActiveRecord::Base
     foreign_key: :voter_id
 
   def points
-    (self.posts.upvotes - self.posts.downvotes) + (self.comments.upvotes - self.comments.downvotes)
+    points = 0
+    self.posts.each do |post|
+      points += post.upvotes.count - post.downvotes.count
+    end
+    self.comments.each do |comment|
+      points += comment.upvotes.count - comment.downvotes.count
+    end
+    points
   end
 
 

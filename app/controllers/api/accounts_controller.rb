@@ -14,6 +14,10 @@ class Api::AccountsController < ApplicationController
     @account = Account.includes(:posts, :comments, :votes).find(params[:id])
   end
 
+  def index
+    @accounts = Account.all
+  end
+
   private
 
   def account_params
