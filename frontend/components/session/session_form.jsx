@@ -50,20 +50,20 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              <br></br>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
 
 
   render() {
-
     return (
       <div>
         <NavLink className="back-imgur" exact to='/' >
@@ -76,26 +76,24 @@ class SessionForm extends React.Component {
               Check out my info at:
             </div>
             <div className="social-box">
-              <a className="linkedin logo" href="https://www.linkedin.com/in/yaakovbeiss/" >
+              <a className="linkedin logo" href="https://www.linkedin.com/in/yaakovbeiss/" target="_blank" >
                 <img src={window.images.linkedin_icon} className="linkedin-icon" />
               </a>
-              <a className="github logo" href="https://github.com/yaakovbeiss">
+              <a className="github logo" href="https://github.com/yaakovbeiss" target="_blank">
                 <img src={window.images.github_icon} className="github-icon"  />
               </a>
               <a className="resume logo" href="http://www.yaakovbeiss.com/Yaakov%20Beiss%20resume.pdf" target="_blank">
                 <img src={window.images.resume_icon} className="resume-icon" />
               </a>
-              <div className="angellist logo">
-                <img src={window.images.angellist_icon} className="angellist-icon" href="https://accounts.google.com/signin/v2/sl/pwd?passive=1209600&osid=1&continue=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&followup=https%3A%2F%2Fplus.google.com%2Fapps%2Factivities&flowName=GlifWebSignIn&flowEntry=ServiceLogin" />
-              </div>
+              <a className="angellist logo" href="https://angel.co/yaakov-beiss" target="_blank">
+                <img src={window.images.angellist_icon} className="angellist-icon" />
+              </a>
             </div>
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <div className="login-divider">
-              <div className="divider"></div>
-              or have fun on imagest!
-              <div className="divider"></div>
+            <div className="login-divider">or have fun on imagest!<br></br>
+
+            <div className="errors">{this.renderErrors()}</div>
             </div>
-            {this.renderErrors()}
             <div className="login-form login-form-session">
               <br/>
               <label>

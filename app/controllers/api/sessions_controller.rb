@@ -1,12 +1,10 @@
 class Api::SessionsController < ApplicationController
 
 	def create
-
 		@account = Account.find_by_credentials(
       params[:account][:username],
       params[:account][:password]
     )
-
     if @account
 			login(@account)
 			render "api/accounts/show"
@@ -20,6 +18,7 @@ class Api::SessionsController < ApplicationController
 
 	def destroy
 		@account = current_user
+
 		if @account
 			logout
 			render "api/accounts/show"

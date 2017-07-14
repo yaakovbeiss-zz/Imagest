@@ -126,9 +126,14 @@
 
 .login-divider {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px 0 10px 0;
+}
+.errors{
+  color: red;
+  justify-content: center;
+  width: inherit;
 }
 .divider{
   opacity: .5;

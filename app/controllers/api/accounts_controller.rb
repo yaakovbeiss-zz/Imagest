@@ -1,6 +1,7 @@
 class Api::AccountsController < ApplicationController
 
   def create
+
     @account = Account.new(account_params)
     if @account.save
       login(@account)
