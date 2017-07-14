@@ -1,5 +1,3 @@
-# README
-
 # Imagest
 
 [Imagest live](https://imagest.herokuapp.com/#/)

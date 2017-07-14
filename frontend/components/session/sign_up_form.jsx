@@ -75,7 +75,7 @@ class SignUpForm extends React.Component {
             <a className="github logo" href="https://github.com/yaakovbeiss">
               <img src={window.images.github_icon} className="github-icon"  />
             </a>
-            <a className="resume logo" href="https://docs.google.com/document/d/1enzQGlTqfClweE3buxkDi7pe-XXQtjJUUYXknbM3x40/edit?usp=sharing">
+            <a className="resume logo" href="https://github.com/yaakovbeiss/yaakovbeiss.github.io/blob/master/Yaakov%20Beiss%20resume.pdf" target="_blank">
               <img src={window.images.resume_icon} className="resume-icon" />
             </a>
               <div className="angellist logo">
