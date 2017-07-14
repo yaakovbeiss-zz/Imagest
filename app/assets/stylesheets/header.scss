@@ -251,7 +251,15 @@ li:hover{
   flex-direction: row;
   text-decoration: none;
   color: white;
-
+}
+.greeting-name{
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  background: transparent;
+  color: white;
+  height: 30px;
+  cursor: pointer;
 }
 .greeting:visited{
   text-decoration: none;
