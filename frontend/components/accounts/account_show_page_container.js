@@ -1,22 +1,26 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import AccountShowPage from './account_show_page';
-import { requestAccounts } from '../../actions/account_actions';
+import { requestAccounts, requestAccount } from '../../actions/account_actions';
 
-const mapStateToProps = ({ session }, ownProps ) => {
+const mapStateToProps = ({ session, accounts }, ownProps ) => {
   return {
+    currentaccountId: session.currentaccount.id,
     posts: session.currentaccount.posts,
     comments: session.currentaccount.comments,
     votes: session.currentaccount.votes,
+    accounts: accounts.entities,
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    requestAccounts: () => dispatch(requestAccounts())
+    requestAccounts: () => dispatch(requestAccounts()),
+    requestAccount: (id) => dispatch(requestAccount(id))
   }
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(AccountShowPage)
+)(AccountShowPage))

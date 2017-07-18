@@ -5,6 +5,7 @@ import ImageReducer from './image_reducer';
 import CommentReducer from './comment_reducer';
 import ModalReducer from './modal_reducer';
 import SearchReducer from './search_reducer';
+import AccountReducer from './account_reducer';
 
 export default combineReducers({
   session: SessionReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
   comment: CommentReducer,
   modal: ModalReducer,
   search: SearchReducer,
+  accounts: AccountReducer,
 });

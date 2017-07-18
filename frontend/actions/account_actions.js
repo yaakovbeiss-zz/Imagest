@@ -8,18 +8,18 @@ export const receiveAccounts = accounts => ({
   accounts
 });
 
-// export const receiveAccount = payload => {
-//   return {
-//     type: RECEIVE_ACCOUNT,
-//     payload
-//   }
-// };
+export const receiveAccount = account => {
+  return {
+    type: RECEIVE_ACCOUNT,
+    account
+  }
+};
 
-// export const requestAccount = id => dispatch => (
-//   APIUtil.fetchAccount(id).then(account => (
-//     dispatch(receiveAccount(account))
-//   ))
-// );
+export const requestAccount = id => dispatch => (
+  APIUtil.fetchAccount(id).then(account => (
+    dispatch(receiveAccount(account))
+  ))
+);
 
 export const requestAccounts = () => dispatch => (
   APIUtil.fetchAccounts().then(accounts => (
