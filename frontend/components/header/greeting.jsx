@@ -13,6 +13,7 @@ class Greeting extends React.Component{
     return (
       <div className="signup-signin-links icon-container greeting">
 
+
           <button className="greeting-name">{this.props.currentaccount.username}</button>
 
           <button className="icon-container logout" onClick={this.props.logout}>logout</button>

@@ -9,6 +9,7 @@ class AccountShowPage extends React.Component{
   }
 
   componentDidMount(){
+    this.props.requestPosts();
     this.props.requestAccounts();
     const id = parseInt(this.props.match.params.accountId);
     this.props.requestAccount(id);
@@ -18,7 +19,12 @@ class AccountShowPage extends React.Component{
     if(parseInt(this.props.match.params.accountId) === this.props.currentaccountId){
       return ( <div> My Posts</div>)
     } else {
-      return (<div>Someone elses posts</div>)
+      const id = this.props.accountId;
+      
+      if(this.props.accounts){
+        return (
+          <div>{this.props.accounts.entities[id].username}</div>)
+      }
     }
   }
 

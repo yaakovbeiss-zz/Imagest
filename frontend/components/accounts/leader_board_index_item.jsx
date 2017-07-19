@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class LeaderBoardIndexItem extends React.Component{
   constructor(props){
@@ -9,7 +10,9 @@ class LeaderBoardIndexItem extends React.Component{
   render(){
     return(
       <div>
-        {this.props.username} : {this.props.points}
+        <Link to={`/accounts/${this.props.accountId}`} >
+          {this.props.username} : {this.props.points}
+        </Link>
       </div>
     )
   }

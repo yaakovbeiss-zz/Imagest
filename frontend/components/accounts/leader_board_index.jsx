@@ -9,14 +9,15 @@ class LeaderBoardIndex extends React.Component {
 
   render(){
     let accounts = this.props.accounts;
-    if (accounts.length > 0){
+    
+    if (accounts){
       return (
         <div>
           <span className="leader-board-title">
             Leaders
           </span>
           <div>
-            {accounts.map( (account) => <LeaderBoardIndexItem key={account.id} username={account.username}
+            {accounts.map( (account) => <LeaderBoardIndexItem username={account.username}
             points={account.points} accountId={account.id} /> )}
           </div>
         </div>

@@ -20,6 +20,8 @@ Posting images is a main feature of Imagest. Logged in users can upload images a
 
 Comments are a main feature of imgur.com and of imagest.com. Users can express their thoughts on posts and comments by creating their own comments everything. Commenting on infinitely nested comments provides some challenges when it comes storage in redux state. Normalizing state solves this problem. Each comment and post has a list of comment Ids that commented on them, and they are associated via a polymorphic association. This association lets the database know if the thing being commented on (commentable) is a post or another comment. Each comment can then render a list of its child comments using its own commentIds array which is stored in state.
 
+![commentable](app/assets/images/comment on a comment.gif)
+
 ```javascript
 posts: {
   1: {
