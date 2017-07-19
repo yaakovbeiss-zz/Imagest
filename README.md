@@ -16,6 +16,8 @@ Backend - Users enter a password which stores a password-digest token in the dat
 
 Posting images is a main feature of Imagest. Logged in users can upload images and give them a title and description. Once uploaded, other users can upvote or downvote. Users can select a file from their computer or drag and drop on in the form. Each post has a main-image association that designates a main picture to be displayed on the posts index page. Posts are stored in a post slice of redux state, and each post has information about who commented or voted on it.
 
+![posting](https://github.com/yaakovbeiss/Imagest/blob/master/app/assets/images/posting.gif)
+
 ### Commenting on Posts and Comments
 
 Comments are a main feature of imgur.com and of imagest.com. Users can express their thoughts on posts and comments by creating their own comments everything. Commenting on infinitely nested comments provides some challenges when it comes storage in redux state. Normalizing state solves this problem. Each comment and post has a list of comment Ids that commented on them, and they are associated via a polymorphic association. This association lets the database know if the thing being commented on (commentable) is a post or another comment. Each comment can then render a list of its child comments using its own commentIds array which is stored in state.
