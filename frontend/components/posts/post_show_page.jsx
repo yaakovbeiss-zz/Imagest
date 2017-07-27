@@ -106,8 +106,9 @@ class PostShowPage extends React.Component {
 
     if (this.props.post) {
       const images = this.props.post.images;
+
       return (
-        <div className="post-show-page-container">
+        <div className="post-show-page-container" onClick={this.props.hideSearchBar}>
           <div className="post-show-page">
             <div className="left-post-pad">
               <div className="show-page-title-container">

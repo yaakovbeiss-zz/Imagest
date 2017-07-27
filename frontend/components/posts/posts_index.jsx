@@ -10,12 +10,12 @@ class PostsIndex extends React.Component{
     this.props.requestPosts();
   }
   render(){
-    
+
     let posts = this.props.posts;
 
     if (posts.length > 0) {
         return (
-          <div className="post-index-container">
+          <div className="post-index-container" onClick={this.props.hideSearchBar}>
             <div className="post-index">
               <ul>
 

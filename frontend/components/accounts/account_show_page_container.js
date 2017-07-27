@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     requestPosts: () => dispatch(requestPosts()),
     requestAccounts: () => dispatch(requestAccounts()),
-    requestAccount: (id) => dispatch(requestAccount(id))
+    requestAccount: (id) => dispatch(requestAccount(id)),
   }
 };
 

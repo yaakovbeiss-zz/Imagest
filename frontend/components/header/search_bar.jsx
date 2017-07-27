@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import { fetchSearch } from '../../actions/search_actions';
+import { fetchSearch, hideSearchBar, revealSearchBar } from '../../actions/search_actions';
 
 class SearchBar extends React.Component {
   constructor(props){
@@ -32,25 +32,15 @@ class SearchBar extends React.Component {
     }
   }
 
-  toggleDrop(e) {
-    let id = e.currentTarget.id;
-    let dropdown = document.getElementById(`${id}-menu`);
-    if (dropdown.className === `hidden`){
-      dropdown.className = ``;
-    } else {
-      dropdown.className = `hidden`;
-    }
-  }
-
   toggleSearchBar(){
-    this.setState({ hideSearchBar: !this.state.hideSearchBar })
+    this.props.hiddenSearchBar ? this.props.revealSearchBar() : this.props.hideSearchBar();
   }
 
   searchBar(){
-    return this.state.hideSearchBar ? <div className="hidden-div"></div> :
+    return this.props.hiddenSearchBar ? <div className="hidden-div"></div> :
     <div id="search-icon-menu" className="">
       <form onSubmit={this.toggleSearchBar}>
-        <input type="text" onChange={this.handleChange('searchResults')} className="search-bar"></input>
+        <input type="text" autoFocus="autoFocus" onChange={this.handleChange('searchResults')} className="search-bar"></input>
         <div className="search-bar search-bar-addition">SEARCH SYNTAX</div>
       </form>
     </div>
@@ -75,13 +65,21 @@ class SearchBar extends React.Component {
   }
 }
 
+const mapStateToProps = ({ search }) => {
+  return {
+    hiddenSearchBar: search.hideSearchBar
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSearch: (search) => dispatch(fetchSearch(search))
+    fetchSearch: (search) => dispatch(fetchSearch(search)),
+    hideSearchBar: (e) => dispatch(hideSearchBar(e)),
+    revealSearchBar: (e) => dispatch(revealSearchBar(e))
   }
 }
 
 export default withRouter(connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(SearchBar));
