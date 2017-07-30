@@ -12,7 +12,7 @@ class CommentsIndex extends React.Component{
     const comments = this.props.comments;
 
     if (comments) {
-      
+
         return (
           <div className="comment-index-container">
             <div className="comment-index">

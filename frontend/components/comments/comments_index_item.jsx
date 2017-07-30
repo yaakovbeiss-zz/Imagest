@@ -104,9 +104,9 @@ class CommentsIndexItem extends React.Component {
     if (this.props.commentId) {
       return (
         <div className="container" onMouseEnter={this.toggleVotes} onMouseLeave={this.toggleVotes}>
-          {this.revealVotes()}
 
           <div className="comment-index-item">
+            {this.revealVotes()}
             <div className="comment-body-container">
               <div className="comment-item-info">
                 <div className="username">{this.props.username}</div>
@@ -117,10 +117,14 @@ class CommentsIndexItem extends React.Component {
 
                 <button onClick={this.toggle} className="reply-button">reply</button>
               </div>
-            
+
             </div>
+
           </div>
           <button className="replies-button" onClick={this.toggleChild}>{this.repliesCount()}</button>
+            <div className="comment-gradient-wrapper">
+              <div className="comment-gradient"></div>
+            </div>
           {this.form()}
           {this.childComments()}
         </div>

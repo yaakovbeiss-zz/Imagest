@@ -38,7 +38,7 @@ class NewCommentReplyForm extends React.Component{
       <div>
         <form className="new-comment-form">
           <div >
-            <input type="text" className="comment-input" placeholder="Write a comment" onChange={this.update('body')} value={this.state.body}></input>
+            <input type="text" autoFocus="autoFocus" className="comment-input" placeholder="Write a comment" onChange={this.update('body')} value={this.state.body}></input>
             <div className="comment-details-container">
                 <div className="char-counter">140</div>
                 <button onClick={this.handleSubmit} className="comment-button">Post</button>
